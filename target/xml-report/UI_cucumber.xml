@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="10.666">
-    <testcase classname="anasayfa" name="anasayfa test" time="10.38">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="136.29">
+    <testcase classname="anasayfa" name="anasayfa test" time="131.473">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given kullanıcı anasayfaya gider............................................passed
 Given kapatır...............................................................undefined
