@@ -1,15 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="74.634">
-    <testcase classname="anasayfa" name="anasayfa test" time="72.231">
-=======
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.326">
-    <testcase classname="anasayfa" name="anasayfa test" time="9.074">
->>>>>>> 06a08afeafb0997248854a8b0b58eb93e5ea8e4a
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given kullanıcı anasayfaya gider............................................passed
-Given kapatır...............................................................undefined
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="32.462">
+    <testcase classname="Register giris" name="Geçerli bir SSN, 3. ve 5. rakamdan sonra &quot;-&quot; içermeli ve 9 rakamdan oluşmalıdır." time="26.826">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class='invalid-feedback'])[1]&quot;}&#10;  (Session info: chrome=104.0.5112.79)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-RATHJAF', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [5a7eec8631b9463890f4e363861e3757, findElement {using=xpath, value=(//div[@class='invalid-feedback'])[1]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61696}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61696/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5a7eec8631b9463890f4e363861e3757" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given Medunna url'sine tiklar...............................................passed
+* Kullanici sayfanin en ust sag kismindaki adam ikonuna tiklar..............passed
+* Kullanici Register buttonuna tiklar.......................................passed
+* Kullanici ilk uc haneyi rakam girer; dorduncu haneyi '-' girer; besinci ve altinci haneyi rakam olarak girer; yedinci haneyi '-'girer; sekizinci ve onbirinci hane arasini rakam olarak girer..passed
+* Your SSN is required. yazisinin gorunmedigini test eder...................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='invalid-feedback'])[1]"}
+  (Session info: chrome=104.0.5112.79)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-RATHJAF', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5a7eec8631b9463890f4e363861e3757, findElement {using=xpath, value=(//div[@class='invalid-feedback'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61696}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61696/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a7eec8631b9463890f4e363861e3757
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy21.isDisplayed(Unknown Source)
+	at stepDefinitions.uiStep.US01StepDefinitions.your_ssn_is_required_yazisinin_gorunmedigini_test_eder(US01StepDefinitions.java:39)
+	at ✽.Your SSN is required. yazisinin gorunmedigini test eder(file:///C:/Users/pc/eclipse-space/medunna_TR_team56/src/test/resources/features/uiFeatures/US01.feature:10)
 ]]>
         </failure>
+    </testcase>
+    <testcase classname="Register giris" name="SSN bos birakilamaz" time="1.777">
+        <system-out>
+            <![CDATA[Given Medunna url'sine tiklar...............................................passed
+* Kullanici sayfanin en ust sag kismindaki adam ikonuna tiklar..............passed
+* Kullanici Register buttonuna tiklar.......................................passed
+* Kullanici SSN kutucugu bos olup olmadigini kontrol eder...................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register giris" name="Herhangi bir karakter içeren ve boş bırakılamayan geçerli bir FirstName  olmalıdır" time="1.759">
+        <system-out>
+            <![CDATA[Given Medunna url'sine tiklar...............................................passed
+* Kullanici sayfanin en ust sag kismindaki adam ikonuna tiklar..............passed
+* Kullanici Register buttonuna tiklar.......................................passed
+* Kullanici Name kutucuguna sembolik karakter icermeyen isim girer..........passed
+* Kullanici Name kutucugunun bos olup olmadigini konrol eder................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register giris" name="Kullanici LastName kutucuguna sembolik karakter icermeyen soyisim girer" time="1.451">
+        <system-out>
+            <![CDATA[Given Medunna url'sine tiklar...............................................passed
+* Kullanici sayfanin en ust sag kismindaki adam ikonuna tiklar..............passed
+* Kullanici Register buttonuna tiklar.......................................passed
+* Kullanici LastName kutucuguna sembolik karakter icermeyen soyisim girer...passed
+* Kullanici LastName kutucugunun bos olup olmadigini konrol eder............passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>
