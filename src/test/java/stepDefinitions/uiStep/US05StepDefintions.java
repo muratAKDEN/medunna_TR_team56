@@ -147,5 +147,6 @@ public class US05StepDefintions {
         String actualCreatedDate=us05_06_Page.createdDateElements.get(actualCreatedIndex).getText();
 
         Assert.assertEquals(actualCreatedDate, expectedCreatedDate);
+        System.out.println();
     }
 }
