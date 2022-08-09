@@ -21,12 +21,15 @@ public class US_08_StepDefinitions {
     @Given("kullanici {string} anasayfasindaa")
     public void kullanici_anasayfasinda(String medunna) {
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+
     }
 
     @Then("doktor signInbutonu tiklar")
     public void doktor_sign_ınbutonu_tiklar() {
         us08.signInButonu.click();
     }
+
+
 
     @Then("doktor loginButonu tiklar")
     public void doktor_login_butonu_tiklar() {
@@ -52,11 +55,15 @@ public class US_08_StepDefinitions {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+
     @Then("Password sekmesine tiklar")
     public void password_sekmesine_tiklar() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+
     @Then("Current password kutusuna mevcut şifreyi girer")
     public void current_password_kutusuna_mevcut_şifreyi_girer() {
         // Write code here that turns the phrase above into concrete actions
