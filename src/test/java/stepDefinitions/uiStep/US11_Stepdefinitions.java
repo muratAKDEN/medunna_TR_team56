@@ -5,7 +5,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.US11_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -58,5 +60,41 @@ public class US11_Stepdefinitions {
     public void doktor_create_or_edit_an_appointment_yazisini_gorur() {
         Assert.assertTrue(us11_pages.createYazisi.isDisplayed());
 
+    }
+
+    @Given("doktor {string},{string},{string},{string},{string} gorebilmeli")
+    public void doktorGorebilmeli(String ID, String SrartDateTime, String EndDataTime, String Status, String aPhysician) {
+        Assert.assertTrue(us11_pages.Id.isDisplayed());
+        Assert.assertTrue(us11_pages.startDateTime.isDisplayed());
+        Assert.assertTrue(us11_pages.endDateTime.isDisplayed());
+        Assert.assertTrue(us11_pages.status.isDisplayed());
+        Assert.assertTrue(us11_pages.patient.isDisplayed());
+    }
+
+    @Given("doktor {string},{string} ve {string} alanlarini doldurmali")
+    public void doktorVeAlanlariniDoldurmali(String Anamnesis, String Treatment, String Diagnosis) {
+        actions.click(us11_pages.anamnesis)
+                .sendKeys(fakerName)
+                .sendKeys(Keys.TAB)
+                .sendKeys(fakerName)
+                .sendKeys(Keys.TAB)
+                .sendKeys(fakerName)
+                .perform();
+    }
+
+
+    @Given("doktor {string},{string} doldurmali")
+    public void doktorDoldurmali(String prescription, String description) {
+        us11_pages.prescription.sendKeys(fakerName);
+        us11_pages.description.sendKeys(fakerName);
+    }
+
+    @Given("doktor status olarak secebilmeli")
+    public void doktorOlarakSecebilmeli(String status) {
+        WebElement ddo= us11_pages.status;
+        Select select= new Select(ddo);
+        select.selectByVisibleText("PENDING");
+        select.selectByVisibleText("COMPLETED");
+        select.selectByVisibleText("CANCELLED");
     }
 }

@@ -15,3 +15,18 @@ Background: ortak adimlar
 
 
     Given doktor Create or Edit an Appointment yazisini gorur
+
+  Scenario: TC02 Bir randevu guncellendiginde; kullanıcı (doktor), hastanın asagıdaki bilgilerini gormelidir
+  "id, start and end date, Status, physician and patient"
+
+    Given doktor "ID","Start DateTime","End DateTime","Status","Physician" gorebilmeli
+
+
+  Scenario: TC03 Doktor  "Anamnesis, Treatment ve Diagnosis"  alanlarini doldurmak zorundadir
+    Given doktor "Anamnesis","Treatment" ve "Diagnosis" alanlarini doldurmali
+
+  Scenario: TC04 "prescription ve description" alanlari doldurmali
+    Given doktor "prescription","description" doldurmali
+
+  Scenario: TC05 "Status" doktor tarafından "PENDING, COMPLETED veya CANCELLED" olarak secilebilmeli
+    Given doktor status olarak secebilmeli

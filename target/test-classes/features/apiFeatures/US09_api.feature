@@ -1,4 +1,4 @@
-Feature: US09 Staff (Personel), hasta bilgilerini görebilmeli, düzenleyebilmeli ve silebilmelidir.
+Feature: US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir.
 
   Scenario: TC04 Kullanıcı, API kullanarak tüm hasta bilgilerini doğrulamalıdır.
     Given Kullanici "Medunnaurl" adresine gider

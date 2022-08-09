@@ -1,4 +1,4 @@
-Feature: US09 Staff (Personel), hasta bilgilerini görebilmeli, düzenleyebilmeli ve silebilmelidir.
+Feature: US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir.
 
   Scenario: TC01 Staff "My Pages" sekmesinden hasta bilgilerini görebilmelidir.
     Given Kullanici "Medunnaurl" adresine gider
