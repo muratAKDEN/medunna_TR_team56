@@ -1,5 +1,12 @@
 Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
+  Background: ortak adimlar
+    Given kullanici "medunnaUrl" anasayfasindaa
+    Then doktor signInbutonu tiklar
+    And doktor loginButonu tiklar
+    And doktor "doctorUser" ve "password" girer SignIn tıklar
+
+
   Scenario: TC01 "New password confirmation" onaylanabilmelidir.
     Given Kullanici "Medunnaurl" adresine gider
     And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
