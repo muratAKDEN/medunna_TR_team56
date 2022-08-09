@@ -17,7 +17,7 @@ public class US11_Stepdefinitions {
     Faker faker = new Faker();
     String fakerName = faker.name().fullName();
 
-    @Given("kullanici {string} anasayfasinda")
+    @Given("kullanici {string} anasayfasindaa")
     public void kullanici_anasayfasinda(String medunna) {
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
