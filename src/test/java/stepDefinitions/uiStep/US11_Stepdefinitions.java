@@ -82,6 +82,7 @@ public class US11_Stepdefinitions {
                 .perform();
     }
 
+
     @Given("doktor {string},{string} doldurmali")
     public void doktorDoldurmali(String prescription, String description) {
         us11_pages.prescription.sendKeys(fakerName);
