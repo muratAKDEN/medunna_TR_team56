@@ -2,7 +2,7 @@ Feature: US11 "My Appointments" Physician (Doctor) tarafından düzenlenebilmeli
 
 
 Background: ortak adimlar
-  Given kullanici "medunnaUrl" anasayfasinda
+  Given kullanici "medunnaUrl" anasayfasindaa
   Then doktor signInbutonu tiklar
   And doktor loginButonu tiklar
   And doktor "doctorUser" ve "password" girer SignIn tıklar
