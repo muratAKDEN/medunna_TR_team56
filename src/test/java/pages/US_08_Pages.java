@@ -11,7 +11,11 @@ public class US_08_Pages {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+  /*
+
+  fatih beyin locator lari .
     @FindBy(xpath="//li[@id='account-menu']")
+
     public WebElement signInButonu;
     @FindBy(xpath ="//a[@id='login-item']")
     public WebElement loginButonu;
@@ -21,4 +25,6 @@ public class US_08_Pages {
     public WebElement password;
     @FindBy(xpath ="//button[@type='submit']")
     public WebElement signIn;
+
+   */
 }

@@ -8,14 +8,12 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
   Scenario: TC01 "New password confirmation" onaylanabilmelidir.
-    Given Kullanici "Medunnaurl" adresine gider
+    Given kullanici "medunnaUrl" anasayfasindaa
+    Then doktor signInbutonu tiklar
+    And doktor loginButonu tiklar
+    And doktor "doctorUser" ve "password" girer SignIn tıklar
     And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
-    Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar
-    And kullanici username olarak "staffUser" girer
-    And kullanici password olarak "password" girer
-    And kullanici Sign In butonuna tiklar
-    Then  Ana sayfada kullaniciya ait sekmeyi (en sağda) tiklar
-    And Password sekmesine tiklar
+    And  Acilan drop down menude Password sekmesine tiklar
     Then Current password kutusuna mevcut şifreyi girer
     And Kullanıcı sayfayı kapatır
 
