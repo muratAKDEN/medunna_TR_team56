@@ -14,26 +14,28 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     And kullanici username olarak "staffUser" girer
     And kullanici password olarak "password" girer
     And kullanici Sign In butonuna tiklar
-    Then Kullanıcı 'My Pages' dropdown menusunu tiklar
-    And Kullanıcı 'Search Patient' butonunu tiklar
-    Then Kullanıcı 'Search Patient' sekmesinde hasta bilgilerinin görünür oldugunu test eder
+    Then  Ana sayfada kullaniciya ait sekmeyi (en sağda) tiklar
+    And Password sekmesine tiklar
+    Then Current password kutusuna mevcut şifreyi girer
     And Kullanıcı sayfayı kapatır
 
 
 
-  Scenario: TC02 Daha guclü sifre icin en az 1 kucuk harf olmalı ve "Password strength" seviyesinin degistigi gorulmelidir
 
+
+
+  Scenario: TC02 Daha guclü sifre icin en az 1 kucuk harf olmalı ve "Password strength" seviyesinin degistigi gorulmelidir
     Given Kullanici "Medunnaurl" adresine gider
     And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
     Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar
     And kullanici username olarak "staffUser" girer
     And kullanici password olarak "password" girer
     And kullanici Sign In butonuna tiklar
-    Then Kullanıcı 'My Pages' dropdown menusunu tiklar
-    And Kullanıcı 'Search Patient' butonunu tiklar
-    Then Kullanıcı tablo bilgilerini düzenlemek istediği hastanın yanındaki 'edit' butonuna tıklar
-    And Kullanıcı hasta bilgilerinin düzenlenebilir olduğunu test eder
+    Then  Ana sayfada kullaniciya ait sekmeyi (en sağda) tiklar
+    And Password sekmesine tiklar
+    Then Current password kutusuna mevcut şifreyi girer
     And Kullanıcı sayfayı kapatır
+
 
 
   Scenario: TC03 sifre en az 1 büyük harf icermeli ve "Password strength" seviyesinin degistigi gorulmelidir
@@ -44,12 +46,10 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     And kullanici username olarak "staffUser" girer
     And kullanici password olarak "password" girer
     And kullanici Sign In butonuna tiklar
-    Then Kullanıcı 'My Pages' dropdown menusunu tiklar
-    And Kullanıcı 'Search Patient' butonunu tiklar
-    And Kullanici Patient SSN kısmına hastanın SSN bilgisini girer
-    Then Kullanici Ilgili hastanın yanındaki 'view' butonuna tıklar
-    And Kullanici kayit bilgilerinin gorunur oldugunu test eder
-    And Kullanici sayfayi kapatir
+    Then  Ana sayfada kullaniciya ait sekmeyi (en sağda) tiklar
+    And Password sekmesine tiklar
+    Then Current password kutusuna mevcut şifreyi girer
+    And Kullanıcı sayfayı kapatır
 
   Scenario: TC04 sifre en az 1 rakam icermeli ve "Password strength" seviyesinin degistigi gorulmelidir
 
@@ -59,24 +59,22 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     And kullanici username olarak "staffUser" girer
     And kullanici password olarak "password" girer
     And kullanici Sign In butonuna tiklar
-    Then Kullanıcı 'My Pages' dropdown menusunu tiklar
-    And Kullanıcı 'Search Patient' butonunu tiklar
-    Then Kullanıcı tablo bilgilerini düzenlemek istediği hastanın yanındaki edit butonuna tıklar
-    And Kullanıcı kayıt bilgilerini siler ve save butonuna tıklar
-    And Kullanıcı bilgilerin silinip silinmediğini test eder
+    Then  Ana sayfada kullaniciya ait sekmeyi (en sağda) tiklar
+    And Password sekmesine tiklar
+    Then Current password kutusuna mevcut şifreyi girer
     And Kullanıcı sayfayı kapatır
 
   Scenario: TC05 sifre en az 1 ozel karakter icermeli ve"Password strength" seviyesinin degistigi gorulmelidir
+
     Given Kullanici "Medunnaurl" adresine gider
     And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
     Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar
     And kullanici username olarak "staffUser" girer
     And kullanici password olarak "password" girer
     And kullanici Sign In butonuna tiklar
-    Then Kullanıcı 'My Pages' dropdown menusunu tiklar
-    And Kullanıcı 'Search Patient' butonunu tiklar
-    Then Kullanıcı hastaların silinmediğini test eder
-    And Kullanici Hasta idsini silemedigini test eder
+    Then  Ana sayfada kullaniciya ait sekmeyi (en sağda) tiklar
+    And Password sekmesine tiklar
+    Then Current password kutusuna mevcut şifreyi girer
     And Kullanıcı sayfayı kapatır
 
 
@@ -88,11 +86,11 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     And kullanici username olarak "staffUser" girer
     And kullanici password olarak "password" girer
     And kullanici Sign In butonuna tiklar
-    Then Kullanıcı 'My Pages' dropdown menusunu tiklar
-    And Kullanıcı 'Search Patient' butonunu tiklar
-    And Kullanici Patient SSN kısmına hastanın SSN bilgisini girer
-    And Kullanici Arama yapabildigini ve istenilen hastanın gorunur oldugunu test eder
-    And Kullanici sayfayi kapatir
+    Then  Ana sayfada kullaniciya ait sekmeyi (en sağda) tiklar
+    And Password sekmesine tiklar
+    Then Current password kutusuna mevcut şifreyi girer
+    And Kullanıcı sayfayı kapatır
+
 
   Scenario: TC07 Eski sifre kullanılmamalıdır
 
@@ -102,10 +100,9 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     And kullanici username olarak "staffUser" girer
     And kullanici password olarak "password" girer
     And kullanici Sign In butonuna tiklar
-    Then Kullanıcı 'My Pages' dropdown menusunu tiklar
-    And Kullanıcı 'Search Patient' butonunu tiklar
-    And Kullanici Patient SSN kısmına hastanın SSN bilgisini girer
-    And Kullanici Arama yapabildigini ve istenilen hastanın gorunur oldugunu test eder
-    And Kullanici sayfayi kapatir
+    Then  Ana sayfada kullaniciya ait sekmeyi (en sağda) tiklar
+    And Password sekmesine tiklar
+    Then Current password kutusuna mevcut şifreyi girer
+    And Kullanıcı sayfayı kapatır
 
 

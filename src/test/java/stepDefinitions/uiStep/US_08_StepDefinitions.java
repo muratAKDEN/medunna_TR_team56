@@ -44,6 +44,22 @@ public class US_08_StepDefinitions {
         us08.signIn.click();
     }
 
+    @Then("Ana sayfada kullaniciya ait sekmeyi \\(en sağda) tiklar")
+    public void ana_sayfada_kullaniciya_ait_sekmeyi_en_sağda_tiklar() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("Password sekmesine tiklar")
+    public void password_sekmesine_tiklar() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("Current password kutusuna mevcut şifreyi girer")
+    public void current_password_kutusuna_mevcut_şifreyi_girer() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 
 
 
