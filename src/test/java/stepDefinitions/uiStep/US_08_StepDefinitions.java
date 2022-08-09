@@ -16,20 +16,23 @@ public class US_08_StepDefinitions {
 
     Actions actions = new Actions(Driver.getDriver());
     Faker faker = new Faker();
-    String fakerName = faker.name().fullName();
+
 
     @Given("kullanici {string} anasayfasindaa")
     public void kullanici_anasayfasinda(String medunna) {
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
+
     @Then("doktor signInbutonu tiklar")
     public void doktor_sign_ınbutonu_tiklar() {
         us08.signInButonu.click();
     }
+
     @Then("doktor loginButonu tiklar")
     public void doktor_login_butonu_tiklar() {
         us08.loginButonu.click();
     }
+
     @Then("doktor {string} ve {string} girer SignIn tıklar")
     public void doktor_ve_girer_sign_ın_tıklar(String string, String string2) {
         us08.username.sendKeys("doctor-healthprojectteam56" + Keys.TAB);
