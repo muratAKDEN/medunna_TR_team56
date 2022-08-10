@@ -1,12 +1,14 @@
 Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
   Background: ortak adimlar
-    Given kullanici "medunnaUrl" anasayfasindaa
-    Then doktor signInbutonu tiklar
-    And doktor loginButonu tiklar
-    And doktor "doctorUser" ve "password" girer SignIn tıklar
-    And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
-    And  Acilan drop down menude Password sekmesine tiklar
+    Given Kullanici "medunnaUrl" adresine gider
+    Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
+    And kullanici acilan dropdown menude signIn butonuna tiklar
+    And kullanici username olarak "doktorErva" girer
+    And kullanici password olarak "passwordErva" girer
+     And kullanici Sign In butonuna tiklar
+    And Kullanici sayfayi kapatir
+
 
 
 
@@ -14,11 +16,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
 
-
-
-
-    Then Current password kutusuna mevcut şifreyi girer
-    And Kullanıcı sayfayı kapatır
+    And Kullanici sayfayi kapatir
 
 
 
