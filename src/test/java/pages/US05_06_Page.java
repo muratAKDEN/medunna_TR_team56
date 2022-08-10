@@ -72,5 +72,17 @@ public class US05_06_Page {
     @FindBy(xpath = "//h4[text()='Useful Links']")
     public WebElement usefullLinks;
 
+    @FindBy(xpath = "//span[text()='Settings']")
+    public WebElement settings;
+
+    @FindBy(xpath = "//input[@name='firstName']")
+    public WebElement settingsFirstName;
+
+    @FindBy(xpath = "//input[@name='lastName']")
+    public WebElement settingsLastName;
+
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement settingsEmail;
+
 
 }
