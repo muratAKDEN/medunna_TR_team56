@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="6.998">
-    <testcase classname="anasayfa" name="anasayfa test" time="6.866">
-        <system-out>
-            <![CDATA[Given kullanıcı anasayfaya gider............................................passed
-]]>
-        </system-out>
-    </testcase>
-</testsuite>
