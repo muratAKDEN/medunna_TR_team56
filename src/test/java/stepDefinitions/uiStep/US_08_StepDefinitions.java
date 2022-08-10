@@ -36,19 +36,4 @@ public class US_08_StepDefinitions {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @Then("Current password kutusuna mevcut şifreyi girer")
-    public void current_password_kutusuna_mevcut_şifreyi_girer() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @Then("Kullanıcı sayfayı kapatır")
-    public void kullanıcı_sayfayı_kapatır() {
-
-    }
-
-
-
-
-
 }

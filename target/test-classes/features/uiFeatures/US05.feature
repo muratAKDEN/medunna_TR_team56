@@ -69,20 +69,3 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     And My Appointmentsa tiklar
     And Ramdevularin goruntulendigini kontrol eder
     And Sayfayi kapatir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

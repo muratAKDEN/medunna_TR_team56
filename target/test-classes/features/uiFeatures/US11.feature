@@ -21,6 +21,7 @@ Background: ortak adimlar
 
     Given doktor "ID","Start DateTime","End DateTime","Status","Physician" gorebilmeli
 
+
   Scenario: TC03 Doktor  "Anamnesis, Treatment ve Diagnosis"  alanlarini doldurmak zorundadir
     Given doktor "Anamnesis","Treatment" ve "Diagnosis" alanlarini doldurmali
 
