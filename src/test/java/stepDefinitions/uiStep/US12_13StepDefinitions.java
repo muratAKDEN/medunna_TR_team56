@@ -154,6 +154,7 @@ public class US12_13StepDefinitions {
     public void saveButonunaTiklar() {
         js.executeScript("arguments[0].click();", us12_13.saveButton);
         ReusableMethods.waitFor(3);
+       String aa= "hahahhahha";
     }
 }
 
