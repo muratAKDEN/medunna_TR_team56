@@ -24,10 +24,7 @@ public class US12_13StepDefinitions {
     public void doktor_gider(String url) {
         Driver.getDriver().get(ConfigReader.getProperty(url));
     }
-    @When("Anasayfada giris ikonuna tiklar")
-    public void anasayfada_giris_ikonuna_tiklar() {
-       us12_13.accountMenu.click();
-    }
+
     @Then("Sign in secenegine tiklar")
     public void sign_in_secenegine_tiklar() {
       us12_13.signInButton.click();
