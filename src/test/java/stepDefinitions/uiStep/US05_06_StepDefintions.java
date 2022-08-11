@@ -29,10 +29,7 @@ public class US05_06_StepDefintions {
         us05_06_Page.girisIkonu.click();
     }
 
-    @Given("Sign in secenegine tiklar")
-    public void sign_in_secenegine_tiklar() {
-        us05_06_Page.signInTextElement.click();
-    }
+
 
     @Given("Gecerli bir username girer")
     public void gecerli_bir_username_girer() {

@@ -21,11 +21,6 @@ public class OrtakSteps {
 
 
 
-
-
-
-
-
     @Given("Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar")
     public void kullanici_sayfanin_sag_ust_kosesinde_yer_alan_insan_ikonuna_tiklar() {
         ortakPages.anasayfaInsanIkonu.click();

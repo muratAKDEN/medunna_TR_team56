@@ -4,8 +4,8 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     Given Kullanici "medunnaUrl" adresine gider
     Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
     And kullanici acilan dropdown menude signIn butonuna tiklar
-    And kullanici username olarak "doktorErva" girer
-    And kullanici password olarak "passwordErva" girer
+    And kullanici username olarak "DrMuratAkdeniz" girer
+    And kullanici password olarak "drMuratsifre" girer
      And kullanici Sign In butonuna tiklar
     And Kullanici sayfayi kapatir
 
