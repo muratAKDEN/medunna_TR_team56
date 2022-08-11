@@ -3,7 +3,7 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
   @us05tc01
   Scenario: TC01 Kullanıcının herhangi bir karakter içeren First Name yazması gerekir ve boş bırakılamaz.
     Given Hasta "medunnaUrl" ana sayfasina gider
-    And Anasayfada giris ikonuna tiklar
+    And Anasayfa giris ikonuna tiklar
     And Sign in secenegine tiklar
     And Gecerli bir username girer
     And Gecerli bir parola girer

@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="6.998">
-    <testcase classname="anasayfa" name="anasayfa test" time="6.866">
-        <system-out>
-            <![CDATA[Given kullanıcı anasayfaya gider............................................passed
-]]>
-        </system-out>
+<testsuite errors="0" failures="6" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="2.885">
+    <testcase classname="US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir" name="TC01 Staff &quot;My Pages&quot; sekmesinden hasta bilgilerini görebilmelidir" time="0.39">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Kullanici "Medunnaurl" adresine gider.................................undefined
+And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar......skipped
+Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar.............skipped
+And kullanici username olarak "staffUser" girer.............................skipped
+And kullanici password olarak "password" girer..............................skipped
+And kullanici 'Sign In' butonuna tiklar.....................................skipped
+Then Kullanıcı 'My Pages' dropdown menusunu tiklar..........................skipped
+And Kullanıcı 'Search Patient' butonunu tiklar..............................skipped
+Then Kullanıcı 'Search Patient' sekmesinde hasta bilgilerinin görünür oldugunu test eder.skipped
+And Kullanici sayfayi kapatir...............................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir" name="TC02 Staff bütün hasta bilgilerini düzenleyebilmelidir." time="0.024">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Kullanici "Medunnaurl" adresine gider.................................undefined
+And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar......skipped
+Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar.............skipped
+And kullanici username olarak "staffUser" girer.............................skipped
+And kullanici password olarak "password" girer..............................skipped
+And kullanici 'Sign In' butonuna tiklar.....................................skipped
+Then Kullanıcı 'My Pages' dropdown menusunu tiklar..........................skipped
+And Kullanıcı 'Search Patient' butonunu tiklar..............................skipped
+Then Kullanıcı tablo bilgilerini düzenlemek istediği hastanın yanındaki 'edit' butonuna tıklar.skipped
+And Kullanıcı hasta bilgilerinin düzenlenebilir olduğunu test eder..........skipped
+And Kullanici sayfayi kapatir...............................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir" name="TC03 Kullanıcı, SSN'lerine göre yeni bir başvuru sahibi arayabilmeli ve tüm kayıt bilgilerinin doldurulduğunu görebilmelidir" time="0.014">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Kullanici "Medunnaurl" adresine gider.................................undefined
+And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar......skipped
+Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar.............skipped
+And kullanici username olarak "staffUser" girer.............................skipped
+And kullanici password olarak "password" girer..............................skipped
+And kullanici 'Sign In' butonuna tiklar.....................................skipped
+Then Kullanıcı 'My Pages' dropdown menusunu tiklar..........................skipped
+And Kullanıcı 'Search Patient' butonunu tiklar..............................skipped
+And Kullanici Patient SSN kısmına hastanın SSN bilgisini girer..............skipped
+Then Kullanici Ilgili hastanın yanındaki 'view' butonuna tıklar.............skipped
+And Kullanici kayit bilgilerinin gorunur oldugunu test eder.................skipped
+And Kullanici sayfayi kapatir...............................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir" name="TC06 Kullanıcı herhangi bir hasta bilgisini silebilir" time="0.019">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Kullanici "Medunnaurl" adresine gider.................................undefined
+And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar......skipped
+Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar.............skipped
+And kullanici username olarak "staffUser" girer.............................skipped
+And kullanici password olarak "password" girer..............................skipped
+And kullanici 'Sign In' butonuna tiklar.....................................skipped
+Then Kullanıcı 'My Pages' dropdown menusunu tiklar..........................skipped
+And Kullanıcı 'Search Patient' butonunu tiklar..............................skipped
+Then Kullanıcı tablo bilgilerini düzenlemek istediği hastanın yanındaki 'edit' butonuna tıklar.skipped
+And Kullanıcı kayıt bilgilerini siler ve save butonuna tıklar...............skipped
+And Kullanıcı bilgilerin silinip silinmediğini test eder....................skipped
+And Kullanici sayfayi kapatir...............................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir" name="TC07 Staff hastaları silememeli" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Kullanici "Medunnaurl" adresine gider.................................undefined
+And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar......skipped
+Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar.............skipped
+And kullanici username olarak "staffUser" girer.............................skipped
+And kullanici password olarak "password" girer..............................skipped
+And kullanici 'Sign In' butonuna tiklar.....................................skipped
+Then Kullanıcı 'My Pages' dropdown menusunu tiklar..........................skipped
+And Kullanıcı 'Search Patient' butonunu tiklar..............................skipped
+Then Kullanıcı hastaların silinmediğini test eder...........................skipped
+And Kullanici sayfayi kapatir...............................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir" name="TC08 Staff, hastalari SSN kimliklerine gore arayabilir" time="0.007">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Kullanici "Medunnaurl" adresine gider.................................undefined
+And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar......skipped
+Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar.............skipped
+And kullanici username olarak "staffUser" girer.............................skipped
+And kullanici password olarak "password" girer..............................skipped
+And kullanici 'Sign In' butonuna tiklar.....................................skipped
+Then Kullanıcı 'My Pages' dropdown menusunu tiklar..........................skipped
+And Kullanıcı 'Search Patient' butonunu tiklar..............................skipped
+And Kullanici Patient SSN kısmına hastanın SSN bilgisini girer..............skipped
+And Kullanici Arama yapabildigini ve istenilen hastanın gorunur oldugunu test eder.skipped
+And Kullanici sayfayi kapatir...............................................skipped
+]]></failure>
     </testcase>
 </testsuite>
