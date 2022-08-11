@@ -2,14 +2,13 @@
 Feature: US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir
 
   Background:
-    Given Kullanici "Medunnaurl" adresine gider
-    And Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
-    Then kullanici acilan dropdown menude 'Sign in' butonuna tıklar
+    Given Kullanici "medunnaUrl" adresine gider
+    Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
+    And kullanici acilan dropdown menude signIn butonuna tiklar
     And kullanici username olarak "staffUser" girer
     And kullanici password olarak "password" girer
-    And kullanici 'Sign In' butonuna tiklar
-    Then Kullanıcı 'My Pages' dropdown menusunu tiklar
-    And Kullanıcı 'Search Patient' butonunu tiklar
+    And kullanici Sign In butonuna tiklar
+    And Kullanici sayfayi kapatir
 
   Scenario: TC01 Staff "My Pages" sekmesinden hasta bilgilerini görebilmelidir
     Then Kullanıcı 'Search Patient' sekmesinde hasta bilgilerinin görünür oldugunu test eder
