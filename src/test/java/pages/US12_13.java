@@ -16,7 +16,7 @@ public class US12_13 {
     public WebElement accountMenu;
 
     @FindBy (id = "login-item")
-    public WebElement signInButton;
+    public WebElement signInButton1;
 
     @FindBy (xpath = "//input[@name='username']")
     public WebElement userNameButton;
@@ -39,8 +39,8 @@ public class US12_13 {
     @FindBy(xpath = "//*[text()='Request A Test']")
     public WebElement requestATest;
 
-    @FindBy (xpath = "//*[text()='Test Items']")
-    public WebElement testItemsTable;
+    @FindBy (xpath = "//tr//th")
+    public List<WebElement> testItemsTable;
 
     @FindBy (xpath = "//tr//td[2]")
     public List<WebElement> testListesi;
@@ -64,4 +64,10 @@ public class US12_13 {
 
     @FindBy (xpath = "//tr//th")
     public List<WebElement> testResultsBaslikIsimleri;
+
+    @FindBy(xpath = "//*[text()='My Inpatients']")
+    public WebElement myInpatientsButton;
+
+    @FindBy(xpath = "//tr/td")
+    public List<WebElement> inpatientsBilgileriTablosu;
 }
