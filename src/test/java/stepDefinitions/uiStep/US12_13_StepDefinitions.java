@@ -15,7 +15,7 @@ import utilities.ReusableMethods;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US12_13StepDefinitions {
+public class US12_13_StepDefinitions {
     US12_13 us12_13 =new US12_13();
     JavascriptExecutor js ;
 
