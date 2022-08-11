@@ -34,14 +34,8 @@ public class US12_13StepDefinitions {
        us12_13.userNameButton.sendKeys(ConfigReader.getProperty("doktorErva"));
        us12_13.passwordButton.sendKeys(ConfigReader.getProperty("passwordErva"));
     }
-    @Then("Sign in butonuna tiklar")
-    public void sign_in_butonuna_tiklar() {
-        us12_13.signInButton2.click();
-    }
-    @Then("My Pages\\(patient)e tiklar")
-    public void my_pages_patient_e_tiklar() {
-        us12_13.myPages.click();
-    }
+
+
     @Then("My appointments'e tiklar")
     public void my_appointments_e_tiklar() {
         us12_13.myAppointments.click();
