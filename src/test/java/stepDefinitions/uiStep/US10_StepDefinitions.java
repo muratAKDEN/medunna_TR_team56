@@ -36,11 +36,7 @@ public class US10_StepDefinitions {
         US10_Page.password.sendKeys(ConfigReader.getProperty("password"));
         throw new io.cucumber.java.PendingException();
     }
-    @Given("Doktor Sign in butonuna tiklar")
-    public void doktor_sign_in_butonuna_tiklar() {
-        US10_Page.signInButonu.click();
-        throw new io.cucumber.java.PendingException();
-    }
+
     @Given("Doktor My Pages butonuna tiklar")
     public void doktor_my_pages_butonuna_tiklar() {
         US10_Page.myPages.click();
