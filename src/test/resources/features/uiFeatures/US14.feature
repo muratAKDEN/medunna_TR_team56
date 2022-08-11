@@ -5,7 +5,7 @@ Feature: US14 Physician (Doctor) "Edit Inpatient" (Yatılı Tedavi) işlemleri y
 
     Given Doktor Medunna ana sayfasina gider
     When Anasayfada giris butonuna tiklar
-    Then Sign in secenegine tiklar
+    Then SignIn secenegine tiklar
     And Gecerli bir kullaniciAdi girer
     And Gecerli bir sifre girer
     And SignIn buttonuna tiklar
@@ -19,12 +19,13 @@ Feature: US14 Physician (Doctor) "Edit Inpatient" (Yatılı Tedavi) işlemleri y
 
   @Status
   Scenario:  TC02 Doktor status bilgilerini guncelleyebilmeli
+
     Given Doktor Medunna ana sayfasina gider
     When Anasayfada giris butonuna tiklar
-    Then Sign in secenegine tiklar
-    And Gecerli bir username girer
-    And Gecerli bir parola girer
-    And Sign in buttonuna tiklar
+    Then SignIn secenegine tiklar
+    And Gecerli bir kullaniciAdi girer
+    And Gecerli bir sifre girer
+    And SignIn buttonuna tiklar
     Then kullanici 3 saniye bekler
     Then MY PAGES menusune tiklar
     And MY PAGES menuden My Inpatients'i secer
@@ -34,6 +35,8 @@ Feature: US14 Physician (Doctor) "Edit Inpatient" (Yatılı Tedavi) işlemleri y
     And status menusunden "STAYING" sekmesi secilerek save tusuna basilir. "STAYING"yazisi goruntulenir
     And status menusunden "DISCHARGED" sekmesi secilerek save tusuna basilir. "DISCHARGED"yazisi goruntulenir
     And status menusunden "CANCELLED" sekmesi secilerek save tusuna basilir. "CANCELLED"yazisi goruntulenir
+    And kullanici sayfayi kapatir
+
 
 
 
@@ -42,10 +45,10 @@ Feature: US14 Physician (Doctor) "Edit Inpatient" (Yatılı Tedavi) işlemleri y
 
     Given Doktor Medunna ana sayfasina gider
     When Anasayfada giris butonuna tiklar
-    Then Sign in secenegine tiklar
-    And Gecerli bir username girer
-    And Gecerli bir parola girer
-    And Sign in buttonuna tiklar
+    Then SignIn secenegine tiklar
+    And Gecerli bir kullaniciAdi girer
+    And Gecerli bir sifre girer
+    And SignIn buttonuna tiklar
     Then kullanici 3 saniye bekler
     Then MY PAGES menusune tiklar
     And MY PAGES menuden My Inpatients'i secer
@@ -54,3 +57,4 @@ Feature: US14 Physician (Doctor) "Edit Inpatient" (Yatılı Tedavi) işlemleri y
     And "Room" menusunden herhangi bir oda secilerek save tusuna basilir.
     Then kullanici 3 saniye bekler
     And Yeni sayfada degisikligin oldugu goruntulenir.
+    And kullanici sayfayi kapatir
