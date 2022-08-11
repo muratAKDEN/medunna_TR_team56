@@ -1,13 +1,11 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US_08_Pages {
+public class US08_Pages {
 
-    public US_08_Pages(){
+    public US08_Pages(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
