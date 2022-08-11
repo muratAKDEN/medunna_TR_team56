@@ -11,7 +11,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
 
-
+@asd
   Scenario: TC01 "New password confirmation" onaylanabilmelidir.
 
 

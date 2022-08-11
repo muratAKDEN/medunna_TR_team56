@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class US05_06_StepDefintions {
-
+/*
     US05_06_Page us05_06_Page = new US05_06_Page();
     Faker faker=new Faker();
     String expectedCreatedDate;
@@ -25,7 +25,7 @@ public class US05_06_StepDefintions {
     }
 
     @Given("Anasayfada giris ikonuna tiklar")
-    public void anasayfada_giris_ikonuna_tiklar() {
+    public void anasayfa_giris_ikonuna_tiklar() {
         us05_06_Page.girisIkonu.click();
     }
 
@@ -223,4 +223,6 @@ public class US05_06_StepDefintions {
 
         Assert.assertEquals(actualEmail, firstEmail);
     }
+*/
+
 }

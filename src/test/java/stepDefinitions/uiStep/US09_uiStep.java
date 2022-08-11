@@ -1,8 +1,11 @@
 package stepDefinitions.uiStep;
 
 import io.cucumber.java.en.*;
+import utilities.ConfigReader;
+import utilities.Driver;
 
 public class US09_uiStep {
+
 
 
 
@@ -67,6 +70,7 @@ public class US09_uiStep {
     public void kullanici_arama_yapabildigini_ve_istenilen_hastanın_gorunur_oldugunu_test_eder() {
 
     }
+
 
 
 
