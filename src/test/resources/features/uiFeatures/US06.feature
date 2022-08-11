@@ -3,7 +3,7 @@ Feature: US06 Kullanici bilgisi sekmesi (Setting) Ana Sayfada duzenlenebilir olm
   @us06tc01
   Scenario: TC01 Kullanici bilgileri firstname, lastname, email girerken doldurulan kullanici bilgileri olmalidir.
     Given Hasta "medunnaUrl" ana sayfasina gider
-    And Anasayfada giris ikonuna tiklar
+    And Anasayf giris ikonuna tiklar
     And Sign in secenegine tiklar
     And Gecerli bir username girer
     And Gecerli bir parola girer
