@@ -18,11 +18,6 @@ public class US_08_StepDefinitions {
 
 
 
-    @Given("kullanici {string} anasyfasindaa")
-    public void kullanici_anasyfasinda(String medunna) {
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
-
-    }
 
 
 
@@ -31,9 +26,6 @@ public class US_08_StepDefinitions {
 
 
 
-    @Then("Acilan drop down menude Password sekmesine tiklar")
-    public void acilan_drop_down_menude_password_sekmesine_tiklar() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+
+
 }
