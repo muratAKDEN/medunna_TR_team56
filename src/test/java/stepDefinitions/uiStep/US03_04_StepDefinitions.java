@@ -13,8 +13,8 @@ import utilities.Driver;
 public class US03_04_StepDefinitions {
     US03_04 us03_04=new US03_04();
 
-    @Given("kullanici {string} anasayfasinda")
-    public void kullaniciAnasayfasinda(String URL) {
+    @Given("kullanici {string} anasayfasindaa")
+    public void kullaniciAnasayfasindaa(String URL) {
         Driver.getDriver().get(ConfigReader.getProperty(URL));
     }
     @Given("dropdown menusune tiklar")
@@ -125,7 +125,7 @@ public class US03_04_StepDefinitions {
 
     @And("register a new account seceneginin oldugunu test eder")
     public void registerANewAccountSecenegininOldugunuTestEder() {
-        Assert.assertTrue(us03_04.yeniKayitOl.isDisplayed());
+        Assert.assertTrue(us03_04.yeniKayitOl.isEnabled());
     }
 
     @And("Cancel secenegininin gorundugunu test eder")
