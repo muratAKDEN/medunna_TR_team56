@@ -25,53 +25,64 @@ public class US12_13StepDefinitions {
         Driver.getDriver().get(ConfigReader.getProperty(url));
     }
 
-    @Then("Sign in secenegine tiklar")
-    public void sign_in_secenegine_tiklar() {
-      us12_13.signInButton.click();
+    @When("Doktor Giris ikonuna tiklar")
+    public void doktorGirisIkonunaTiklar() {
+        us12_13.accountMenu.click();
     }
-    @Then("Gecerli kullanici adi ve gecerli sifre ile giris yapar")
-    public void gecerli_kullanici_adi_ve_gecerli_sifre_ile_giris_yapar() {
-       us12_13.userNameButton.sendKeys(ConfigReader.getProperty("doktorErva"));
-       us12_13.passwordButton.sendKeys(ConfigReader.getProperty("passwordErva"));
+
+    @Then("Doktor Sign in secenegine tiklar")
+    public void doktorSignInSecenegineTiklar() {
+        us12_13.signInButton1.click();
     }
-    @Then("Sign in butonuna tiklar")
-    public void sign_in_butonuna_tiklar() {
-        us12_13.signInButton2.click();
+
+    @And("Doktor valid {string} ve valid {string} ile giris yapar")
+    public void doktorValidVeValidIleGirisYapar(String username, String password) {
+        us12_13.userNameButton.sendKeys(ConfigReader.getProperty(username));
+        us12_13.passwordButton.sendKeys(ConfigReader.getProperty(password));
     }
-    @Then("My Pages\\(patient)e tiklar")
-    public void my_pages_patient_e_tiklar() {
+
+    @And("Doktor Sign in butonuna tiklar")
+    public void doktorSignInButonunaTiklar() {
+       us12_13.signInButton2.click();
+    }
+
+    @And("Doktor My Pages'e tiklar")
+    public void doktorMyPagesETiklar() {
         us12_13.myPages.click();
     }
-    @Then("My appointments'e tiklar")
-    public void my_appointments_e_tiklar() {
+
+    @And("Doktor My appointments'e tiklar")
+    public void doktorMyAppointmentsETiklar() {
         us12_13.myAppointments.click();
     }
-    @Then("Edit butonuna tiklar")
-    public void edit_butonuna_tiklar() {
+
+    @And("Doktor Edit butonuna tiklar")
+    public void doktorEditButonunaTiklar() {
         us12_13.editButton.click();
         ReusableMethods.waitFor(3);
-
     }
-    @Then("Request A Test  butonuna tiklar")
-    public void request_a_test_butonuna_tiklar() {
+
+    @And("Doktor Request A Test butonuna tiklar")
+    public void doktorRequestATestButonunaTiklar() {
         us12_13.requestATest.click();
         ReusableMethods.waitFor(5);
     }
 
-
-    @And("Test items tablosu gorunur olmali")
-    public void testItemsTablosuGorunurOlmali() {
-        Assert.assertTrue(us12_13.testItemsTable.isDisplayed());
+    @And("Doktor Test items tablosunun gorunur oldugunu test eder")
+    public void doktorTestItemsTablosununGorunurOldugunuTestEder() {
+        for (WebElement w:us12_13.testItemsTable
+             ) {
+            Assert.assertTrue(w.isDisplayed());
+        }
     }
 
-    @And("sayfayi kapatir")
-    public void sayfayiKapatir() {
+    @Then("Doktor sayfayi kapatir")
+    public void doktorSayfayiKapatir() {
         Driver.closeDriver();
     }
 
-
-    @And("Testlere tiklar")
-    public void testlereTiklar() {
+    @And("Doktor Testlere tiklar")
+    public void doktorTestlereTiklar() {
         js = (JavascriptExecutor)Driver.getDriver();
 
         for (WebElement w: us12_13.buttonListesi
@@ -80,12 +91,11 @@ public class US12_13StepDefinitions {
             js.executeScript("arguments[0].click();",w);
             js.executeScript("window.scrollBy(0,200)");
         }
-        js.executeScript("window.scrollBy(0,10000)");
         ReusableMethods.waitFor(5);
     }
 
-    @And("Test içeriğinde Glucose Urea Creatinine Sodium Potassium Total protein Albumin Hemoglobin seçenekleri olmalı")
-    public void testIçeriğindeGlucoseUreaCreatinineSodiumPotassiumTotalProteinAlbuminHemoglobinSeçenekleriOlmalı() {
+    @And("Doktor Test iceriginde \\(glucose, Urea, Creatinine-, Sodium-, Potassium-, Albumin, Hemoglobin) seceneklerinin oldugunu test eder")
+    public void doktorTestIcerigindeGlucoseUreaCreatinineSodiumPotassiumAlbuminHemoglobinSeceneklerininOldugunuTestEder() {
         List<String> expectedTestListesi=new ArrayList<>();
         expectedTestListesi.add("glucose");
         expectedTestListesi.add("Urea");
@@ -95,28 +105,35 @@ public class US12_13StepDefinitions {
         expectedTestListesi.add("Albumin");
         expectedTestListesi.add("Hemoglobin");
 
-       List<String> actualTestListesi=new ArrayList<>();
+        List<String> actualTestListesi=new ArrayList<>();
         for (WebElement w: us12_13.testListesi
-             ) {
+        ) {
             actualTestListesi.add(w.getText());
         }
         Assert.assertTrue(actualTestListesi.containsAll(expectedTestListesi));
     }
 
-    @And("Show Test Result butonuna tiklar")
-    public void showTestResultButonunaTiklar() {
+    @And("Doktor save butonuna tiklar")
+    public void doktorSaveButonunaTiklar() {
+        js.executeScript("window.scrollBy(0,5000)");
+        js.executeScript("arguments[0].click();", us12_13.saveButton);
+        ReusableMethods.waitFor(3);
+    }
+
+    @And("Doktor Show Test Result butonuna tiklar")
+    public void doktorShowTestResultButonunaTiklar() {
         us12_13.showTestResultButton.click();
         ReusableMethods.waitFor(2);
     }
 
-    @And("View Results butonuna tiklar")
-    public void viewResultsButonunaTiklar() {
-       us12_13.viewResultsButton.click();
-       ReusableMethods.waitFor(3);
+    @And("Doktor View Results butonuna tiklar")
+    public void doktorViewResultsButonunaTiklar() {
+        us12_13.viewResultsButton.click();
+        ReusableMethods.waitFor(3);
     }
 
-    @And("id name\\(Urea Sodium Glucose etc) default maximum value default minimum value test description and date bilgileri gorunur olmali")
-    public void idNameUreaSodiumGlucoseEtcDefaultMaximumValueDefaultMinimumValueTestDescriptionAndDateBilgileriGorunurOlmali() {
+    @And("Doktor id,name\\(Urea Sodium Glucose etc),default maximum value, default minimum value, test, description, and date bilgilerinin gorunur oldugunu test eder")
+    public void doktorIdNameUreaSodiumGlucoseEtcDefaultMaximumValueDefaultMinimumValueTestDescriptionAndDateBilgilerininGorunurOldugunuTestEder() {
         //Assert.assertTrue(us12_13Page.testResultsBaslik.isDisplayed());
         List<String> expectedBaslik=new ArrayList<>();
         expectedBaslik.add("ID");
@@ -130,31 +147,29 @@ public class US12_13StepDefinitions {
 
         List<String> actualBaslik=new ArrayList<>();
         for (WebElement w: us12_13.testResultsBaslikIsimleri
-             ) {
+        ) {
             actualBaslik.add(w.getText());
         }
         Assert.assertTrue(actualBaslik.containsAll(expectedBaslik));
     }
 
-    @And("Request Inpatient butonuna tiklar")
-    public void requestInpatientButonunaTiklar() {
+    @And("Doktor Request Inpatient butonuna tiklar")
+    public void doktorRequestInpatientButonunaTiklar() {
         us12_13.requestInpatientButton.click();
         ReusableMethods.waitFor(5);
     }
 
-    @And("A new In Patient is created with identifier mesaji gorunur olmali")
-    public void aNewInPatientIsCreatedWithIdentifierMesajiGorunurOlmali() {
-        String expectedAlert="A new In Patient is created with identifier 164867";
-        WebElement alertMesaji=Driver.getDriver().findElement(By.xpath("//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']"));
-        System.out.println(alertMesaji.getText());
-        Assert.assertTrue(alertMesaji.getText().contains(expectedAlert));
+    @And("Doktor My Inpatients butonuna tiklar")
+    public void doktorMyInpatientsButonunaTiklar() {
+        us12_13.myInpatientsButton.click();
     }
 
-    @And("save butonuna tiklar")
-    public void saveButonunaTiklar() {
-        js.executeScript("arguments[0].click();", us12_13.saveButton);
-        ReusableMethods.waitFor(3);
-       String aa= "hahahhahha";
+    @And("Doktor yatan hastalar\\(Inpatients) tablosunda hasta bilgilerinin gorunur oldugunu test eder")
+    public void doktorYatanHastalarInpatientsTablosundaHastaBilgilerininGorunurOldugunuTestEder() {
+        for (WebElement w:us12_13.inpatientsBilgileriTablosu
+        ) {
+            Assert.assertTrue(w.isDisplayed());
+        }
     }
 }
 
