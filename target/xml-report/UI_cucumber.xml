@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.264">
+    <testcase classname="US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir" name="TC01 &quot;New password confirmation&quot; onaylanabilmelidir." time="11.954">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And kullanici username olarak "doktorErva" girer............................passed
+And kullanici password olarak "passwordErva" girer..........................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And Kullanici sayfayi kapatir...............................................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
