@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class US05_06_StepDefintions {
-/*
+
     US05_06_Page us05_06_Page = new US05_06_Page();
     Faker faker=new Faker();
     String expectedCreatedDate;
@@ -223,6 +223,6 @@ public class US05_06_StepDefintions {
 
         Assert.assertEquals(actualEmail, firstEmail);
     }
-*/
+
 
 }
