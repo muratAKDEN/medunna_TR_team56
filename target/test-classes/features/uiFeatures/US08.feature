@@ -5,17 +5,16 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
     And kullanici acilan dropdown menude signIn butonuna tiklar
     And kullanici username olarak "DrMuratAkdeniz" girer
-    And kullanici password olarak "drMuratsifre1" girer
+    And kullanici password olarak "drMuratsifre2" girer
     And kullanici Sign In butonuna tiklar
     And kullanici account buttona tiklar
     And  password buttona tiklar
-    And current Password Kutusuna "drMuratsifre1" girer
 
 
   @asd
   Scenario: TC01 "New password confirmation" onaylanabilmelidir.
 
-
+    And current Password Kutusuna "drMuratsifre2" girer
     And new password kutusuna "drMuratsifre1" girer
     And confirm the password kutusuna "drMuratsifre1" girer
     And save butonuna basar
@@ -28,20 +27,23 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
 
-    And new password kutusuna "drMuratsifre5" girer
+ And Current password kutusuna mevcut şifreyi girer
+  And New password Kutusuna 1  harf kucuk digerleri buyuk  en az 7 karakterli sifre girer
+ And password strength kisminin renk degistirdigini seviye 2 ye ciktigini test eder
+
 
     And Kullanici sayfayi kapatir
 
 
   Scenario: TC03 sifre en az 1 büyük harf icermeli ve "Password strength" seviyesinin degistigi gorulmelidir
 
-    And new password kutusuna "drMuratsifre6" girer
+
     And Kullanici sayfayi kapatir
 
   Scenario: TC04 sifre en az 1 rakam icermeli ve "Password strength" seviyesinin degistigi gorulmelidir
 
 
-    And new password kutusuna "drMuratsifre7" girer
+
 
     And Kullanici sayfayi kapatir
 
@@ -50,14 +52,14 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
 
-    And new password kutusuna "drMuratsifre8" girer
+
     And Kullanici sayfayi kapatir
 
 
   Scenario: TC06 guclu bir parola için sifre en az 7 karakterden oluşmalıdır
 
 
-    And new password kutusuna "drMuratsifre9" girer
+
 
     And Kullanici sayfayi kapatir
 

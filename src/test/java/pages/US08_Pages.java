@@ -1,28 +1,59 @@
 package pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class US08_Pages {
 
-    public US08_Pages(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public US08_Pages() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
-  /*
 
-  fatih beyin locator lari .
-    @FindBy(xpath="//li[@id='account-menu']")
 
-    public WebElement signInButonu;
-    @FindBy(xpath ="//a[@id='login-item']")
-    public WebElement loginButonu;
-    @FindBy(xpath="//input[@id='username']")
-    public WebElement username;
-    @FindBy(xpath ="//input[@id='password']")
-    public WebElement password;
-    @FindBy(xpath ="//button[@type='submit']")
-    public WebElement signIn;
 
-   */
+    @FindBy(xpath = "//li[@id='account-menu']")
+    public WebElement accountButton;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[5]")
+    public WebElement passwordButton;
+
+
+    @FindBy(xpath = "//input[@name='currentPassword']")
+    public WebElement currentPaswordBox;
+
+
+    @FindBy(xpath = "//input[@name='newPassword']")
+    public WebElement newPaswordBox;
+
+
+    @FindBy(xpath = "//input[@name='confirmPassword']")
+    public WebElement confirmNewPaswordBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveButton;
+
+
+    @FindBy(xpath = "//div[@class='Toastify']")
+    public WebElement passwordChanged;
+
+    @FindBy(xpath = "(//li[@class='point'])[1]")
+    public WebElement passwordStrengthBar1;
+
+    @FindBy(xpath = "(//li[@class='point'])[1]")
+    public WebElement passwordStrengthBar2;
+
+    @FindBy(xpath = "(//li[@class='point'])[1]")
+    public WebElement passwordStrengthBar3;
+
+    @FindBy(xpath = "(//li[@class='point'])[1]")
+    public WebElement passwordStrengthBar4;
+
+    @FindBy(xpath = "(//li[@class='point'])[1]")
+    public WebElement passwordStrengthBar5;
+
+
+
 }
