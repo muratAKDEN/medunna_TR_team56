@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class US05_06_StepDefintions {
-/*
+
     US05_06_Page us05_06_Page = new US05_06_Page();
     Faker faker=new Faker();
     String expectedCreatedDate;
@@ -25,7 +25,7 @@ public class US05_06_StepDefintions {
     }
 
     @Given("Anasayfada giris ikonuna tiklar")
-    public void anasayfa_giris_ikonuna_tiklar() {
+    public void anasayfada_giris_ikonuna_tiklar() {
         us05_06_Page.girisIkonu.click();
     }
 
@@ -72,7 +72,6 @@ public class US05_06_StepDefintions {
 
     @And("Sayfayi kapatir")
     public void sayfayiKapatir() throws InterruptedException {
-        Thread.sleep(3000);
         Driver.closeDriver();
     }
 
@@ -160,7 +159,7 @@ public class US05_06_StepDefintions {
     @Given("First Name bilgisinin dogrulugunu kontrol eder")
     public void first_name_bilgisinin_dogrulugunu_kontrol_eder() throws InterruptedException {
         String expectedFirstName = ConfigReader.getProperty("userFirstName");
-        String actualFirstName = us05_06_Page.settingsFirstName.getText();
+        String actualFirstName = us05_06_Page.settingsFirstName.getAttribute("value");
 
         Assert.assertEquals(actualFirstName, expectedFirstName);
     }
@@ -168,7 +167,7 @@ public class US05_06_StepDefintions {
     @Given("Last Name bilgisinin dogrulugunu kontrol eder")
     public void last_name_bilgisinin_dogrulugunu_kontrol_eder() {
         String expectedLastName = ConfigReader.getProperty("userLastName");
-        String actualLastName = us05_06_Page.settingsLastName.getText();
+        String actualLastName = us05_06_Page.settingsLastName.getAttribute("value");
 
         Assert.assertEquals(actualLastName, expectedLastName);
 
@@ -176,21 +175,25 @@ public class US05_06_StepDefintions {
 
     @Given("Email bilgisinin dogrulugunu kontrol eder")
     public void email_bilgisinin_dogrulugunu_kontrol_eder() {
-        String expectedEmail = ConfigReader.getProperty("userEmail");
-        String actualEmail = us05_06_Page.settingsEmail.getText();
+        us05_06_Page.settingsEmail.clear();
+        String expectedEmail = faker.internet().emailAddress();
+        us05_06_Page.settingsEmail.sendKeys(expectedEmail + Keys.ENTER);
+        Driver.getDriver().navigate().refresh();
 
-        //Assert.assertEquals(actualEmail, expectedEmail);
+        String actualEmail = us05_06_Page.settingsEmail.getAttribute("value");
+
+        Assert.assertEquals(actualEmail, expectedEmail);
 
     }
 
     @And("First Name bilgisinin degistirilebildigini kontrol eder")
-    public void firstNameBilgisininDegistirilebildiginiKontrolEder() {
+    public void firstNameBilgisininDegistirilebildiginiKontrolEder() throws InterruptedException {
         us05_06_Page.settingsFirstName.clear();
         us05_06_Page.settingsFirstName.sendKeys(ConfigReader.getProperty("newUserFirstName") + Keys.ENTER);
         Driver.getDriver().navigate().refresh();
 
         String expectedFirstName = ConfigReader.getProperty("newUserFirstName");
-        String actualFirstName = us05_06_Page.settingsFirstName.getText();
+        String actualFirstName = us05_06_Page.settingsFirstName.getAttribute("value");
 
         Assert.assertEquals(actualFirstName, expectedFirstName);
 
@@ -206,7 +209,7 @@ public class US05_06_StepDefintions {
         Driver.getDriver().navigate().refresh();
 
         String expectedLastName = ConfigReader.getProperty("newUserLastName");
-        String actualLastName = us05_06_Page.settingsFirstName.getText();
+        String actualLastName = us05_06_Page.settingsLastName.getAttribute("value");
 
         Assert.assertEquals(actualLastName, expectedLastName);
 
@@ -218,14 +221,14 @@ public class US05_06_StepDefintions {
     @And("Email bilgisinin degistirilebildigini kontrol eder")
     public void emailBilgisininDegistirilebildiginiKontrolEder() {
         us05_06_Page.settingsEmail.clear();
-        String firstEmail = us05_06_Page.settingsEmail.getText();
-        us05_06_Page.settingsEmail.sendKeys(faker.internet().emailAddress() + Keys.ENTER);
+        String expectedEmail = us05_06_Page.settingsEmail.getAttribute("value");
+
+        String newEmail = faker.internet().emailAddress();
+        us05_06_Page.settingsEmail.sendKeys(newEmail + Keys.ENTER);
         Driver.getDriver().navigate().refresh();
 
-        String actualEmail = us05_06_Page.settingsEmail.getText();
+        String actualEmail = us05_06_Page.settingsEmail.getAttribute("value");
 
-        Assert.assertEquals(actualEmail, firstEmail);
+        Assert.assertNotEquals(actualEmail, expectedEmail);
     }
-*/
-
 }
