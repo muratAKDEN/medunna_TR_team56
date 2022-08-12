@@ -13,8 +13,9 @@ import org.junit.runner.RunWith;
         features="src/test/resources/features/uiFeatures",
         glue= "stepDefinitions",
 
-        tags = "Giris",
-        dryRun = true
+        tags = "@tumu",
+        dryRun = false
+
 
 
 
