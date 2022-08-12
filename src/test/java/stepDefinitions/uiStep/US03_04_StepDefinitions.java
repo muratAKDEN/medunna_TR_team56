@@ -96,7 +96,7 @@ public class US03_04_StepDefinitions {
 
     @And("sifremi unuttum seceneginin oldugunu test eder")
     public void sifremiUnuttumSecenegininOldugunuTestEder() {
-        Assert.assertTrue(us03_04.sifreUnuttum.isDisplayed());
+        Assert.assertTrue(us03_04.sifreUnuttum.isEnabled());
     }
 
 
