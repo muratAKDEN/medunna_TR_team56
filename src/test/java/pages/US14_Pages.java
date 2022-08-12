@@ -75,5 +75,4 @@ public class US14_Pages {
     @FindBy(xpath = "//*[@class='Toastify__toast-body']")
     public WebElement uyariYazi;
 
-
 }
