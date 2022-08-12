@@ -12,13 +12,11 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/UI_cucumber.xml"},
         features="src/test/resources/features/uiFeatures",
         glue= "stepDefinitions",
-<<<<<<< HEAD
+
         tags = "Giris",
         dryRun = true
-=======
-        tags = "@us05",
-        dryRun = false
->>>>>>> main
+
+
 
 
 
