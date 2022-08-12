@@ -113,7 +113,7 @@ public class US03_04_StepDefinitions {
 
     @And("register a new account seceneginin oldugunu test eder")
     public void registerANewAccountSecenegininOldugunuTestEder() {
-        Assert.assertTrue(us03_04.yeniKayitOl.isDisplayed());
+        Assert.assertTrue(us03_04.yeniKayitOl.isEnabled());
     }
 
     @And("Cancel secenegininin gorundugunu test eder")
