@@ -29,6 +29,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
     And new password kutusuna "drMuratsifre5" girer
+    And password strenght seviyesinin koyu yesil oldugunu test eder
 
     And Kullanici sayfayi kapatir
 
