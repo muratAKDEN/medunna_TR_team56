@@ -165,6 +165,10 @@ public class US14_StepDefinitions {
 
     @Then("Yeni sayfada degisikligin oldugu goruntulenir.")
     public void yeni_sayfada_degisikligin_oldugu_goruntulenir() {
+        String alert = us14.uyariYazi.getText();
+        System.out.println(alert);
+
+
 
 
     }

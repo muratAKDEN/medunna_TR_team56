@@ -72,4 +72,8 @@ public class US14_Pages {
     @FindBy(xpath = "//select[@id='in-patient-room']")
     public WebElement roomDd;
 
+    @FindBy(xpath = "//*[@class='Toastify__toast-body']")
+    public WebElement uyariYazi;
+
+
 }

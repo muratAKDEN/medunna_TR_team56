@@ -13,7 +13,7 @@ Feature: US14 Physician (Doctor) "Edit Inpatient" (Yatılı Tedavi) işlemleri y
     Then MY PAGES menusune tiklar
     And MY PAGES menuden My Inpatients'i secer
     And Cikan sayfada ""ID, Start Date, End date, Satatus, Description, Created Date, Room, Appointment id and Patient" bilgilerinin goruntulenebildigini test eder
-    # And kullanici sayfayi kapatir
+    And kullanici sayfayi kapatir
 
 
 
