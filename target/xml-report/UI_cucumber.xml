@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="11.839">
-    <testcase classname="US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir" name="TC01 &quot;New password confirmation&quot; onaylanabilmelidir." time="11.522">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="50.759">
+    <testcase classname="Physician (Doktor) test isteyebilmeli (My Appointments/Edit/Request A Test)" name="Test iceriginde &quot;Glucose, Urea, Creatinine, Sodium Potassium, Total protein, Albumin, Hemoglobin&quot; secenekleri olmalı" time="50.562">
         <system-out>
-            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
-Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
-And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
-And kullanici username olarak "DrMuratAkdeniz" girer........................passed
-And kullanici password olarak "drMuratsifre" girer..........................passed
-And kullanici Sign In butonuna tiklar.......................................passed
-And Kullanici sayfayi kapatir...............................................passed
-And Kullanici sayfayi kapatir...............................................passed
+            <![CDATA[Given Doktor "medunnaUrl" gider.............................................passed
+When Doktor Giris ikonuna tiklar............................................passed
+Then Doktor Sign in secenegine tiklar.......................................passed
+And Doktor valid "doktorErva" ve valid "passwordErva" ile giris yapar.......passed
+And Doktor Sign in butonuna tiklar..........................................passed
+And Doktor My Pages'e tiklar................................................passed
+And Doktor My appointments'e tiklar.........................................passed
+And Doktor Edit butonuna tiklar.............................................passed
+And Doktor Request A Test butonuna tiklar...................................passed
+And Doktor Testlere tiklar..................................................passed
+And Doktor save butonuna tiklar.............................................passed
+And Doktor Show Test Result butonuna tiklar.................................passed
+And Doktor View Results butonuna tiklar.....................................passed
+And Doktor Test iceriginde (glucose, Urea, Creatinine-, Sodium-, Potassium-, Albumin, Hemoglobin) seceneklerinin oldugunu test eder.passed
 ]]>
         </system-out>
     </testcase>
