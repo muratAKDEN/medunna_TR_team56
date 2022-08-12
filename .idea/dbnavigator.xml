@@ -29,7 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
-      <console name="Medunna" type="STANDARD" schema="information_schema" session="Main" />
+      <console name="Medunna" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select * from pg_catalog.pg_tables]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -192,7 +192,6 @@
         <object-type name="FUNCTİON" sorting-type="NAME" />
         <object-type name="PROCEDURE" sorting-type="NAME" />
         <object-type name="ARGUMENT" sorting-type="POSITION" />
-        <object-type name="TYPE ATTRİBUTE" sorting-type="POSITION" />
       </sorting>
       <default-editors>
         <object-type name="VİEW" editor-type="SELECTION" />
