@@ -16,7 +16,7 @@ public class US12_13 {
     public WebElement accountMenu;
 
     @FindBy (id = "login-item")
-    public WebElement signInButton;
+    public WebElement signInButton1;
 
     @FindBy (xpath = "//input[@name='username']")
     public WebElement userNameButton;
@@ -39,14 +39,8 @@ public class US12_13 {
     @FindBy(xpath = "//*[text()='Request A Test']")
     public WebElement requestATest;
 
-    @FindBy (xpath = "//*[text()='Test Items']")
-    public WebElement testItemsTable;
-
-    @FindBy (xpath = "//tr//td[2]")
-    public List<WebElement> testListesi;
-
-    @FindBy (xpath = "//input[@type='checkbox']")
-    public List<WebElement> buttonListesi;
+    @FindBy (xpath = "//tr//th")
+    public List<WebElement> testItemsTable;
 
     @FindBy (xpath = "//button[@id='save-entity']")
     public WebElement saveButton;
@@ -64,4 +58,34 @@ public class US12_13 {
 
     @FindBy (xpath = "//tr//th")
     public List<WebElement> testResultsBaslikIsimleri;
+
+    @FindBy(xpath = "//*[text()='My Inpatients']")
+    public WebElement myInpatientsButton;
+
+    @FindBy(xpath = "//tr/td")
+    public List<WebElement> inpatientsBilgileriTablosu;
+
+    @FindBy(xpath = "//input[@id='1404']")
+    public WebElement sodiumbutton;
+
+    @FindBy(xpath = "//input[@id='1402']")
+    public WebElement ureaButton;
+
+    @FindBy(xpath = "//input[@id='1408']")
+    public WebElement hemoglobinButton;
+
+    @FindBy(xpath = "//input[@id='1407']")
+    public WebElement albuminButton;
+
+    @FindBy(xpath = "//input[@id='1403']")
+    public WebElement creatinineButton;
+
+    @FindBy(xpath = "//input[@id='132795']")
+    public WebElement potassiumButton;
+
+    @FindBy(xpath = "//input[@id='132751']")
+    public WebElement glucoseButton;
+
+    @FindBy(xpath = "//tr//td[2]")
+    public List<WebElement> testResultsListesi;
 }

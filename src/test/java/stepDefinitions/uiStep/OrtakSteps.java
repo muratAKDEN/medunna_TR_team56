@@ -4,7 +4,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.OrtakPages;
-import pages.US11_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -17,13 +16,6 @@ public class OrtakSteps {
         Driver.getDriver().get(ConfigReader.getProperty(url));
 
     }
-
-
-
-
-
-
-
 
 
     @Given("Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar")
@@ -59,6 +51,6 @@ ortakPages.loginPasswordTextBox.sendKeys(ConfigReader.getProperty(password));
 
     @And("Kullanici sayfayi kapatir")
     public void kullaniciSayfayiKapatir() {
-      //  Driver.closeDriver();
+     Driver.closeDriver();
     }
 }
