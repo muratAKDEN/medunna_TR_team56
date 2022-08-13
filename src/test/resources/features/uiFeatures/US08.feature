@@ -29,7 +29,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
     And new password kutusuna "drMuratsifre5" girer
-    And password strenght seviyesinin koyu yesil oldugunu test eder
+    And password strenght seviyesinin "koyu yesil" oldugunu test eder
 
     And Kullanici sayfayi kapatir
 
@@ -37,6 +37,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
   Scenario: TC03 sifre en az 1 büyük harf icermeli ve "Password strength" seviyesinin degistigi gorulmelidir
 
     And new password kutusuna "drMuratsifre6" girer
+
     And Kullanici sayfayi kapatir
 
   Scenario: TC04 sifre en az 1 rakam icermeli ve "Password strength" seviyesinin degistigi gorulmelidir

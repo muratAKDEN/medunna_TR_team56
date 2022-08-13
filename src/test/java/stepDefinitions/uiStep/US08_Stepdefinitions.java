@@ -4,12 +4,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import pages.US08_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class US08_Stepdefinitions {
     US08_Pages us08 = new US08_Pages();
@@ -81,6 +85,13 @@ public class US08_Stepdefinitions {
 
     }
 
+
+    @And("password strenght seviyesinin {string} oldugunu test eder")
+    public void passwordStrenghtSeviyesininOldugunuTestEder(String arg0) {
+
+      Assert.assertTrue(us08.passwordStrengthBar5.isDisplayed());
+
+    }
 
 
 

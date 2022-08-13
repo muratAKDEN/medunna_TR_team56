@@ -5,12 +5,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class US08_Pages {
 
     public US08_Pages() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
 
 
 
@@ -53,6 +55,9 @@ public class US08_Pages {
 
     @FindBy(xpath = "(//li[@class='point'])[1]")
     public WebElement passwordStrengthBar5;
+
+
+
 
 
 
