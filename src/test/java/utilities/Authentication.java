@@ -16,8 +16,9 @@ public class Authentication {
     //     System.out.println(guncelToken);
     // }
 
-    public static String generateToken(String username, String password) {
-
+    public static String generateToken() {
+        String username="healthprojectteam56";
+        String password="Teamproject.56";
         Map<String, Object> map = new HashMap<>();
         map.put("username", username);
         map.put("password", password);
