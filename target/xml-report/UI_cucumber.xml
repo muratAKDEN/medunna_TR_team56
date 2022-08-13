@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.437"/>
+=======
 <testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="12.839">
     <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC01 guclu sifre giris" time="10.498">
         <system-out>
@@ -56,3 +59,4 @@ And guclu bir parola oldugunu test eder.....................................pass
         </system-out>
     </testcase>
 </testsuite>
+>>>>>>> main
