@@ -20,16 +20,15 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     And confirm the password kutusuna "drMuratsifre1" girer
     And save butonuna basar
     And password changed yazisinin gorundugunu test eder
-
-
-
+    And Kullanici sayfayi kapatir
 
   Scenario: TC02 Daha guclü sifre icin en az 1 kucuk harf olmalı ve "Password strength" seviyesinin degistigi gorulmelidir
 
 
 
     And new password kutusuna "drMuratsifre5" girer
-    And password strenght seviyesinin "koyu yesil" oldugunu test eder
+    And password strenght seviyesinin turuncu oldugunu test eder
+
 
     And Kullanici sayfayi kapatir
 
@@ -37,6 +36,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
   Scenario: TC03 sifre en az 1 büyük harf icermeli ve "Password strength" seviyesinin degistigi gorulmelidir
 
     And new password kutusuna "drMuratsifre6" girer
+    And password strenght seviyesinin turuncu oldugunu test eder
 
     And Kullanici sayfayi kapatir
 
@@ -44,7 +44,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
     And new password kutusuna "drMuratsifre7" girer
-
+    And password strenght seviyesinin acik yesil oldugunu test eder
     And Kullanici sayfayi kapatir
 
 
@@ -53,6 +53,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
     And new password kutusuna "drMuratsifre8" girer
+    And password strenght seviyesinin koyu yesil oldugunu test eder
     And Kullanici sayfayi kapatir
 
 
@@ -60,6 +61,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
     And new password kutusuna "drMuratsifre9" girer
+    And password strenght seviyesinin koyu yesil oldugunu test eder
 
     And Kullanici sayfayi kapatir
 
@@ -70,8 +72,9 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
     And new password kutusuna "drMuratsifre2" girer
     And confirm the password kutusuna "drMuratsifre2" girer
     And save butonuna basar
-    And password changed yazisinin gorunmedigini test eder
-
-
+    And password could not be changed yazisinin gorundugunu test eder
     And Kullanici sayfayi kapatir
+
+
+
 

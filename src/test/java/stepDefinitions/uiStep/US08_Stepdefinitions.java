@@ -94,5 +94,9 @@ public class US08_Stepdefinitions {
     }
 
 
+    @And("password could not be changed yazisinin gorundugunu test eder")
+    public void passwordCouldNotBeChangedYazisininGorundugunuTestEder() {
 
+        Assert.assertTrue(us08.errorYaziElementi.isDisplayed());
+    }
 }

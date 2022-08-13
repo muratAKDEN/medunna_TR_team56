@@ -57,6 +57,9 @@ public class US08_Pages {
     public WebElement passwordStrengthBar5;
 
 
+    @FindBy(xpath = "//span[text()=' The password could not be changed.']")
+    public WebElement errorYaziElementi;
+
 
 
 
