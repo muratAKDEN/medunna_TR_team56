@@ -13,14 +13,7 @@ import utilities.Driver;
 public class US03_04_StepDefinitions {
     US03_04 us03_04=new US03_04();
 
-    @Given("kullanici {string} anasayfasinda")
-    public void kullaniciAnasayfasinda(String URL) {
-        Driver.getDriver().get(ConfigReader.getProperty(URL));
-    }
-    @Given("dropdown menusune tiklar")
-    public void dropdown_menusune_tiklar() {
-        us03_04.dropdownMenu.click();
-    }
+
     @Then("register butonuna basar")
     public void register_butonuna_basar() {
         us03_04.registerButonu.click();
@@ -71,11 +64,6 @@ public class US03_04_StepDefinitions {
         Assert.assertTrue(us03_04.besinciseviye.isDisplayed());
 
     }
-    @Then("sign in butonuna basar")
-    public void sign_in_butonuna_basar() {
-
-        us03_04.signInButonu.click();
-    }
 
     @Then("kullanici gecerli bir username girer")
     public void kullanici_gecerli_bir_username_girer() {
@@ -108,7 +96,7 @@ public class US03_04_StepDefinitions {
 
     @And("sifremi unuttum seceneginin oldugunu test eder")
     public void sifremiUnuttumSecenegininOldugunuTestEder() {
-        Assert.assertTrue(us03_04.sifreUnuttum.isDisplayed());
+        Assert.assertTrue(us03_04.sifreUnuttum.isEnabled());
     }
 
 
@@ -125,12 +113,13 @@ public class US03_04_StepDefinitions {
 
     @And("register a new account seceneginin oldugunu test eder")
     public void registerANewAccountSecenegininOldugunuTestEder() {
-        Assert.assertTrue(us03_04.yeniKayitOl.isDisplayed());
+        Assert.assertTrue(us03_04.yeniKayitOl.isEnabled());
     }
 
     @And("Cancel secenegininin gorundugunu test eder")
     public void cancelSeceneginininGorundugunuTestEder() {
-        Assert.assertTrue(us03_04.cancelButonu.isDisplayed());
+
+        Assert.assertTrue(us03_04.cancelButonu.isEnabled());
     }
 
 

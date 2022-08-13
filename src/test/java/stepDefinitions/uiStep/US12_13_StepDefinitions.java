@@ -17,7 +17,7 @@ import java.util.List;
 
 public class US12_13_StepDefinitions {
     US12_13 us12_13 =new US12_13();
-    JavascriptExecutor js ;
+    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
 
     @Given("Doktor {string} gider")
     public void doktor_gider(String url) {
@@ -82,39 +82,32 @@ public class US12_13_StepDefinitions {
 
     @And("Doktor Testlere tiklar")
     public void doktorTestlereTiklar() {
-        js = (JavascriptExecutor)Driver.getDriver();
-
-        for (WebElement w: us12_13.buttonListesi
-        ) {
-            //js.executeScript("document.getElementById("+w+").click();");
-            js.executeScript("arguments[0].click();",w);
-            js.executeScript("window.scrollBy(0,200)");
-        }
-        ReusableMethods.waitFor(5);
+        //    //js.executeScript("document.getElementById("+w+").click();");
+        //    js.executeScript("window.scrollBy(0,200)");
+        js.executeScript("arguments[0].scrollIntoView()",us12_13.sodiumbutton);
+        js.executeScript("arguments[0].click();",us12_13.sodiumbutton);
+        js.executeScript("arguments[0].scrollIntoView()",us12_13.ureaButton);
+        js.executeScript("arguments[0].click();",us12_13.ureaButton);
+        js.executeScript("arguments[0].scrollIntoView()",us12_13.creatinineButton);
+        js.executeScript("arguments[0].click();",us12_13.creatinineButton);
+        js.executeScript("arguments[0].scrollIntoView()",us12_13.albuminButton);
+        js.executeScript("arguments[0].click();",us12_13.albuminButton);
+        js.executeScript("arguments[0].scrollIntoView()",us12_13.hemoglobinButton);
+        js.executeScript("arguments[0].click();",us12_13.hemoglobinButton);
+        js.executeScript("arguments[0].scrollIntoView()",us12_13.glucoseButton);
+        js.executeScript("arguments[0].click();",us12_13.glucoseButton);
+        js.executeScript("arguments[0].scrollIntoView()",us12_13.potassiumButton);
+        js.executeScript("arguments[0].click();",us12_13.potassiumButton);
+       ReusableMethods.waitFor(5);
     }
 
-    @And("Doktor Test iceriginde \\(glucose, Urea, Creatinine-, Sodium-, Potassium-, Albumin, Hemoglobin) seceneklerinin oldugunu test eder")
-    public void doktorTestIcerigindeGlucoseUreaCreatinineSodiumPotassiumAlbuminHemoglobinSeceneklerininOldugunuTestEder() {
-        List<String> expectedTestListesi=new ArrayList<>();
-        expectedTestListesi.add("glucose");
-        expectedTestListesi.add("Urea");
-        expectedTestListesi.add("Creatinine-");
-        expectedTestListesi.add("Sodium-");
-        expectedTestListesi.add("Potassium-");
-        expectedTestListesi.add("Albumin");
-        expectedTestListesi.add("Hemoglobin");
 
-        List<String> actualTestListesi=new ArrayList<>();
-        for (WebElement w: us12_13.testListesi
-        ) {
-            actualTestListesi.add(w.getText());
-        }
-        Assert.assertTrue(actualTestListesi.containsAll(expectedTestListesi));
-    }
+
 
     @And("Doktor save butonuna tiklar")
     public void doktorSaveButonunaTiklar() {
-        js.executeScript("window.scrollBy(0,5000)");
+        js.executeScript("arguments[0].scrollIntoView()",us12_13.saveButton);
+        ReusableMethods.waitFor(2);
         js.executeScript("arguments[0].click();", us12_13.saveButton);
         ReusableMethods.waitFor(3);
     }
@@ -170,5 +163,26 @@ public class US12_13_StepDefinitions {
             Assert.assertTrue(w.isDisplayed());
         }
     }
-}
+
+    @And("Doktor Test iceriginde \\(glucose, Urea, Creatinine, Sodium, Potassium-, Albumin, Hemoglobin) seceneklerinin oldugunu test eder")
+    public void doktorTestIcerigindeGlucoseUreaCreatinineSodiumPotassiumAlbuminHemoglobinSeceneklerininOldugunuTestEder() {
+        List<String> expectedTestListesi=new ArrayList<>();
+        expectedTestListesi.add("glucose");
+        expectedTestListesi.add("Urea");
+        expectedTestListesi.add("Creatinine");
+        expectedTestListesi.add("Sodium");
+        expectedTestListesi.add("Potassium-");
+        expectedTestListesi.add("Albumin");
+        expectedTestListesi.add("Hemoglobin");
+
+        List<String> actualTestListesi=new ArrayList<>();
+        for (WebElement w: us12_13.testResultsListesi
+        ) {
+            actualTestListesi.add(w.getText());
+        }
+        Assert.assertTrue(actualTestListesi.containsAll(expectedTestListesi));
+
+    }
+    }
+
 
