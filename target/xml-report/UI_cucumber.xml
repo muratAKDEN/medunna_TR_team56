@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="12.839">
+    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC01 guclu sifre giris" time="10.498">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+Then register butonuna basar................................................passed
+And kullanici sayfada elementi bulana kadar asagiya iner....................passed
+Then password kutusuna en az bir kucuk harf gonderir........................passed
+And password strenght seviyesinin kirmizi oldugunu test eder................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC02 guclu sifre giris" time="0.558">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+Then register butonuna basar................................................passed
+And kullanici sayfada elementi bulana kadar asagiya iner....................passed
+Then password kutusuna en az bir buyuk harf gonderir........................passed
+And password strenght seviyesinin turuncu oldugunu test eder................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC03 guclu sifre giris" time="0.467">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+Then register butonuna basar................................................passed
+And kullanici sayfada elementi bulana kadar asagiya iner....................passed
+Then password kutusuna en az bir rakam gonderir.............................passed
+And password strenght seviyesinin acik yesil oldugunu test eder.............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC04 guclu sifre giris" time="0.529">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+Then register butonuna basar................................................passed
+And kullanici sayfada elementi bulana kadar asagiya iner....................passed
+Then password kutusuna en az bir ozel karakter gonderir.....................passed
+And password strenght seviyesinin koyu yesil oldugunu test eder.............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC05 guclu sifre giris" time="0.466">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And register butonuna basar.................................................passed
+Then kullanici sayfada elementi bulana kadar asagiya iner...................passed
+Then password kutusuna en az yedi karakter gonderir.........................passed
+And guclu bir parola oldugunu test eder.....................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
