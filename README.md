@@ -1,2 +1,2 @@
-# medunna_TR_team56
+# Medunna Project
 
