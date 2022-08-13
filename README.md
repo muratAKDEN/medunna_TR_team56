@@ -2,8 +2,8 @@
 
 Team collaboration on testing medunna website
 
--Link to the project: medunna.com
--Test Cases written.
+Link to the project: medunna.com
+Test Cases written.
 Framework successfully installed.
 BDD technology was used when installing the Cucumber framework.
 The tests were run. The results are reported.
