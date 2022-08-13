@@ -26,8 +26,10 @@ Feature: Physician (Doktor) test isteyebilmeli (My Appointments/Edit/Request A T
     And Doktor Edit butonuna tiklar
     And Doktor Request A Test butonuna tiklar
     And Doktor Testlere tiklar
-    And Doktor Test iceriginde (glucose, Urea, Creatinine-, Sodium-, Potassium-, Albumin, Hemoglobin) seceneklerinin oldugunu test eder
     And Doktor save butonuna tiklar
+    And Doktor Show Test Result butonuna tiklar
+    And Doktor View Results butonuna tiklar
+    And Doktor Test iceriginde (glucose, Urea, Creatinine, Sodium, Potassium-, Albumin, Hemoglobin) seceneklerinin oldugunu test eder
     Then Doktor sayfayi kapatir
 
 
