@@ -21,9 +21,9 @@ public class US10_Page {
     public WebElement password;
     @FindBy(xpath ="//button[@type='submit']")
     public WebElement signIn;
-    @FindBy(xpath ="//span[normalize-space()='MY PAGES']")
+    @FindBy(xpath ="//*[text()='MY PAGES']")
     public WebElement myPages;
-    @FindBy(xpath ="//span[normalize-space()='My Appointments']")
+    @FindBy(xpath ="//*[text()='My Appointments']")
     public WebElement myAppointments;
     @FindBy(xpath="//input[@id='appointment-id']")
     public WebElement Id;
@@ -33,7 +33,7 @@ public class US10_Page {
     public WebElement endDateTime;
     @FindBy(xpath ="//select[@id='appointment-status']")
     public WebElement status;
-    @FindBy(xpath ="//select[@id='appointment-heading']")
+    @FindBy(xpath ="//h2[@id='appointment-heading']")
     public WebElement timeSlots;
     @FindBy(xpath ="//div[@class='table-responsive']")
     public WebElement appointmentList;
