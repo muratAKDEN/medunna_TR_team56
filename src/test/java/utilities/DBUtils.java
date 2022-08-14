@@ -15,9 +15,9 @@ public class DBUtils {
     //Database e ne zaman baglanmak isterse bu methodu cagrabiliriz
     //Bu method u data cok BeforeMethod icinde setup icin kullanacagiz
     public static void createConnection() {
-        String url="jdbc:sqlserver://184.168.194.58:1433;databaseName=hotelmycamp ; user=techproed;password=P2s@rt65";
-        String username="techproed";
-        String password="P2s@rt65";
+        String url=ConfigReader.getProperty("db_url");
+        String username=ConfigReader.getProperty("db_user");
+        String password=ConfigReader.getProperty("db_password");
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -74,9 +74,9 @@ public class DBUtils {
     }
     //getConnection method Connection object i olusturmak icin. Bu method create createConnectiondan farkli olarak connection objesi return ediyor
     public static Connection getConnection() {
-        String url="jdbc:sqlserver://184.168.194.58:1433;databaseName=hotelmycamp ; user=techproed;password=P2s@rt65";
-        String username="techproed";
-        String password="P2s@rt65";
+        String url=ConfigReader.getProperty("db_url");;
+        String username=ConfigReader.getProperty("db_user");
+        String password=ConfigReader.getProperty("db_password");
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
