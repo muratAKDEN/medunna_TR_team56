@@ -29,11 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
-<<<<<<< Updated upstream
-      <console name="Medunna" type="STANDARD" schema="information_schema" session="Main">select * from pg_catalog.pg_tables</console>
-=======
       <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from in_patient;]]></console>
->>>>>>> Stashed changes
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
