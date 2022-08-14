@@ -33,5 +33,5 @@ public class Authentication {
         JsonPath token = response.jsonPath();
 
         return token.getString("id_token");
-    }
+
 }
