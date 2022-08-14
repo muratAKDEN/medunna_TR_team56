@@ -16,19 +16,22 @@ public class Authentication {
     //     System.out.println(guncelToken);
     // }
 
-    public static String generateToken(String username, String password) {
+    public static String generateToken() {
 
-        Map<String, Object> map = new HashMap<>();
-        map.put("username", username);
-        map.put("password", password);
-        map.put("rememberme", true);
+        String username = "healthprojectteam56";
+        String password = "Teamproject.56";
 
-        String endPoint = "https://www.medunna.com/api/authenticate";
+            Map<String, Object> map = new HashMap<>();
+            map.put("username", username);
+            map.put("password", password);
+            map.put("rememberme", true);
 
-        Response response = given().contentType(ContentType.JSON).body(map).when().post(endPoint);
+            String endPoint = "https://www.medunna.com/api/authenticate";
 
-        JsonPath token = response.jsonPath();
+            Response response = given().contentType(ContentType.JSON).body(map).when().post(endPoint);
 
-        return token.getString("id_token");
+            JsonPath token = response.jsonPath();
+
+            return token.getString("id_token");
+        }
     }
-}
