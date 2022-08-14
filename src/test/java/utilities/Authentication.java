@@ -1,8 +1,10 @@
 package utilities;
 
+import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,21 +19,19 @@ public class Authentication {
     // }
 
     public static String generateToken() {
+        String username="healthprojectteam56";
+        String password="Teamproject.56";
+        Map<String, Object> map = new HashMap<>();
+        map.put("username", username);
+        map.put("password", password);
+        map.put("rememberme", true);
 
-        String username = "healthprojectteam56";
-        String password = "Teamproject.56";
+        String endPoint = "https://www.medunna.com/api/authenticate";
 
-            Map<String, Object> map = new HashMap<>();
-            map.put("username", username);
-            map.put("password", password);
-            map.put("rememberme", true);
+        Response response = given().contentType(ContentType.JSON).body(map).when().post(endPoint);
 
-            String endPoint = "https://www.medunna.com/api/authenticate";
+        JsonPath token = response.jsonPath();
 
-            Response response = given().contentType(ContentType.JSON).body(map).when().post(endPoint);
-
-            JsonPath token = response.jsonPath();
-
-            return token.getString("id_token");
-        }
+        return token.getString("id_token");
     }
+}
