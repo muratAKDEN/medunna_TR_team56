@@ -51,6 +51,10 @@ ortakPages.loginPasswordTextBox.sendKeys(ConfigReader.getProperty(password));
 
     @And("Kullanici sayfayi kapatir")
     public void kullaniciSayfayiKapatir() {
+<<<<<<< Updated upstream
      Driver.closeDriver();
+=======
+        Driver.closeDriver();
+>>>>>>> Stashed changes
     }
 }
