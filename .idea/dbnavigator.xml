@@ -29,7 +29,11 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
+<<<<<<< Updated upstream
       <console name="Medunna" type="STANDARD" schema="information_schema" session="Main">select * from pg_catalog.pg_tables</console>
+=======
+      <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from in_patient;]]></console>
+>>>>>>> Stashed changes
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -37,6 +41,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="information_schema.sql_features" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -192,7 +199,6 @@
         <object-type name="FUNCTİON" sorting-type="NAME" />
         <object-type name="PROCEDURE" sorting-type="NAME" />
         <object-type name="ARGUMENT" sorting-type="POSITION" />
-        <object-type name="TYPE ATTRİBUTE" sorting-type="POSITION" />
       </sorting>
       <default-editors>
         <object-type name="VİEW" editor-type="SELECTION" />
