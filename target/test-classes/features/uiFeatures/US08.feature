@@ -37,7 +37,6 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
     And new password kutusuna "drMuratsifre6" girer
     And password strenght seviyesinin turuncu oldugunu test eder
-
     And Kullanici sayfayi kapatir
 
   Scenario: TC04 sifre en az 1 rakam icermeli ve "Password strength" seviyesinin degistigi gorulmelidir
@@ -62,18 +61,18 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
     And new password kutusuna "drMuratsifre9" girer
     And password strenght seviyesinin koyu yesil oldugunu test eder
-
     And Kullanici sayfayi kapatir
 
 
   Scenario: TC07 Eski sifre kullanılmamalıdır
 
-    And current Password Kutusuna "drMuratsifre2" girer
-    And new password kutusuna "drMuratsifre2" girer
-    And confirm the password kutusuna "drMuratsifre2" girer
+    And current Password Kutusuna "drMuratsifre1" girer
+    And new password kutusuna "drMuratsifre1" girer
+    And confirm the password kutusuna "drMuratsifre1" girer
     And save butonuna basar
-    And password could not be changed yazisinin gorundugunu test eder
-    And Kullanici sayfayi kapatir
+    And password changed yazisinin gorunmedigini test eder
+    And kullanici sayfayi kapatir
+
 
 
 
