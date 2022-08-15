@@ -99,4 +99,10 @@ public class US08_Stepdefinitions {
         ReusableMethods.waitFor(2);
         Assert.assertTrue(us08.errorYaziElementi.isDisplayed());
     }
+
+    @And("password strenght seviyesinin sari oldugunu test eder")
+    public void passwordStrenghtSeviyesininSariOldugunuTestEder() {
+
+       Assert.assertTrue(us08.passwordStrengthBar3.isDisplayed());
+    }
 }
