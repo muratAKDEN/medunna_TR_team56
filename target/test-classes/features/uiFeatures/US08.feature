@@ -43,7 +43,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
 
     And new password kutusuna "drMuratsifre7" girer
-    And password strenght seviyesinin acik yesil oldugunu test eder
+    And password strenght seviyesinin sari oldugunu test eder
     And Kullanici sayfayi kapatir
 
 
@@ -66,7 +66,7 @@ Feature: US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir
 
   Scenario: TC07 Eski sifre kullanılmamalıdır
 
-    And current Password Kutusuna "drMuratsifre1" girer
+
     And new password kutusuna "drMuratsifre1" girer
     And confirm the password kutusuna "drMuratsifre1" girer
     And save butonuna basar
