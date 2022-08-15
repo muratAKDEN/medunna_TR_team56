@@ -8,7 +8,7 @@ import utilities.Driver;
 public class US07_Page {
     public US07_Page() {PageFactory.initElements(Driver.getDriver(), this);}
 
-    @FindBy(xpath = "//li[@id='account-menu']")
+    @FindBy(xpath = "(//a[@href='#'])[1]")
     public WebElement dropDownIkonu;
 
     @FindBy(xpath = "//span[text()='Sign in']")
@@ -23,10 +23,10 @@ public class US07_Page {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement signinButonu;
 
-    @FindBy(xpath = "//span[normalize-space()='MY PAGES(PATIENT)']")
+    @FindBy(xpath = "//span[text()='MY PAGES(PATIENT)']")
     public WebElement mypagesElementi;
 
-    @FindBy(xpath = "(//span[normalize-space()='Make an Appointment'])[1]")
+    @FindBy(xpath = "//span[text()='Make an Appointment']")
     public WebElement makeanAppointmentButonu;
 
     @FindBy(xpath = "(//input[@id='phone'])[1]")

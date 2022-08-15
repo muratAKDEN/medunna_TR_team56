@@ -9,22 +9,29 @@ import pages.US07_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class US07_StepDefinitions {
 
     US07_Page US07_Page = new US07_Page();
 
     @Given("kullanici Medunna internet sitesinin anasayfasina gider")
     public void hastaMedunnaAnasayfasinaGider(){
+
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
 
     @Then("Hasta dropdown ikonuna tiklar")
     public void hastaDropDownIkonunaTiklar(){
+
         US07_Page.dropDownIkonu.click();
     }
 
     @And("Hasta sign in elementini tiklar")
     public void hastaSigninElementinitiklar(){
+
         US07_Page.signinElementi.click();
     }
 
@@ -35,21 +42,25 @@ public class US07_StepDefinitions {
 
     @And("Hasta gecerli bir password girer")
     public void hastaGecerliBirPasswordGirer(){
+
         US07_Page.passwordBox.sendKeys(ConfigReader.getProperty("password"));
     }
 
     @And("Hasta signinButonuna tiklar")
     public void hastaSigninButonunaTiklar(){
+
         US07_Page.signinButonu.click();
     }
 
     @And("Hasta My Pages-patient elementine tiklar")
     public void myPagespatientElementineTiklar(){
+
         US07_Page.mypagesElementi.click();
     }
 
     @Then("Hasta Make an Appointment butonuna tiklar")
     public void makeAnAppointmentButonunaTiklar(){
+
         US07_Page.makeanAppointmentButonu.click();
     }
 
@@ -68,6 +79,21 @@ public class US07_StepDefinitions {
         Assert.assertTrue(US07_Page.pastDateTextElement.isDisplayed());
     }
 
+
+     @Then("Hasta Guncel tarihle randevu alinabilecegini test eder")
+    public void guncelTarihleRandevuAlinabileceginiTestEder() {
+        Date simdikiZaman = new Date();
+        System.out.println(simdikiZaman.toString());
+        DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+        System.out.println(df.format(simdikiZaman));
+
+
+         US07_Page.appointmentDateTimeBox.sendKeys(df.format(simdikiZaman));
+
+
+    }
+
+
     @Then("Hasta appointment DateTime Boxa guncel veya gelecekteki bir tarih girer")
     public void appointmentDateTimeBoxaGuncelVeyaGelecekBirTarihGirer(){
         US07_Page.appointmentDateTimeBox.sendKeys(ConfigReader.getProperty("gelecekTarih"));
@@ -75,6 +101,7 @@ public class US07_StepDefinitions {
 
     @And("Hasta appointment request butonunu tiklar")
     public void appointmentRequestButonunuTiklar(){
+
         US07_Page.appointmentRequestButonu.click();
     }
 

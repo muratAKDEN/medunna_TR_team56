@@ -1,62 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.437"/>
-=======
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="12.839">
-    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC01 guclu sifre giris" time="10.498">
-        <system-out>
-            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
-Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
-Then register butonuna basar................................................passed
-And kullanici sayfada elementi bulana kadar asagiya iner....................passed
-Then password kutusuna en az bir kucuk harf gonderir........................passed
-And password strenght seviyesinin kirmizi oldugunu test eder................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="49.671">
+    <testcase classname="Hastalar randevu tarihi olusturabilmelidir." name="Gecerli tarih girilmeli" time="48.611">
+        <failure message="Keys to send should be a not null CharSequence" type="java.lang.IllegalArgumentException">
+            <![CDATA[Given kullanici Medunna internet sitesinin anasayfasina gider...............passed
+Then Hasta dropdown ikonuna tiklar..........................................passed
+And Hasta sign in elementini tiklar.........................................passed
+And Hasta gecerli bir username girer........................................passed
+And Hasta gecerli bir password girer........................................passed
+And Hasta signinButonuna tiklar.............................................passed
+And Hasta My Pages-patient elementine tiklar................................passed
+And Hasta Make an Appointment butonuna tiklar...............................passed
+Then Hasta Phone boxa telefon numarasi girer................................failed
+And Hasta appointment DateTime Gecmis bir tarih girer.......................skipped
+And Hasta gecmis bir tarihle randevu alinamayacagini test eder..............skipped
+And Hasta appointment DateTime Boxa guncel veya gelecekteki bir tarih girer.skipped
+And Hasta appointment request butonunu tiklar...............................skipped
+And Hasta guncel veya gelecek bir tarih girilebilecegini dogrular...........skipped
+And Hasta Sayfayi kapatir...................................................skipped
+
+StackTrace:
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:92)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.sendKeys(Unknown Source)
+	at stepDefinitions.uiStep.US07_StepDefinitions.phoneBoxaTelefonNumarasiGirer(US07_StepDefinitions.java:65)
+	at ✽.Hasta Phone boxa telefon numarasi girer(file:///C:/Users/cihan/IdeaProjects/medunna_TR_team56/src/test/resources/features/uiFeatures/US07.feature:13)
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC02 guclu sifre giris" time="0.558">
-        <system-out>
-            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
-Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
-Then register butonuna basar................................................passed
-And kullanici sayfada elementi bulana kadar asagiya iner....................passed
-Then password kutusuna en az bir buyuk harf gonderir........................passed
-And password strenght seviyesinin turuncu oldugunu test eder................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC03 guclu sifre giris" time="0.467">
-        <system-out>
-            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
-Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
-Then register butonuna basar................................................passed
-And kullanici sayfada elementi bulana kadar asagiya iner....................passed
-Then password kutusuna en az bir rakam gonderir.............................passed
-And password strenght seviyesinin acik yesil oldugunu test eder.............passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC04 guclu sifre giris" time="0.529">
-        <system-out>
-            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
-Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
-Then register butonuna basar................................................passed
-And kullanici sayfada elementi bulana kadar asagiya iner....................passed
-Then password kutusuna en az bir ozel karakter gonderir.....................passed
-And password strenght seviyesinin koyu yesil oldugunu test eder.............passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US03 Registration sayfasında güçlü şifre girilmeli ve &quot;Password strength&quot; seviyeleri görülebilmelidir." name="TC05 guclu sifre giris" time="0.466">
-        <system-out>
-            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
-Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
-And register butonuna basar.................................................passed
-Then kullanici sayfada elementi bulana kadar asagiya iner...................passed
-Then password kutusuna en az yedi karakter gonderir.........................passed
-And guclu bir parola oldugunu test eder.....................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
->>>>>>> main
