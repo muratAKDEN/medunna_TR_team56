@@ -14,10 +14,6 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertTrue;
 
-
-
-
-
 public class US10_ApiStepDefinations {
 
     static Response response;
@@ -59,8 +55,5 @@ public class US10_ApiStepDefinations {
         assertTrue(physicianId.contains(94228));
         assertTrue(appointmentId.contains(20739));
 
-
     }
-
-
 }

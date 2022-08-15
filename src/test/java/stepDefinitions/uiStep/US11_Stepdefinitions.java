@@ -1,6 +1,7 @@
 package stepDefinitions.uiStep;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import pages.US11_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US11_Stepdefinitions {
     US11_Pages us11_pages=new US11_Pages();
@@ -41,6 +43,9 @@ public class US11_Stepdefinitions {
 
     @Given("ft {string},{string},{string},{string},{string} gorebilmeli")
     public void doktorGorebilmeli(String ID, String SrartDateTime, String EndDataTime, String Status, String aPhysician) {
+
+        ReusableMethods.waitFor(2);
+        ReusableMethods.waitForPageToLoad(7);
         Assert.assertTrue(us11_pages.Id.isDisplayed());
         Assert.assertTrue(us11_pages.startDateTime.isDisplayed());
         Assert.assertTrue(us11_pages.endDateTime.isDisplayed());
@@ -50,6 +55,7 @@ public class US11_Stepdefinitions {
 
     @Given("ft {string},{string} ve {string} alanlarini doldurmali")
     public void doktorVeAlanlariniDoldurmali(String Anamnesis, String Treatment, String Diagnosis) {
+        ReusableMethods.waitFor(2);
         actions.click(us11_pages.anamnesis)
                 .sendKeys(fakerName)
                 .sendKeys(Keys.TAB)
@@ -62,16 +68,26 @@ public class US11_Stepdefinitions {
 
     @Given("ft {string},{string} doldurmali")
     public void doktorDoldurmali(String prescription, String description) {
+        ReusableMethods.waitFor(2);
         us11_pages.prescription.sendKeys(fakerName);
         us11_pages.description.sendKeys(fakerName);
     }
 
-    @Given("ft status olarak secebilmeli")
-    public void doktorOlarakSecebilmeli(String status) {
+
+
+    @And("ft {string} olarak secebilmeli")
+    public void ftOlarakSecebilmeli(String arg0) {
+    }
+
+    @And("ft {string},{string},{string} olarak secebilmeli")
+    public void ftOlarakSecebilmeli(String arg0, String arg1, String arg2) {
         WebElement ddo= us11_pages.status;
         Select select= new Select(ddo);
-        select.selectByVisibleText("PENDING");
-        select.selectByVisibleText("COMPLETED");
-        select.selectByVisibleText("CANCELLED");
+
+        select.selectByIndex(1);
+
+        select.selectByIndex(2);
+
+        select.selectByIndex(3);
     }
 }

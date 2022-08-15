@@ -1,24 +1,21 @@
 package utilities;
 
-import io.restassured.builder.RequestSpecBuilder;
+
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
+
 
 import java.util.HashMap;
 import java.util.Map;
 
+import static hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 
 public class Authentication {
 
-    // public static void main(String[] args) {
-    //     String guncelToken = generateToken(ConfigReader.getProperty("adminUsername"), ConfigReader.getProperty("adminPassword"));
-    //     System.out.println(guncelToken);
-    // }
+    public static String generateToken(){
 
-    public static String generateToken() {
         String username = "healthprojectteam56";
         String password = "Teamproject.56";
         Map<String, Object> map = new HashMap<>();
@@ -33,5 +30,7 @@ public class Authentication {
         JsonPath token = response.jsonPath();
 
         return token.getString("id_token");
+
     }
+
 }
