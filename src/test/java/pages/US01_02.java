@@ -37,7 +37,7 @@ public class US01_02 {
     public WebElement bosAlan;
 
     @FindBy(xpath="//input[@name='firstName']")
-    public WebElement firstNameHataMesaji;
+    public List<WebElement> firstNameHataMesaji;
 
     @FindBy(xpath="//*[text()='Your LastName is required.']")
     public WebElement lastNameHataMesasji;
@@ -53,11 +53,12 @@ public class US01_02 {
     @FindBy(xpath = "//div[@class=\"invalid-feedback\"]")
     public WebElement thisFieldIsInvalidMesaji;
 
-    @FindBy(xpath = "//div[@class=\"invalid-feedback\"]")
+    @FindBy(xpath = "//div[@class=\"invalid-feedback\"][1]")
     public WebElement yourEmailIsRequiredMesaji;
 
-    @FindBy(xpath = "//input[@name=\"email\"]")
-    public WebElement emailKutusu;
+
+    @FindBy(xpath = "//*[@id='email']")
+    public WebElement emailTextBox;
 
     @FindBy(xpath = "//div[@class=\"invalid-feedback\"]")
     public WebElement yourUsernameIsInvalidMessage;
@@ -68,11 +69,12 @@ public class US01_02 {
     @FindBy(xpath = "//div[@class=\"invalid-feedback\"]")
     public WebElement yourEmailIsRequiredMessage;
 
-    @FindBy(xpath = "//input[@name=\"firstPassword\"]")
+    @FindBy(xpath = "//input[@id='firstPassword']")
     public WebElement passwordbox;
 //input[@name="firstPassword"]
 
     @FindBy(xpath = "//div[@class='invalid-feedback'][1]")
     public WebElement YourFirstNameIsrequiredMesaji;
+//div[@class='invalid-feedback'][1]
 
 }

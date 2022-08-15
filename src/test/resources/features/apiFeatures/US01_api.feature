@@ -6,7 +6,7 @@ Feature: registrant_data_api_test
   Scenario: TC05 Swagger kullanarak tüm kayıt bilgilerini alın ve doğrulayın
     * Kullanici tum kayit edilenler icin end point belirler
     * Kullanici request gonderir
-    * Kullanici status kodun ikiyuz oldugunu dogrular
+    * Kullanici request gonderir
     * Kullanici tum kayit edilenlerin sayisinin beklenen sonucla ayni olduğunu dogrular
   @PostApiRegistrants
   Scenario:TC06 API kullanarak kayıtlı kişiler oluşturun ve doğrulayın
