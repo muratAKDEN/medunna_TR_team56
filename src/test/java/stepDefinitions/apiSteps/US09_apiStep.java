@@ -1,12 +1,6 @@
 package stepDefinitions.apiSteps;
 import io.cucumber.java.en.*;
-<<<<<<< Updated upstream
-import io.restassured.builder.RequestSpecBuilder;
 
-import static stepDefinitions.apiSteps.US01_apiStep.spec;
-
-public class US09_apiStep {
-=======
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -27,7 +21,7 @@ public class US09_apiStep {
     Response response;
     int hastaToplamSayisi_API;
     String token;
->>>>>>> Stashed changes
+
 
     @Given("Kullanici GET request gonderir")
     public void kullaniciGETRequestGonderir() {
@@ -44,14 +38,12 @@ public class US09_apiStep {
                 ContentType.JSON).when().get(endpointAllUsers);
     }
 
-<<<<<<< Updated upstream
 
-=======
     @Given("status kodunun {int} oldugu gorulur")
     public void status_kodunun_oldugu_gorulur(int expectedStatusCode) {
 
        Assert.assertEquals(expectedStatusCode,response.getStatusCode());
->>>>>>> Stashed changes
+
     }
 
     @Then("Kullanici tum hasta bilgilerini API response ile alir")
@@ -65,18 +57,14 @@ public class US09_apiStep {
         System.out.println("Tüm kayıtlı API Hasta  Sayısı : "+hastaToplamSayisi_API);
 
     }
-<<<<<<< Updated upstream
-    @When("kullanici bilgilerini dogrular")
-    public void kullanici_bilgilerini_dogrular() {
-=======
 
     @Then("Kullanici API ile kayitli hasta sayisini DB ve UI ile gercekler")
-    public void kullanici_apı_ile_kayitli_hasta_sayisini_db_ve_uı_ile_gercekler() {
-        Assert.assertEquals(hastaToplamSayisi_API, hastaToplamSayisi_DB);
-        Assert.assertNotEquals(hastaToplamSayisi_API, hastaToplamSayisi_UI);
->>>>>>> Stashed changes
+    public void kullanici_apı_ile_kayitli_hasta_sayisini_db_ve_uı_ile_gercekler () {
+            Assert.assertEquals(hastaToplamSayisi_API, hastaToplamSayisi_DB);
+            Assert.assertNotEquals(hastaToplamSayisi_API, hastaToplamSayisi_UI);
 
+
+        }
     }
 
 
-}

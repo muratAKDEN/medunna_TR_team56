@@ -22,10 +22,6 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 import static utilities.Authentication.generateToken;
 
-
-
-
-
 public class US10_ApiStepDefinations {
     static RequestSpecification spec;
 
@@ -76,8 +72,5 @@ public class US10_ApiStepDefinations {
         assertTrue(physicianId.contains(94228));
         assertTrue(appointmentId.contains(20739));
 
-
     }
-
-
 }

@@ -35,5 +35,5 @@ Background: ortak adimlar
     Given ft "prescription","description" doldurmali
     And Kullanici sayfayi kapatir
   Scenario: TC05 "Status" doktor tarafından "PENDING, COMPLETED veya CANCELLED" olarak secilebilmeli
-    Given ft status olarak secebilmeli
+    And ft "PENDING","COMPLETED","CANCELLED" olarak secebilmeli
     And Kullanici sayfayi kapatir
