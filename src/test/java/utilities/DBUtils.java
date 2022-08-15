@@ -15,9 +15,15 @@ public class DBUtils {
     //Database e ne zaman baglanmak isterse bu methodu cagrabiliriz
     //Bu method u data cok BeforeMethod icinde setup icin kullanacagiz
     public static void createConnection() {
+<<<<<<< HEAD
         String url="jdbc:postgresql://medunna.com:5432/medunna_db";
         String username="medunnadb_user";
         String password="Medunnadb_@129";
+=======
+        String url=ConfigReader.getProperty("db_url");
+        String username=ConfigReader.getProperty("db_user");
+        String password=ConfigReader.getProperty("db_password");
+>>>>>>> main
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -74,9 +80,15 @@ public class DBUtils {
     }
     //getConnection method Connection object i olusturmak icin. Bu method create createConnectiondan farkli olarak connection objesi return ediyor
     public static Connection getConnection() {
+<<<<<<< HEAD
         String url="jdbc:postgresql://medunna.com:5432/medunna_db";
         String username="medunnadb_user";
         String password="Medunnadb_@129";
+=======
+        String url=ConfigReader.getProperty("db_url");;
+        String username=ConfigReader.getProperty("db_user");
+        String password=ConfigReader.getProperty("db_password");
+>>>>>>> main
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
