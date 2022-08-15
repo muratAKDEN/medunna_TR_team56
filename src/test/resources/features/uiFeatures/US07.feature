@@ -13,7 +13,6 @@ Feature:Hastalar randevu tarihi olusturabilmelidir.
      Then Hasta Phone boxa telefon numarasi girer
      And  Hasta appointment DateTime Gecmis bir tarih girer
      And Hasta gecmis bir tarihle randevu alinamayacagini test eder
-     Then Hasta Guncel tarihle randevu alinabilecegini test eder
      And Hasta appointment DateTime Boxa guncel veya gelecekteki bir tarih girer
      And Hasta appointment request butonunu tiklar
      And Hasta guncel veya gelecek bir tarih girilebilecegini dogrular

@@ -1,15 +1,12 @@
 package stepDefinitions.apiSteps;
 
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import utilities.Authentication;
 import utilities.ConfigReader;
-
-import static io.restassured.RestAssured.given;
 
 public class US07_apiStep {
 
@@ -26,7 +23,7 @@ public class US07_apiStep {
     }
 
 
-    @Given("Kullanici send request ve get response yapar")
+    /*@Given("Kullanici send request ve get response yapar")
     public void kullanici_send_request_get_response_yapar() {
         String token= Authentication.generateToken();
             response=given().headers("Authorization",
@@ -37,7 +34,7 @@ public class US07_apiStep {
 
             response.prettyPrint();
 
-    }
+    }*/
 
     @Then("Kullanici status code ikiYuz olarak dogrular")
     public void kullanici_status_code_ikiYuz_olarak_dogrular() {
