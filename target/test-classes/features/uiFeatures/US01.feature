@@ -3,13 +3,12 @@ Feature:US01 Kayıt olmak için SSN, Firstname ve Lastname bilgileri girililebil
   Background: Kullanici_register_sayfasina_gider
     Given Kullanici "medunnaUrl" adresine gider
     Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
-    Then Hg Register butonuna tiklar
-    And Kullanici sayfayi kapatir
+    Then Kulllanici register butonuna tiklar
+
   @TC001
   Scenario Outline: Gecerli bir SSN uc ve besinci rakamdan sonra - icermeli ve dokuz rakamdan olusmalıdır.
-    * Hg ssn kutucuguna tiklar
     * Hg dokuz haneli "<ssn>" girer
-    * Hg bos alana tiklar
+    * Hg firstname kutucuguna tiklar
     * Hg Your SSN is required yazisinin gorunmedigini test eder
     Examples:
       |ssn|
@@ -28,9 +27,9 @@ Feature:US01 Kayıt olmak için SSN, Firstname ve Lastname bilgileri girililebil
   Scenario Outline: Herhangi bir karakter içeren ve boş bırakılamayan geçerli bir FirstName  olmalıdır
     * Hg firstname kutucuguna tiklar
     * Hg firstname kutucuguna karakter iceren "<isim>" girer
-    * Hg hata metni goruldugunu dogrular
+    * Hg hata metni gorulmedigini dogrular
     Examples:|isim|
-      |ali*|
+      |?ali*|
     @TC003_1
       Scenario:firstname kutucugunun bos olup olmadigini dogrular
       * Hg firstname kutucuguna tiklar
@@ -40,7 +39,7 @@ Feature:US01 Kayıt olmak için SSN, Firstname ve Lastname bilgileri girililebil
   Scenario Outline: Herhangi bir karakter içeren ve boş bırakılamayan geçerli bir LastName  olmalıdır
     * Hg lastname kutucuguna tiklar
     * Hg lastname kutucuguna karakter iceren "<soyisim>" girer
-    * Hg hata metni goruldugunu dogrular
+    * Hg hata metni gorulmedigini dogrular
     Examples:|soyisim|
     |ali*|
   @TC004_1

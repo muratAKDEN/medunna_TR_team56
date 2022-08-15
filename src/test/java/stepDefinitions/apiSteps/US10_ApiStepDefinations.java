@@ -1,6 +1,5 @@
 package stepDefinitions.apiSteps;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,37 +7,20 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import org.junit.Assert;
-import pojos.US10_AppointmentPojo;
-import pojos.US10_PhysicianPojo;
 import utilities.Authentication;
-import utilities.ConfigReader;
-
 
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.*;
-import static utilities.Authentication.generateToken;
+import static org.junit.Assert.assertTrue;
 
 public class US10_ApiStepDefinations {
-    static RequestSpecification spec;
 
-    Response response;
-    US10_AppointmentPojo  appointmentPojo;
-    US10_PhysicianPojo physicianPojo;
-    String token;
-    String endPoint = ConfigReader.getProperty("US_010_appointmentsListApi");
-
-    // https://medunna.com/api/appointments?=size=10000
-
+    static Response response;
 
     @Given("user set the URL")
     public void user_set_the_URL() {
-        spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("medunnaUrl")).build();
-        spec.pathParams("first","api","second","appointments").
-                queryParam("size",10000);
+        String url ="medunnaUrl";
     }
 
     @Then("user sends GET request for appointments")
@@ -48,7 +30,8 @@ public class US10_ApiStepDefinations {
                 "Authorization","Bearer "+ token,
                 "Content-Type", ContentType.JSON,
                 "Accept",ContentType.JSON
-        ).spec(spec).when().get("/{first}/{second}"); // https://medunna.com/api/appointments?=size=10000
+        ).when().get("https://medunna.com/api/appointments?page=1&size=5000");
+       //medunna.com/api/appointments/?page=1&size=5000
         response.prettyPrint();
     }
 

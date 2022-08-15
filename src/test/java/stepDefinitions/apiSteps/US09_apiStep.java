@@ -26,9 +26,8 @@ public class US09_apiStep {
     @Given("Kullanici GET request gonderir")
     public void kullaniciGETRequestGonderir() {
         String endpointAllUsers = ConfigReader.getProperty("allPatientEndpoint");
-
-        token = generateToken(ConfigReader.getProperty("adminUser"), ConfigReader.getProperty("password"));
-
+        //  token = generateToken(ConfigReader.getProperty("adminUser"), ConfigReader.getProperty("password"));
+String token=Authentication.generateToken();
         response = given().headers(
                 "Authorization",
                 "Bearer " + Authentication.generateToken(),
