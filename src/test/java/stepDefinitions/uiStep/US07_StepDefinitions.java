@@ -90,9 +90,7 @@ public class US07_StepDefinitions {
 
          US07_Page.appointmentDateTimeBox.sendKeys(df.format(simdikiZaman));
 
-
     }
-
 
     @Then("Hasta appointment DateTime Boxa guncel veya gelecekteki bir tarih girer")
     public void appointmentDateTimeBoxaGuncelVeyaGelecekBirTarihGirer(){
