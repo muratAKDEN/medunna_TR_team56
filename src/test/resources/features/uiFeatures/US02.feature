@@ -3,7 +3,7 @@ Feature:US02 Kayıt olmak için email and username bilgileri girilebilmelidir.
   Background: Kullanici register sayfasina gider
     Given Kullanici "medunnaUrl" adresine gider
     Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
-    Then Hg Register butonuna tiklar
+    Then Kulllanici register butonuna tiklar
 
 
   @TC001
@@ -35,20 +35,19 @@ Feature:US02 Kayıt olmak için email and username bilgileri girilebilmelidir.
 
   @TC003
         Scenario Outline: Gecersiz email
-    * Hg e-mail kutusuna tiklar
+   * Hg email kutusuna tiklar
     * Hg yeni "<email>"  olusturur
-    * Hg bos alana tiklar
+    * Hg password kutusuna tiklar
     * Hg This field is invalid yazisinin goruntulendigini dogrular
-    Examples:|email|
-      |alibabagmailcom |
-      |@alibabagmail.com|
-      |alibaba@gmail    |
-      |alibaba.gmail@com |
+    Examples:
+      |email|
+      |alibaba@gmail|
+      |alibaba.gmail@com|
 
   @TC004
     Scenario: E-mail boş bırakılamaz
-    * Hg e-mail kutusuna tiklar
-    * Hg bos alana tiklar
+    * Hg email kutusuna tiklar
+    * Hg password kutusuna tiklar
     * Hg Your email is required yazisinin goruntulendigini  dogrular
 
 

@@ -1,27 +1,18 @@
 package stepDefinitions.uiStep;
 
-import com.github.javafaker.Faker;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.Assert;
 import pages.US01_02;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 
 public class US01_StepDefinitions {
     US01_02 medunna = new US01_02();
-    Faker faker = new Faker();
 
-
-
-
-    @Given("Hg Register butonuna tiklar")
-    public void hg_register_butonuna_tiklar() {
-        medunna.Register.click();
-    }
 
 
     //   TC1
@@ -29,8 +20,7 @@ public class US01_StepDefinitions {
 
     @Given("Hg Your SSN is required yazisinin gorunmedigini test eder")
     public void hg_your_ssn_is_required_yazisinin_gorunmedigini_test_eder() {
-        medunna.SSNBox.click();
-        medunna.bosAlan.click();
+
         Assert.assertEquals(0,medunna.YourSSNisinvalidmesaji.size());
 
     }
@@ -72,11 +62,12 @@ public class US01_StepDefinitions {
         medunna.usernamebox.click();
     }
 
-    @Given("Hg e-mail kutusuna tiklar")
-    public void hg_e_mail_kutusuna_tiklar() {
-       Actions action=new Actions(Driver.getDriver());
-             action.sendKeys(Keys.PAGE_DOWN);
-             medunna.emailKutusu.click();
+    @Given("Hg email kutusuna tiklar")
+    public void hg_email_kutusuna_tiklar() {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+jse.executeScript("arguments[0].scrollIntoView()",medunna.emailTextBox);
+        ReusableMethods.waitForVisibility(medunna.emailTextBox,5);
+      medunna.emailTextBox.click();
 
     }
     @Given("Hg Your username is required yazisinin goruntulendigini dogrular")
@@ -108,7 +99,7 @@ public class US01_StepDefinitions {
 
     @Given("Hg @ ve . isareti olmadan {string} ile giris yapar")
     public void hg_ve_isareti_olmadan_ile_giris_yapar(String email) {
-        medunna.emailKutusu.sendKeys(email);
+        medunna.emailTextBox.sendKeys(email);
     }
 
     @Given("Hg This field is invalid yazisinin goruntulendigini dogrular")
@@ -121,7 +112,8 @@ public class US01_StepDefinitions {
     }
     @Then("Hg yeni {string}  olusturur")
     public void hg_yeni_olusturur(String email) {
-     medunna.emailKutusu.sendKeys(email);
+
+     medunna.emailTextBox.sendKeys(email);
     }
 
 
@@ -132,7 +124,7 @@ public class US01_StepDefinitions {
 
     @Then("Hg bos alana tiklar")
     public void hg_bos_alana_tiklar() {
-        medunna.bosAlan.click();
+        medunna.firstNameBox.click();
 
     }
     @Then("Hg lastname kutucuguna tiklar")
@@ -152,10 +144,18 @@ public class US01_StepDefinitions {
     public void hg_firstname_kutucuguna_karakter_iceren_girer(String isim) {
         medunna.firstNameBox.sendKeys(isim);
     }
- @Given("Hg hata metni goruldugunu dogrular")
-    public void hg_hata_metni_goruldugunu_dogrular(){
-        //bug
+ @Given("Hg hata metni gorulmedigini dogrular")
+    public void hg_hata_metni_gorulmedigini_dogrular(){
+     Assert.assertEquals(0,medunna.firstNameHataMesaji.size());
  }
 
 
+    @Then("Kulllanici register butonuna tiklar")
+    public void kulllanici_Register_Butonuna_Tiklar() {
+        medunna.Register.click();
+    }
+ @Then ("Hg password kutusuna tiklar")
+    public void hg_password_kutusuna_tiklar(){
+        medunna.passwordbox.click();
+ }
 }
