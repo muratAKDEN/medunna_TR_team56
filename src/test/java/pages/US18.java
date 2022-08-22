@@ -29,7 +29,7 @@ public class US18 {
     public WebElement useSearch;
 
     @FindBy (xpath = "//div[@class='Toastify__toast-body']")
-    public WebElement alertSSNDelete;
+    public WebElement alertSSNDeleteEdit;
 
     @FindBy (xpath = "(//a[@class='dropdown-item'])[3]")
     public WebElement physicianSecenegi;

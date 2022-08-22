@@ -15,9 +15,6 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class US18_StepDefinitions {
     US12_13 us12_13 =new US12_13();
     US18 us18=new US18();
@@ -30,9 +27,6 @@ public class US18_StepDefinitions {
     String birthDate="20.12.1994";
     String phone="765-888-0987";
     String adress="Kim bilir nerede";
-    String gender="MALE";
-    String speciality="Ophthalmology";
-    String blood="AB+";
     String desc="Aciklamam yok";
     String examFree="700";
 
@@ -71,7 +65,7 @@ public class US18_StepDefinitions {
     @When("Admin alert mesajinin {string} oldugunu test eder")
     public void admin_alert_mesajinin_oldugunu_test_eder(String alert) {
         ReusableMethods.waitFor(3);
-        softAssert.assertEquals(us18.alertSSNDelete.getText(),alert);
+        softAssert.assertEquals(us18.alertSSNDeleteEdit.getText(),alert);
     }
     @Then("Admin Sayfayi kapatir")
     public void admin_sayfayi_kapatir() {
@@ -167,37 +161,13 @@ public class US18_StepDefinitions {
         //softAssert.assertTrue(us18.physicianStateCityDdm.getText().contains("Nebraska"),"State/City olmasi gerektigi gibi calismiyor");
 
     }
-    @And("Admin Physician tablosunda doktor bilgilerinin guncellenmis oldugunu test eder")
-    public void adminPhysicianTablosundaDoktorBilgilerininGuncellenmisOldugunuTestEder() {
-
-     List<String> expected=new ArrayList<>();
-     expected.add(firstName);
-     expected.add(lastName);
-     expected.add(birthDate);
-     expected.add(phone);
-     expected.add(adress);
-     expected.add(gender);
-     expected.add(speciality);
-     expected.add(blood);
-     expected.add(desc);
-     expected.add(examFree);
-     softAssert.assertEquals(us18.editPhysicianList.get(3),firstName);
-    //List<String> actualPhysician=new ArrayList<>();
-    //for (WebElement w:us18.editPhysicianList
-    //) {
-    //    actualPhysician.add(w.getText());
-    //}
-    //softAssert.assertTrue(actualPhysician.containsAll(expected));
-    softAssert.assertAll();
-
-    }
 
     @Then("Admin alert mesajinin {string} icerdigini test eder")
     public void adminAlertMesajininIcerdiginiTestEder(String deleteAlert) {
         ReusableMethods.waitFor(3);
-        System.out.println(us18.alertSSNDelete.getText());
+        System.out.println(us18.alertSSNDeleteEdit.getText());
         System.out.println(deleteAlert);
-        Assert.assertTrue("Actual alert ve expected alert farkli",us18.alertSSNDelete.getText().contains(deleteAlert));
+        Assert.assertTrue("Actual alert ve expected alert farkli",us18.alertSSNDeleteEdit.getText().contains(deleteAlert));
 
 
     }
