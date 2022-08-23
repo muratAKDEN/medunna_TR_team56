@@ -53,5 +53,4 @@ public class US18_apiStep {
         softAssert.assertEquals(actualData.getPhone(),expectedData.getPhone());
     }
 
-
 }
