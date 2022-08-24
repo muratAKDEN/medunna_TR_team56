@@ -29,7 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
-      <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from in_patient;]]></console>
+      <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from public.cmessage where name = 'Furkan']]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -39,6 +39,7 @@
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="public.cmessage" active-filter-id="" />
     <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="information_schema.sql_features" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">

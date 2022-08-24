@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.486">
+    <testcase classname="US27 Messages by Admin Validate with API and DB" name="TC01 Kullanıcı DB ile mesajları doğrulamalıdır" time="0.141">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given Admin medunna database'e baglanir.....................................undefined
+When Admin database'den tum mesajlari alir..................................skipped
+Then Admin alinan mesajlari dogrular........................................skipped
+]]>
+        </failure>
+    </testcase>
+</testsuite>
