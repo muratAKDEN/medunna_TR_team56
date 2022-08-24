@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/API_cucumber.xml"},
         features = "src/test/resources/features/apiFeatures",
         glue = "src/test/java/stepDefinitions/apiStep",
-        tags = "",
+        tags = "RoomPut",
         dryRun = false
 
 )
