@@ -1,8 +1,10 @@
-Feature: DB kullanarak staff leri doğrulayın
+Feature: DB kullarak personelleri dogrulayin
 
-  @US19_TC06
-  Scenario : TC06 ft DB baglanarak staff bilgilerini dogrular
+  Scenario: TC06 ft DB baglanarak doktor bilgilerini dogrular
     Given ft DB ile Medunna veri tabanina baglanir
-    Then Personel Kimliğini veritabanı kimliğiyle doğrular
-    And ft DB ile "staff" tablosundaki "id" 205227 olan staff in verilerini alir
+    When ft DB ile "staff" tablosundaki butun verilerini alir
+    And ft DB ile "staff" tablosundaki "id" 217647 olan personelin verilerini alir
+    And ft DB ile personelin verileri okur
     Then ft DB ile alinan datalari validate eder
+    And ft DB tüm veri kayıtlarını ilgili dosyalara kaydeder
+    And ft veritabanı bağlantısını kapat
