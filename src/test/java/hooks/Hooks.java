@@ -1,14 +1,14 @@
 package hooks;
-
+import io.restassured.builder.RequestSpecBuilder;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.specification.RequestSpecification;
+
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
-
+import io.restassured.specification.RequestSpecification;
 public class Hooks {
 
     public static RequestSpecification spec;
@@ -16,8 +16,8 @@ public class Hooks {
     @Before
     public void setUp() {
 
-        spec = new RequestSpecBuilder().setBaseUri("https://medunna.com").build();
 
+        spec = new RequestSpecBuilder().setBaseUri("https://medunna.com").build();
 
     }
 
@@ -29,7 +29,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             scenario.attach(screenshot, "image/png", "screenshots");
         }
-       // Driver.closeDriver();
+
 
 
     }

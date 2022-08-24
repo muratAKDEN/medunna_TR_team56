@@ -16,7 +16,7 @@ public class DBUtils {
     //Bu method u data cok BeforeMethod icinde setup icin kullanacagiz
     public static void createConnection() {
         String url=ConfigReader.getProperty("db_url");
-        String username=ConfigReader.getProperty("db_username");
+        String username=ConfigReader.getProperty("db_user");
         String password=ConfigReader.getProperty("db_password");
         try {
             connection = DriverManager.getConnection(url, username, password);
