@@ -31,9 +31,9 @@ public class US01_apiStep {
     public void kullanici_tum_kayit_edilenler_icin_end_point_belirler() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("medunnaUrl")).build();
         spec.pathParams("first","api","second","users").
-                queryParams("page",1,"size",5000);
+    queryParams("page",1,"size",5000);
 
-    }
+}
     @Given("Kullanici request gonderir")
     public void kullanici_request_gonderir() {
     //  String token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoZWFsdGhwcm9qZWN0dGVhbTU2IiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NjA1NzMxMTB9.0rtf4OebybYzpO9zcaLJb_-8_c4_yOsBaxv6xCNQ1UXaJtl86AWXP4xARQklwSflbKP97JcQX4dKxsfKjyje4w";
