@@ -80,6 +80,44 @@ public class US16_Page {
 
     @FindBy (xpath = "(//*[text()='Delete'])[21]")
     public WebElement IcDeleteButton;
+    @FindBy (xpath = "//*[text()='Items&Titles']")
+    public WebElement ItemsTitlesButton;
+
+    @FindBy (xpath = "(//*[text()='Room'])[1]")
+    public WebElement RoomButton;
+
+    @FindBy (xpath = "//*[text()='Create a new Room']")
+    public WebElement CreateRoomButton;
+
+    @FindBy (xpath = "//input[@name='roomNumber']")
+    public WebElement RoomNumberBox;
+
+
+    @FindBy (xpath = "//div[@class='invalid-feedback']")
+    public WebElement RoomNumberRequedHataMesji;
+
+
+    @FindBy (xpath = "//select[@name='roomType']")
+    public WebElement RoomTypeBox;
+
+    @FindBy (xpath = " //*[text()='Status']")
+    public WebElement StatusButton;
+
+
+    @FindBy (xpath = "//*[text()='Description']")
+    public WebElement DescriptionButton;
+
+    @FindBy (xpath = "//*[text()='Price']")
+    public WebElement PriceButton;
+
+    @FindBy (xpath = "//*[text()='Room Number']")
+    public WebElement RoomNumberButton;
+
+    @FindBy (xpath = "//div[@class='invalid-feedback']")
+    public WebElement PriceGecersizHataMesaji;
+
+    @FindBy (xpath = "//div[contains(text(),\"deleted\")]")
+    public WebElement DeleteMesaji;
 
 
 }
