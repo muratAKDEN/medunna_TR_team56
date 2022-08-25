@@ -71,4 +71,6 @@ public class US19_dbStep {
     public void ftDBTümVeriKayıtlarınıIlgiliDosyalaraKaydeder() {
         //WriteToTxt.savePatientData(idRow)
     }
+
+
 }
