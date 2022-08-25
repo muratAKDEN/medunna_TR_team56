@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="0.669">
+    <testcase classname="database_read_feature" name="TC_007_kayitli_ssn_bilgilerini_oku" time="0.148">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[* Kullanici database ile baglanti kurar.....................................undefined
+* Kullanici "ssn" bilgilerini "jhi_user" tablosundan getirir................skipped
+* Kullanici Database baglatisini kapatir....................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="US07 Kullanici appointment datalariyla DB dogrulamasi yapar" name="DB test ile appointment datalari dogrulanir" time="0.005">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given Kullanici Medunna db ile baglanti kurar...............................undefined
+When Kullanici gerekli sorgulamayi yaparak butun appointmentleri cagirir....skipped
+Then Daha once olusturulan appointment id ile dogrulama yapar...............skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir." name="TC05 Kullanıcı, DB kullanarak tüm hasta bilgilerini doğrulamalıdır." time="0.014">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given Kullanici medunna database e baglanir.................................undefined
+Then Kullanici database'den tum hasta bilgilerini alir......................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="db_appointmentsList" name="Doctor tests Appointment DB" time="0.013">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given Doctor connects to database...........................................undefined
+Given Doctor connects to database...........................................skipped
+Then Doctor gets appointment "status".......................................skipped
+And Doctor verifies the "PENDING" by DB.....................................skipped
+Then close the database connection 010......................................skipped
+]]>
+        </failure>
+    </testcase>
+</testsuite>
