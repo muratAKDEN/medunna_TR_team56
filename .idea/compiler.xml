@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="medunna_TR_team56" />
-        <module name="medunne_team56" />
         <module name="medunne_team56 (2)" />
+        <module name="medunne_teamxxx" />
+        <module name="medunne_team56" />
       </profile>
     </annotationProcessing>
   </component>
