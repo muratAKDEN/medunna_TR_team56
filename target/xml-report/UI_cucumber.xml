@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="88.024">
+    <testcase classname="US11 &quot;My Appointments&quot; Physician (Doctor) tarafından düzenlenebilmeli" name="TC01 &quot;Create a new appointment or edit&quot; işlemlerini yapabilmeli" time="15.908">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And kullanici username olarak "doctorUser" girer............................passed
+And kullanici password olarak "password" girer..............................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And ft mypages butonuna tiklar..............................................passed
+And ft myAppointments butonuna tiklar.......................................passed
+And ft edit butonuna tiklar.................................................passed
+Given ft Create or Edit an Appointment yazisini gorur.......................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US11 &quot;My Appointments&quot; Physician (Doctor) tarafından düzenlenebilmeli" name="TC02 Bir randevu guncellendiginde; kullanıcı (doktor), hastanın asagıdaki bilgilerini gormelidir" time="16.612">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And kullanici username olarak "doctorUser" girer............................passed
+And kullanici password olarak "password" girer..............................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And ft mypages butonuna tiklar..............................................passed
+And ft myAppointments butonuna tiklar.......................................passed
+And ft edit butonuna tiklar.................................................passed
+Given ft "ID","Start DateTime","End DateTime","Status","Physician" gorebilmeli.passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US11 &quot;My Appointments&quot; Physician (Doctor) tarafından düzenlenebilmeli" name="TC03 Doktor  &quot;Anamnesis, Treatment ve Diagnosis&quot;  alanlarini doldurmak zorundadir" time="16.877">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And kullanici username olarak "doctorUser" girer............................passed
+And kullanici password olarak "password" girer..............................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And ft mypages butonuna tiklar..............................................passed
+And ft myAppointments butonuna tiklar.......................................passed
+And ft edit butonuna tiklar.................................................passed
+Given ft "Anamnesis","Treatment" ve "Diagnosis" alanlarini doldurmali.......passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US11 &quot;My Appointments&quot; Physician (Doctor) tarafından düzenlenebilmeli" name="TC04 &quot;prescription ve description&quot; alanlari doldurmali" time="16.773">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And kullanici username olarak "doctorUser" girer............................passed
+And kullanici password olarak "password" girer..............................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And ft mypages butonuna tiklar..............................................passed
+And ft myAppointments butonuna tiklar.......................................passed
+And ft edit butonuna tiklar.................................................passed
+Given ft "prescription","description" doldurmali............................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US11 &quot;My Appointments&quot; Physician (Doctor) tarafından düzenlenebilmeli" name="TC05 &quot;Status&quot; doktor tarafından &quot;PENDING, COMPLETED veya CANCELLED&quot; olarak secilebilmeli" time="21.231">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And kullanici username olarak "doctorUser" girer............................passed
+And kullanici password olarak "password" girer..............................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And ft mypages butonuna tiklar..............................................passed
+And ft myAppointments butonuna tiklar.......................................passed
+And ft edit butonuna tiklar.................................................passed
+And ft "PENDING","COMPLETED","CANCELLED" olarak secebilmeli.................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

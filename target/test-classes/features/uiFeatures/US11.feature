@@ -1,3 +1,4 @@
+@smoke
 Feature: US11 "My Appointments" Physician (Doctor) tarafından düzenlenebilmeli
 
 

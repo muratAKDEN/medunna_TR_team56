@@ -1,7 +1,7 @@
 Feature: US10 Doktor randevuları
 
 
-  @TC01
+
   Scenario: Kullanici randevu listesini ve zaman dilimlerini "My Appointments" sekmesinden görebilmelidir
     Given Kullanici "medunnaUrl" adresine gider
     Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar
