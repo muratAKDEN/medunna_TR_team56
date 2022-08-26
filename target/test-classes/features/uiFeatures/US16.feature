@@ -31,7 +31,7 @@ Feature: US 16 Admin oda olusturur siler duzenler
   Scenario:TC 04 fiyat girilebilir olmali bos birakilmamali
     # admin room sekmesine tiklar
     And admin status checkbox tiklar
-    And hata mesajinin gorundugunu test eder
+   # And hata mesajinin gorundugunu test eder
     And admin acilan sayfada room number sekmesini doldurur
     And price kismina tiklar
     And  description kismina tiklar

@@ -37,25 +37,32 @@ public class US16_yeni_Steps {
     }
     @Then("Kullanici Room Number kismina daha once kullanilmamis bir oda numarasi girer")
     public void kullanici_room_number_kismina_daha_once_kullanilmamis_bir_oda_numarasi_girer() {
-
-        us16_page.RoomNumberBox.sendKeys("4774875");
+        String number= ""+faker.number().numberBetween(1111,999999999);
+        us16_page.RoomNumberBox.sendKeys(number);
     }
     @Then("Kullanici Price gecerli bir fiyat girer")
     public void kullanici_price_gecerli_bir_fiyat_girer() {
 
-        us16_page.PriceBox.sendKeys("12");
+        us16_page.PriceBox.sendKeys("152");
+        ReusableMethods.waitFor(2);
     }
     @Then("Kullanici Save butonunu tiklar")
     public void kullanici_save_butonunu_tiklar() {
 
-        us16_page.SaveBox.click();
+        jse.executeScript("arguments[0].click();",us16_page.SaveBox );
+     //   us16_page.SaveBox.click();
+
     }
+
+
     @Then("Kullanici cikan mesajinin uzerinde {string}  icerdigini dogrular")
     public void kullanici_cikan_mesajinin_uzerinde_icerdigini_dogrular(String string) {
 
         ReusableMethods.waitFor(2);
         String exceptedmesaj="A new Room is created with identifier";
-        Assert.assertTrue(us16_page.KayitMesji.getText().contains(exceptedmesaj));
+        //Assert.assertTrue(adminNewRoomPage.KayitMesji.getText().contains(exceptedmesaj));
+        Assert.assertTrue(us16_page.KayitMesji.isDisplayed());
+
     }
 
     @Then("Kullanici Room Number kismina tiklar")
@@ -113,15 +120,17 @@ public class US16_yeni_Steps {
 
     @And("Kullanici Description kismina tiklar")
     public void kullaniciDescriptionKisminaTiklar() {
-
-        us16_page.DescriptionBox.click();
+ReusableMethods.waitFor(1);
+       jse.executeScript("arguments[0].scrollIntoView()",us16_page.DescriptionBox);
+        jse.executeScript("arguments[0].click();",us16_page.DescriptionBox );
+       // us16_page.DescriptionBox.click();
     }
 
     @And("Kullanici Price kisminin altinda {string} yazisinin gorundugunu dogrular")
-    public void kullaniciPriceKismininAltindaYazisininGorundugunuDogrular(String arg0) {
+    public void kullaniciPriceKismininAltindaYazisininGorundugunuDogrular(String mesaj) {
 
-        ReusableMethods.waitFor(2);
-        Assert.assertTrue(us16_page.PriceBoxBosHataMesaji.isDisplayed());
+        ReusableMethods.waitFor(1);
+        Assert.assertTrue(us16_page.PriceBoxBosHataMesaji.getText().contains(mesaj));
     }
 
 
@@ -174,7 +183,7 @@ public class US16_yeni_Steps {
 
     @Given("Kullanici Room Table kisminda ID alanina tiklayarak odalari en son olusturulandan baslayarak siralar")
     public void kullaniciRoomTableKismindaIDAlaninaTiklayarakOdalariEnSonOlusturulandanBaslayarakSiralar() {
-
+        ReusableMethods.waitFor(2);
         us16_page.IdButton.click();
     }
 
@@ -219,15 +228,15 @@ public class US16_yeni_Steps {
     @And("Kullanici acilan Room sayfasinda edit butonuna tiklar")
     public void kullaniciAcilanRoomSayfasindaEditButonunaTiklar() {
 
-        us16_page.EditButton.click();
+        us16_page.EditButton2.click();
     }
 
     @And("Kullanici Room Number kismina tiklar, temizler ve daha once kullanilmamis yeni bir Room Number girer")
     public void kullaniciRoomNumberKisminaTiklarTemizlerVeDahaOnceKullanilmamisYeniBirRoomNumberGirer() {
 
-        us16_page.RoomNumberBox.click();
-        us16_page.RoomNumberBox.clear();
-        us16_page.RoomNumberBox.sendKeys("1259748");
+       us16_page.RoomNumberBox.click();
+       us16_page.RoomNumberBox.clear();
+       us16_page.RoomNumberBox.sendKeys("1259748");
 
     }
 
@@ -240,38 +249,37 @@ public class US16_yeni_Steps {
     @And("Kullanici Price kismina tiklar, temizler ve yeni bir price degeri girer")
     public void kullaniciPriceKisminaTiklarTemizlerVeYeniBirPriceDegeriGirer() {
 
-       us16_page.PriceBox.click();
-       us16_page.PriceBox.clear();
-       us16_page.PriceBox.sendKeys("12");
+
+        us16_page.PriceBox.clear();
+        us16_page.PriceBox.sendKeys("124");
 
     }
 
     @And("Kullanici Description kismina tiklar, temizler ve yeni bir description girer")
     public void kullaniciDescriptionKisminaTiklarTemizlerVeYeniBirDescriptionGirer() {
 
-       us16_page.DescriptionBox.click();
-       us16_page.DescriptionBox.clear();
-       us16_page.DescriptionBox.sendKeys("maasallah");
+        us16_page.DescriptionBox.click();
+        us16_page.DescriptionBox.clear();
+        us16_page.DescriptionBox.sendKeys("maasallah");
     }
 
     @Then("Kullanici Room Table'da ilk satirda yer alan odanin delete butonuna basar")
     public void kullaniciRoomTableDaIlkSatirdaYerAlanOdaninDeleteButonunaBasar() {
-
+        ReusableMethods.waitFor(2);
         us16_page.DeleteButton.click();
     }
 
     @And("Kullanici Room sayfasinda acilan kisimda delete butonuna tiklar")
     public void kullaniciRoomSayfasindaAcilanKisimdaDeleteButonunaTiklar() {
 
-        us16_page.IcDeleteButton.click();
+        us16_page.IcDeleteButton.isDisplayed();
     }
 
     @And("Kullanici gelen mesajin {string}  icerdigini dogrular")
     public void kullaniciGelenMesajinARoomIsDeletedWithIdentifierIcerdiginiDogrular() {
 
         ReusableMethods.waitFor(2);
-        String exceptedmesaji="deleted";
-        Assert.assertTrue(us16_page.DeleteMesaji.getText().contains(exceptedmesaji));
+        Assert.assertTrue(us16_page.DeleteMesaji.isDisplayed());
 
     }
 
@@ -282,16 +290,18 @@ public class US16_yeni_Steps {
     }
 
     @And("Price kisminin altinda {string} yazisinin gorundugunu dogrular")
-    public void priceKismininAltindaYazisininGorundugunuDogrular(String arg0) {
+    public void priceKismininAltindaYazisininGorundugunuDogrular(String mesaj) {
         ReusableMethods.waitFor(2);
-        Assert.assertTrue(us16_page.PriceGecersizHataMesaji.isDisplayed());
+        //Assert.assertTrue(adminNewRoomPage.PriceGecersizHataMesaji.isDisplayed());
+       us16_page.PriceGecersizHataMesaji.click();
+        Assert.assertEquals(mesaj,us16_page.PriceGecersizHataMesaji.getText());
     }
 
     @And("Kullanici Save butonunun erisilemez oldugunu dogrular")
     public void kullaniciSaveButonununErisilemezOldugunuDogrular() {
         ReusableMethods.waitFor(2);
         jse.executeScript("arguments[0].scrollIntoView()",us16_page.SaveBox);
-        Assert.assertFalse(us16_page.SaveBox.isEnabled());
+        Assert.assertFalse(us16_page.KayitMesji.isDisplayed());
     }
 
     @And("Kullanici Room Number kismina temizler")
@@ -303,5 +313,15 @@ public class US16_yeni_Steps {
     public void kullaniciAcilanRoomSayfasindaViewButonunaTiklar() {
 
         us16_page.ViewButton.click();
+    }
+
+    @And("Kullanici cikan mesajinin uzerindee {string}  icerdigini dogrular")
+    public void kullaniciCikanMesajininUzerindeeIcerdiginiDogrular(String arg0) {
+
+        ReusableMethods.waitFor(2);
+        String exceptedmesaj="A new Room is updated with identifier";
+        //Assert.assertTrue(adminNewRoomPage.KayitMesji.getText().contains(exceptedmesaj));
+        Assert.assertTrue(us16_page.UpdateMesaji.isDisplayed());
+
     }
 }
