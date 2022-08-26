@@ -31,7 +31,7 @@ Feature: US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli 
     And NBH kayit bilgilerinin gorunur oldugunu test eder
     And Kullanici sayfayi kapatir
 
-
+  @wer
   Scenario: TC06 Kullanici herhangi bir hasta bilgisini silebilir
     Then NBH tablo bilgilerini duzenlemek istediği hastanin yanindaki 'edit' butonuna tiklar
     Then NBH kayit bilgilerini siler ve save butonuna tiklar
