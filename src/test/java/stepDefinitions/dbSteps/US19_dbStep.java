@@ -55,8 +55,8 @@ public class US19_dbStep {
 
     }
 
-    @And("ft veritabanı bağlantısını kapat")
-    public void ftVeritabanıBağlantısınıKapat() {
+    @And("ft veritabani baglantisini kapat")
+    public void ftVeritabaniBaglantisiniKapat() {
         DBUtils.closeConnection();
     }
 
@@ -67,8 +67,10 @@ public class US19_dbStep {
         DBUtils.executeQuery(query);
     }
 
-    @And("ft DB tüm veri kayıtlarını ilgili dosyalara kaydeder")
-    public void ftDBTümVeriKayıtlarınıIlgiliDosyalaraKaydeder() {
+    @And("ft DB tum veri kayitlarini ilgili dosyalara kaydeder")
+    public void ftDBTumVeriKayitlariniIlgiliDosyalaraKaydeder() {
         //WriteToTxt.savePatientData(idRow)
     }
+
+
 }

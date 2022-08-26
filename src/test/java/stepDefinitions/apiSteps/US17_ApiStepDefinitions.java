@@ -66,14 +66,14 @@ public class US17_ApiStepDefinitions {
                 sendKeys("5").sendKeys(Keys.TAB).
                 sendKeys("50").sendKeys(Keys.ENTER).perform();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         String expectedText = us17_page.popUpMessage.getText();
         Assert.assertTrue(expectedText.contains("A new Test Item is created"));
     }
 
     @Given("Olusturulan test items verisini siler")
     public void olusturulan_test_items_verisini_siler() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         us17_page.createdDate.click();
         us17_page.deleteLastTestItem.click();
         us17_page.confirmDelete.click();
@@ -96,7 +96,7 @@ public class US17_ApiStepDefinitions {
                 sendKeys("100").sendKeys(Keys.TAB).
                 sendKeys("5").sendKeys(Keys.TAB).
                 sendKeys("50").sendKeys(Keys.ENTER).perform();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         expectedId = us17_page.popUpMessage.getText().replace("A new Test Item is created with identifier ", "");
         us17_page.createdDate.click();
         us17_page.editLastTestItem.click();
@@ -124,13 +124,15 @@ public class US17_ApiStepDefinitions {
                 sendKeys("5").sendKeys(Keys.TAB).
                 sendKeys("50").sendKeys(Keys.ENTER).perform();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         expectedId = us17_page.popUpMessage.getText().replace("A new Test Item is created with identifier ", "");
 
     }
 
     @Given("Olusturulan test ogesininin goruntulendigini kontrol eder")
-    public void olusturulan_test_ogesininin_goruntulendigini_kontrol_eder() {
+    public void olusturulan_test_ogesininin_goruntulendigini_kontrol_eder() throws InterruptedException {
+        us17_page.createdDate.click();
+        Thread.sleep(1000);
         us17_page.viewLastTestItem.click();
         String actualId = us17_page.viewTestItemTitle.getText();
 
@@ -150,7 +152,7 @@ public class US17_ApiStepDefinitions {
 
     @Given("Test items formunu gunceller")
     public void test_items_formunu_gunceller() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         us17_page.createdDate.click();
         us17_page.editLastTestItem.click();
         actions = new Actions(Driver.getDriver());
@@ -160,7 +162,7 @@ public class US17_ApiStepDefinitions {
         actions.click(us17_page.createEditItemName).keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).
                 sendKeys(Keys.DELETE).
                 sendKeys(newTestName).sendKeys(Keys.ENTER).perform();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     @Given("Test items olusturuldugunu API ile kontrol eder")
