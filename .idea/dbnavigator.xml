@@ -17,8 +17,8 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1252" />
-      <charset value="windows-1252" />
+      <charset value="windows-1254" />
+      <charset value="windows-1254" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -29,8 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
-      <console name="Medunna" type="STANDARD" schema="public" session="Main">select * from in_patient;
-select * from public.physician where id=164031;</console>
+      <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from public.cmessage]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -40,8 +39,8 @@ select * from public.physician where id=164031;</console>
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="information_schema.sql_features" active-filter-id="" />
     <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="public.cmessage" active-filter-id="" />
+    <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="information_schema.sql_features" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -87,8 +86,8 @@ select * from public.physician where id=164031;</console>
           <port value="5432" />
           <database value="medunna_db" />
           <type value="USER_PASSWORD" />
-          <user value="medunnadb_user" />
-          <deprecated-pwd value="TWVkdW5uYWRiX0AxMjk=" />
+          <user value="medunna_user" />
+          <deprecated-pwd value="bWVkdW5uYV9wYXNzXzk4Nw==" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -197,6 +196,7 @@ select * from public.physician where id=164031;</console>
         <object-type name="FUNCTİON" sorting-type="NAME" />
         <object-type name="PROCEDURE" sorting-type="NAME" />
         <object-type name="ARGUMENT" sorting-type="POSITION" />
+        <object-type name="TYPE ATTRİBUTE" sorting-type="POSITION" />
       </sorting>
       <default-editors>
         <object-type name="VİEW" editor-type="SELECTION" />
