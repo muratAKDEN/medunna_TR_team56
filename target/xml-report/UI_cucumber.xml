@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="36.155">
     <testcase classname="US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir" name="TC01 &quot;New password confirmation&quot; onaylanabilmelidir." time="35.165">
+=======
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="38.856">
+    <testcase classname="US_08 Ana sayfadaki sifre bolumu duzenlenebilir olmalidir" name="TC01 &quot;New password confirmation&quot; onaylanabilmelidir." time="38.329">
+>>>>>>> main
         <system-out>
             <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
 Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
