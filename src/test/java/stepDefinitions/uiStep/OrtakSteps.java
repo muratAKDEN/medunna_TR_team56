@@ -33,17 +33,19 @@ public class OrtakSteps {
     @Then("kullanici username olarak {string} girer")
     public void kullanici_username_olarak_girer(String username) {
 
-ortakPages.loginUsernameTextBox.sendKeys(ConfigReader.getProperty(username));
+        ortakPages.loginUsernameTextBox.sendKeys(ConfigReader.getProperty(username));
     }
     @Then("kullanici password olarak {string} girer")
     public void kullanici_password_olarak_girer(String password) {
-ortakPages.loginPasswordTextBox.sendKeys(ConfigReader.getProperty(password));
+    ortakPages.loginPasswordTextBox.sendKeys(ConfigReader.getProperty(password));
 
     }
+
     @And("kullanici Sign In butonuna tiklar")
     public void kullaniciSignInButonunaTiklar() {
 
         ortakPages.loginSignInButonu.click();
+
     }
 
 

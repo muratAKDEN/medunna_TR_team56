@@ -1,6 +1,7 @@
 package stepDefinitions.apiSteps;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -125,6 +126,7 @@ assertEquals(roomsPojo_get.getRoomType(),roomsPojoPost.getRoomType());
 
 
     }
+
 
 
 }
