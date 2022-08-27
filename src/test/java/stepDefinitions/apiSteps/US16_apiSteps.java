@@ -36,6 +36,7 @@ US16_RoomsPojo_Get putRequest=new US16_RoomsPojo_Get();
                 ContentType.JSON).when().get(ConfigReader.getProperty("room_endpoint"));
 
       //  response.then().assertThat().statusCode(200);
+      //  response.then().assertThat().statusCode(200);
 
 //response.prettyPrint();
     }
