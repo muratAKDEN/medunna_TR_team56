@@ -87,7 +87,7 @@
           <database value="medunna_db" />
           <type value="USER_PASSWORD" />
           <user value="medunnadb_user" />
-          <deprecated-pwd value="TWVkdW5uYWRiX0AxMjk=" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
