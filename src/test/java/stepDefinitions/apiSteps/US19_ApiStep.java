@@ -14,28 +14,32 @@ import utilities.Authentication;
 import utilities.ConfigReader;
 
 import static io.restassured.RestAssured.given;
+import static utilities.Authentication.generateToken;
 
 
 public class US19_ApiStep {
+    RequestSpecification spec;
     Response response;
     US19_StaffPojo staffPojo;
 
     @Given("Kullanici {string} icin get request yapar")
     public void kullaniciIcinGetRequestYapar(String id) {
-        RequestSpecification spec = new RequestSpecBuilder().
-                setBaseUri(ConfigReader.getProperty("staff")).build();
+        spec = new RequestSpecBuilder().
+                setBaseUri(ConfigReader.getProperty("staffEnd")).build();
 
-        spec.pathParams("param1","api","param2","staff","param3","214870");
+        spec.pathParams("param1", "api", "param2", "staff", "param3", "id");
 
         response = given().spec(spec)
-                .headers("Authorization","Bearer "+ Authentication.generateToken())
-                .contentType(ContentType.JSON)
+                .headers("Authorization", "Bearer " + Authentication.generateToken(),
+                        "Content-Type",
+                        ContentType.JSON,
+                        "Accept",
+                        ContentType.JSON
+                ).spec(spec)
                 .when()
                 .get("/{param1}/{param2}/{param3}");
 
         response.prettyPrint();
-
-
 
     }
 
@@ -48,13 +52,13 @@ public class US19_ApiStep {
     }
 
     @And("ft gelen datayi validate eder {string} {string} {string} {string} {string} {string}")
-    public void ftGelenDatayiValidateEder(String id, String firstName, String lastName, String phone, String ssn, String email) {
+    public void ftGelenDatayiValidateEder(int id, String firstName, String lastName, String phone, String ssn, String email) {
         Assert.assertEquals(id, staffPojo.getId());
         Assert.assertEquals(firstName, staffPojo.getFirstName());
         Assert.assertEquals(lastName, staffPojo.getLastName());
-        Assert.assertEquals(phone,staffPojo.getPhone());
+        Assert.assertEquals(phone, staffPojo.getPhone());
         //Assert.assertEquals(ssn,staffPojo.getUser().);
-        //Assert.assertEquals(phone,staffPojo.getUser().);
+        //Assert.assertEquals(email,staffPojo.getUser().);
 
     }
 }

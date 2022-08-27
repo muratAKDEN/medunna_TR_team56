@@ -14,6 +14,7 @@ public class US19_dbStep {
     String query;
     List<Object> actualData;
     String Staff;
+    String persoenel;
     String Id;
     int idNum;
 
@@ -23,8 +24,10 @@ public class US19_dbStep {
     }
 
     @Given("ft DB ile {string} tablosundaki {string} {int} olan personelin verilerini alir")
-    public void ft_db_ile_tablosundaki_olan_personelin_verilerini_alir(String staff, String id, Integer num) {
-        query = "select * from " + staff + " where " + id + "=" + num + "";
+    public void ft_db_ile_tablosundaki_olan_personelin_verilerini_alir(String personel, String id, Integer num) {
+        Staff=personel; Id=id; idNum=num;
+
+        query = "select * from " + persoenel + " where " + id + "=" + num + "";
         DBUtils.executeQuery(query);
     }
 
@@ -62,9 +65,13 @@ public class US19_dbStep {
 
 
     @When("ft DB ile {string} tablosundaki butun verilerini alir")
-    public void ftDBIleTablosundakiButunVerileriniAlir(String staff) {
-        query = "select * from " + staff;
+    public void ftDBIleTablosundakiButunVerileriniAlir(String personel) {
+        query = "select * from " + personel;
         DBUtils.executeQuery(query);
+
+        Staff=personel;
+
+
     }
 
     @And("ft DB tum veri kayitlarini ilgili dosyalara kaydeder")

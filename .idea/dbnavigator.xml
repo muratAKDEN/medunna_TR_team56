@@ -29,8 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
-      <console name="Medunna" type="STANDARD" schema="pg_toast_temp_1" session="Main"><![CDATA[select * from public.cmessage
-select * from jhi_user]]></console>
+      <console name="Medunna" type="STANDARD" schema="public" session="Main">select * from public.cmessage</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
