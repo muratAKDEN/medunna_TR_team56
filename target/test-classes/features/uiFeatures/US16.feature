@@ -10,6 +10,7 @@ Feature:US_016 Oda Olusturma / Goruntuleme / Guncelleme /Silme
     And Items&Titles elementine tiklar
     And Kullanici acilan dropdown menuden Room sekmesine tiklar
 
+    @sdf
   Scenario:TC_001 Admin yatan hastalar icin yeni oda olusturabilir.
     And Kullanici Create a New Room butonuna tiklar
     And Kullanici Room Number kismina daha once kullanilmamis bir oda numarasi girer

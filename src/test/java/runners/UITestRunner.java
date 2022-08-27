@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/features/uiFeatures",
         glue= "stepDefinitions",
 
-        tags = "@asd",
+        tags = " @sdf",
         dryRun = false
 
 
