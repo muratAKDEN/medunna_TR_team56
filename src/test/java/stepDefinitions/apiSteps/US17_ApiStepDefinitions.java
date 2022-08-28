@@ -11,10 +11,17 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 import pages.US17_Page;
+import pojos.TestItemsPojo;
 import utilities.Authentication;
 import utilities.ConfigReader;
+import utilities.DBUtils;
 import utilities.Driver;
 
+import java.sql.SQLException;
+import java.util.Collections;
+import java.util.List;
+
+import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertFalse;
 
 public class US17_ApiStepDefinitions {
@@ -169,7 +176,7 @@ public class US17_ApiStepDefinitions {
     public void test_items_olusturuldugunu_api_ile_kontrol_eder() {
         // Test Item icin get Request yolla "https://medunna.com/api/c-test-items/expectedId"
         String token = Authentication.generateToken();
-        response = RestAssured.given().headers("Authorization",
+        response = given().headers("Authorization",
                 "Bearer " + token,
                 "Content-Type",
                 ContentType.JSON,
@@ -191,7 +198,7 @@ public class US17_ApiStepDefinitions {
     public void test_items_guncellendigini_api_ile_kontrol_eder() {
         // Test Item icin get Request yolla "https://medunna.com/api/c-test-items/expectedId"
         String token = Authentication.generateToken();
-        response = RestAssured.given().headers("Authorization",
+        response = given().headers("Authorization",
                 "Bearer " + token,
                 "Content-Type",
                 ContentType.JSON,
@@ -213,7 +220,7 @@ public class US17_ApiStepDefinitions {
     public void test_items_silindigini_api_ile_kontrol_eder() {
         // Test Item icin get Request yolla "https://medunna.com/api/c-test-items/expectedId"
         String token = Authentication.generateToken();
-        response = RestAssured.given().headers("Authorization",
+        response = given().headers("Authorization",
                 "Bearer " + token,
                 "Content-Type",
                 ContentType.JSON,
@@ -232,11 +239,67 @@ public class US17_ApiStepDefinitions {
 
     @Given("Admin API ile test items olusturur")
     public void adminAPIIleTestItemsOlusturur() {
+        TestItemsPojo testItems = new TestItemsPojo();
+        String token = Authentication.generateToken();
+
+        testItems.setCreatedBy("medunna");
+        testItems.setCreatedDate("2022-08-23T18:14:44.983593Z");
+        testItems.setName("Harun");
+        testItems.setDescription("kanTesti");
+
+        testItems.setDefaultValMin("15");
+        testItems.setDefaultValMax("50");
+
+
+        response = given().headers("Authorization",
+                        "Bearer " + token,
+                        "Content-Type",
+                        ContentType.JSON,
+                        "Accept",
+                        ContentType.JSON)
+                .when().body(testItems)
+                .post("https://www.medunna.com/api/c-test-items/")
+                .then()
+                .contentType(ContentType.JSON)
+                .extract()
+                .response();
+        response.prettyPrint();
+        response.then().assertThat().statusCode(201);
 
     }
 
     @And("API ile Test items olusturuldugunu API ile kontrol eder")
     public void apiIleTestItemsOlusturuldugunuAPIIleKontrolEder() {
+    }
+
+    @And("Test items olusturuldugunu DB ile kontrol eder")
+    public void testItemsOlusturuldugunuDBIleKontrolEder() throws SQLException {
+        DBUtils.createConnection();
+        String query = "select * from c_test_item";
+        System.out.println(DBUtils.getColumnNames(query) + "\n");
+        List<Object> idList = DBUtils.getColumnData(query, "id");
+        Object expectedIdObject = expectedId;
+
+        System.out.println(idList + "\n");
+        System.out.println("expectedId= " + expectedId);
+        Assert.assertTrue(idList.contains(expectedIdObject));
+
+        for (Object each : idList) {
+            //System.out.println(each);
+            if (each.equals((Object) expectedId)) {
+                System.out.println("varmisss");
+            }
+        }
+    }
+
+    @And("Test items guncellendigini DB ile kontrol eder")
+    public void testItemsGuncellendiginiDBIleKontrolEder() {
+
+    }
+
+    @And("Test items silindigini DB ile kontrol eder")
+    public void testItemsSilindiginiDBIleKontrolEder() {
+
     }
 }
 
