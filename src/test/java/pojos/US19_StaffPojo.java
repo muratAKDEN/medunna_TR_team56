@@ -48,9 +48,6 @@ public class US19_StaffPojo {
     public US19_StaffPojo() {
     }
 
-    public US19_StaffPojo(int id, String firstName, String lastName, String phone) {
-    }
-
     public String getCreatedBy() {
         return createdBy;
     }
@@ -120,18 +117,6 @@ public class US19_StaffPojo {
     }
 
     public void setUser(User user) {
-        this.user = user;
-    }
-
-    public US19_StaffPojo(String createdBy, String createdDate, int id, String firstName, String lastName, String birthDate, String phone, String gender, User user) {
-        this.createdBy = createdBy;
-        this.createdDate = createdDate;
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
-        this.phone = phone;
-        this.gender = gender;
         this.user = user;
     }
 

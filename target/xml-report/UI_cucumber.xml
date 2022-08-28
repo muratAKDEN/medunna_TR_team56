@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.787">
-    <testcase classname="Admin olarak; Yeni Physicians Olustur / Guncelle / Goruntule ve Sil" name="Admin mevcut doktorları silebilir" time="21.46">
-        <failure message="Actual alert ve expected alert farkli" type="java.lang.AssertionError">
-            <![CDATA[Given Admin "medunnaUrl" gider..............................................passed
-When Admin Giris ikonuna tiklar.............................................passed
-And Admin Sign in secenegine tiklar.........................................passed
-And Admin valid "adminErva" ve valid "adminErvaPassword" ile giris yapar....passed
-And Admin Sign in butonuna tiklar...........................................passed
-And Admin ItemsTitles butonuna tiklar.......................................passed
-And Admin Physician secenegine tiklar.......................................passed
-And Admin son sayfaya gider ve son siradaki delete butonuna tiklar..........passed
-And Admin alert mesajinin "A Physician is deleted with identifier" icerdigini test eder.failed
-Then Admin Sayfayi kapatir..................................................skipped
-
-StackTrace:
-java.lang.AssertionError: Actual alert ve expected alert farkli
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at stepDefinitions.uiStep.US18_StepDefinitions.adminAlertMesajininIcerdiginiTestEder(US18_StepDefinitions.java:170)
-	at ✽.Admin alert mesajinin "A Physician is deleted with identifier" icerdigini test eder(file:///C:/Users/user/IdeaProjects/medunna_TR_team56/src/test/resources/features/uiFeatures/US18.feature:57)
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="26.043">
+    <testcase classname="US_016 Oda Olusturma / Goruntuleme / Guncelleme /Silme" name="TC_001 Admin yatan hastalar icin yeni oda olusturabilir." time="25.712">
+        <system-out>
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And kullanici username olarak "admin" girer.................................passed
+And kullanici password olarak "password" girer..............................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And Items&Titles elementine tiklar..........................................passed
+And Kullanici acilan dropdown menuden Room sekmesine tiklar.................passed
+And Kullanici Create a New Room butonuna tiklar.............................passed
+And Kullanici Room Number kismina daha once kullanilmamis bir oda numarasi girer.passed
+And Kullanici Price gecerli bir fiyat girer.................................passed
+And Kullanici Save butonunu tiklar..........................................passed
+And Kullanici cikan mesajinin uzerinde "A new Room is created with identifier"  icerdigini dogrular.passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>
