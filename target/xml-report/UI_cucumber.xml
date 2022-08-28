@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.787">
+    <testcase classname="Admin olarak; Yeni Physicians Olustur / Guncelle / Goruntule ve Sil" name="Admin mevcut doktorları silebilir" time="21.46">
+        <failure message="Actual alert ve expected alert farkli" type="java.lang.AssertionError">
+            <![CDATA[Given Admin "medunnaUrl" gider..............................................passed
+When Admin Giris ikonuna tiklar.............................................passed
+And Admin Sign in secenegine tiklar.........................................passed
+And Admin valid "adminErva" ve valid "adminErvaPassword" ile giris yapar....passed
+And Admin Sign in butonuna tiklar...........................................passed
+And Admin ItemsTitles butonuna tiklar.......................................passed
+And Admin Physician secenegine tiklar.......................................passed
+And Admin son sayfaya gider ve son siradaki delete butonuna tiklar..........passed
+And Admin alert mesajinin "A Physician is deleted with identifier" icerdigini test eder.failed
+Then Admin Sayfayi kapatir..................................................skipped
+
+StackTrace:
+java.lang.AssertionError: Actual alert ve expected alert farkli
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at stepDefinitions.uiStep.US18_StepDefinitions.adminAlertMesajininIcerdiginiTestEder(US18_StepDefinitions.java:170)
+	at ✽.Admin alert mesajinin "A Physician is deleted with identifier" icerdigini test eder(file:///C:/Users/user/IdeaProjects/medunna_TR_team56/src/test/resources/features/uiFeatures/US18.feature:57)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
