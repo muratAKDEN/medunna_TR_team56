@@ -35,7 +35,7 @@ Feature: US023 Kullanici Staff rolu ile fatura olusturup dogrulayabilmeli
     And kullanici anamneis, treatment, diagnosis kutularini doldurur
     And kullanici create bolumu save butonuna tiklar
 
-  Scenario: US023-TC004 kullanici Staff rolu ile islemleri tamamlanan hastaya fatura olusturur
+  Scenario: US023-TC004
     And kullanici staff rolu ile oturum acar
     Then kullanici staff mypage acilir butonuna tiklar
     And kullanici search patient butonuna tiklar
