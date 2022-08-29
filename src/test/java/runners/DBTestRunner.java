@@ -13,9 +13,9 @@ import org.junit.runner.RunWith;
 
         features="src/test/resources/features/dbFeatures",
 
-        glue="src/test/java/stepDefinitions/dbStep",
+        glue="src/test/java/stepDefinitions/dbSteps",
 
-        tags = "@US18_TC06",
+        tags = "@messageDb",
         dryRun = false
 )
 

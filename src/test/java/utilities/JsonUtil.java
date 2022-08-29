@@ -1,7 +1,7 @@
 package utilities;
 
 
-import org.codehaus.jackson.map.ObjectMapper;
+import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 
