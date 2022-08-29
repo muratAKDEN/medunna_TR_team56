@@ -88,28 +88,24 @@ Feature: Test items(oge) Olustur / Guncelle / Sil
   Scenario: API ile test items oluşturun.
     Given Admin API ile test items olusturur
     And API ile Test items olusturuldugunu API ile kontrol eder
+    And Api ile olusturulan test items verisini siler
     And Sayfayi kapatir
 
- #@us17tc07
- #Scenario: DB ile dogrulayin.
- #  Given Admin olarak "medunnaUrl" ana sayfasina gider
- #  And Anasayfada giris ikonuna tiklar
- #  And Sign in secenegine tiklar
- #  And Admin olarak gecerli bir username girer
- #  And Gecerli bir parola girer
- #  And Sign in buttonuna tiklar
- #  And Items&Titles elementine tiklar
- #  And Test Item elementine tiklar
- #  And Create a new Test Item elementine tiklar
- #  And Test Item formunu doldurur
- #  And Test items olusturuldugunu DB ile kontrol eder
- #  And Test items formunu gunceller
- #  And Test items guncellendigini DB ile kontrol eder
- #  And Olusturulan test items verisini siler
- #  And Test items silindigini DB ile kontrol eder
- #  And Sayfayi kapatir
-
-
-
-
-
+  @us17tc07
+  Scenario: DB ile dogrulayin.
+    Given Admin olarak "medunnaUrl" ana sayfasina gider
+    And Anasayfada giris ikonuna tiklar
+    And Sign in secenegine tiklar
+    And Admin olarak gecerli bir username girer
+    And Gecerli bir parola girer
+    And Sign in buttonuna tiklar
+    And Items&Titles elementine tiklar
+    And Test Item elementine tiklar
+    And Create a new Test Item elementine tiklar
+    And Test Item formunu doldurur
+    And Test items olusturuldugunu DB ile kontrol eder
+    And Test items formunu gunceller
+    And Test items guncellendigini DB ile kontrol eder
+    And Olusturulan test items verisini siler
+    And Test items silindigini DB ile kontrol eder
+    And Sayfayi kapatir
