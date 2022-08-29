@@ -17,10 +17,10 @@ import static utilities.ReusableMethods.waitFor;
 public class US19_StepDefinitions {
     US19_Pages us19_pages = new US19_Pages();
     Actions actions = new Actions(Driver.getDriver());
-/*
+
     @Given("ft  {string} sitesine gider")
     public void ft_sitesine_gider(String string) {
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrll"));
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
 
     @Then("ft account-menu yi tiklar")
@@ -271,5 +271,8 @@ public class US19_StepDefinitions {
 
     }
 
-*/
+    @And("ft sayfayi kapatir")
+    public void ftSayfayiKapatir() {
+        Driver.closeDriver();
+    }
 }
