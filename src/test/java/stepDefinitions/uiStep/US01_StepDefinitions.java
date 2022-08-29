@@ -3,8 +3,8 @@ package stepDefinitions.uiStep;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
-import org.testng.Assert;
 import pages.US01_02;
 import utilities.Driver;
 import utilities.ReusableMethods;
