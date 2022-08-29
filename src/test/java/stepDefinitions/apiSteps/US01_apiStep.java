@@ -34,8 +34,8 @@ public class US01_apiStep {
     queryParams("page",1,"size",5000);
 
 }
-    @Given("Kullanici request gonderir")
-    public void kullanici_request_gonderir() {
+    @Given("Kullanici request gonderirr ve response alirr")
+    public void kullanici_request_gonderirr_ve_response_alirr() {
     //  String token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoZWFsdGhwcm9qZWN0dGVhbTU2IiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NjA1NzMxMTB9.0rtf4OebybYzpO9zcaLJb_-8_c4_yOsBaxv6xCNQ1UXaJtl86AWXP4xARQklwSflbKP97JcQX4dKxsfKjyje4w";
        String token =Authentication.generateToken();
 
@@ -91,7 +91,7 @@ public class US01_apiStep {
     @When("Kullanici request gonderir ve response alirr")
     public void kullanici_request_gonderir_ve_response_alirr() {
 response= given().spec(spec).contentType(ContentType.JSON).body(registrant).when().post("/{first}/{second}");
-
+response.prettyPrint();
 
     }
     @Then("Kullanici API icin Url set ederr")
