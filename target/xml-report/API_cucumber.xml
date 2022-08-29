@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.034"/>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="21.895">
+    <testcase classname="registrant_data_api_test" name="TC05 Swagger kullanarak tüm kayıt bilgilerini alın ve doğrulayın" time="18.831">
+        <system-out>
+            <![CDATA[* Kullanici tum kayit edilenler icin end point belirler.....................passed
+* Kullanici request gonderir................................................passed
+* Kullanici request gonderir................................................passed
+* Kullanici tum kayit edilenlerin sayisinin beklenen sonucla ayni olduğunu dogrular.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="registrant_data_api_test" name="TC06 API kullanarak kayıtlı kişiler oluşturun ve doğrulayın" time="2.059">
+        <system-out>
+            <![CDATA[* Kullanici API icin Url set ederr..........................................passed
+* Kullanici expected datalari girerr........................................passed
+* Kullanici request gonderir ve response alirr..............................passed
+* Kullanici  bilgileri dogrularr............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

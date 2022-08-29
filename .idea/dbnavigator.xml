@@ -29,7 +29,25 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
-      <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from public.cmessage where name = 'Furkan']]></console>
+      <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from public.cmessage where name = 'Furkan'
+select * from pg_catalog.pg_tables
+
+select * from public.physician
+
+select * from public.physician where id=147333
+
+select * from public.appointment
+
+select * from public.appointment where id=153033
+
+select * from public.room
+
+select * from public.patient where id=152832
+
+select * from public.patient where first_name='Hasta'
+select * from jhi_user
+select * from c_state
+select * from public.appointment where public.appointment.id=159174]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -39,8 +57,8 @@
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="public.cmessage" active-filter-id="" />
     <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="information_schema.sql_features" active-filter-id="" />
+    <filter-actions connection-id="a1070f67-1db0-44f7-a7c5-7118c35a751c" dataset="public.cmessage" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -87,7 +105,7 @@
           <database value="medunna_db" />
           <type value="USER_PASSWORD" />
           <user value="medunnadb_user" />
-          <deprecated-pwd value="TWVkdW5uYWRiX0AxMjk=" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
