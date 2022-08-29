@@ -110,10 +110,7 @@ public class US15_apiStep {
         Assert.assertEquals(expectedData.getLastName(), actualData.getLastName());
 
 
-   //     JsonPath jsonPath = response.jsonPath();
-    //    hastaListesi = jsonPath.getList("ssn");
-    //  toplamHastaSayisi = hastaListesi.size();
-     //  System.out.println("Tüm kayıtlı Hasta  Sayısı : "+toplamHastaSayisi);
+
 
     }
     }
