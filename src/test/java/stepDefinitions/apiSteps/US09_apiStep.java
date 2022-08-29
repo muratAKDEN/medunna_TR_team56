@@ -35,6 +35,7 @@ String token=Authentication.generateToken();
                 ContentType.JSON,
                 "Accept",
                 ContentType.JSON).when().get(endpointAllUsers);
+        response.prettyPrint();
     }
 
 
@@ -46,7 +47,7 @@ String token=Authentication.generateToken();
     }
 
     @Then("Kullanici tum hasta bilgilerini API response ile alir")
-    public void kullanici_tum_hasta_bilgilerini_apı_response_ile_alir() {
+    public void kullanici_tum_hasta_bilgilerini_api_response_ile_alir() {
 
         JsonPath jsonPath = response.jsonPath();
 
@@ -58,12 +59,14 @@ String token=Authentication.generateToken();
     }
 
     @Then("Kullanici API ile kayitli hasta sayisini DB ve UI ile gercekler")
-    public void kullanici_apı_ile_kayitli_hasta_sayisini_db_ve_uı_ile_gercekler () {
+    public void kullanici_apı_ile_kayitli_hasta_sayisini_db_ve_ui_ile_gercekler () {
             Assert.assertEquals(hastaToplamSayisi_API, hastaToplamSayisi_DB);
             Assert.assertNotEquals(hastaToplamSayisi_API, hastaToplamSayisi_UI);
 
 
         }
+
+
     }
 
 

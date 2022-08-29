@@ -1,6 +1,7 @@
 package stepDefinitions.apiSteps;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -34,6 +35,7 @@ US16_RoomsPojo_Get putRequest=new US16_RoomsPojo_Get();
                 "Accept",
                 ContentType.JSON).when().get(ConfigReader.getProperty("room_endpoint"));
 
+      //  response.then().assertThat().statusCode(200);
       //  response.then().assertThat().statusCode(200);
 
 //response.prettyPrint();
@@ -125,6 +127,7 @@ assertEquals(roomsPojo_get.getRoomType(),roomsPojoPost.getRoomType());
 
 
     }
+
 
 
 }
