@@ -24,33 +24,30 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="false" />
+    <show-object-properties value="true" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
-      <console name="Medunna" type="STANDARD" schema="public" session="Pool"><![CDATA[select
-    p.adress,
-    p.birth_date,
-    p.blood_group,
-    p.country_id,
-    p.created_by,
-    p.created_date,
-    p.cstate_id,
-    p.description,
-    p.email,
-    p.first_name,
-    p.gender,
-    p."id",
-    p.last_modified_by,
-    p.last_modified_date,
-    p.last_name,
-    p.phone,
-    p.user_id
-from
-    patient p;
+      <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from public.cmessage where name = 'Furkan'
+select * from pg_catalog.pg_tables
 
-select * from room]]></console>
+select * from public.physician
+
+select * from public.physician where id=147333
+
+select * from public.appointment
+
+select * from public.appointment where id=153033
+
+select * from public.room
+
+select * from public.patient where id=152832
+
+select * from public.patient where first_name='Hasta'
+select * from jhi_user
+select * from c_state
+select * from public.appointment where public.appointment.id=159174]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -107,8 +104,8 @@ select * from room]]></console>
           <port value="5432" />
           <database value="medunna_db" />
           <type value="USER_PASSWORD" />
-          <user value="medunna_user" />
-          <deprecated-pwd value="bWVkdW5uYV9wYXNzXzk4Nw==" />
+          <user value="medunnadb_user" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
