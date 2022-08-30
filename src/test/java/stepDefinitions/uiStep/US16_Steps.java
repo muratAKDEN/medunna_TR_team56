@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US16_yeni_Steps {
+public class US16_Steps {
     US16_Page us16_page=new US16_Page();
 
     Faker faker=new Faker();
@@ -324,4 +324,5 @@ ReusableMethods.waitFor(1);
         Assert.assertTrue(us16_page.UpdateMesaji.isDisplayed());
 
     }
+
 }

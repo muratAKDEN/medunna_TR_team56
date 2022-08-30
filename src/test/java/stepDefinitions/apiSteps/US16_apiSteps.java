@@ -1,6 +1,7 @@
 package stepDefinitions.apiSteps;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
@@ -33,7 +34,7 @@ US16_RoomsPojo_Get putRequest=new US16_RoomsPojo_Get();
                 "Content-Type",
                 ContentType.JSON,
                 "Accept",
-                ContentType.JSON).when().get(ConfigReader.getProperty("room_endpoint"));
+                ContentType.JSON).when().get(ConfigReader.getProperty("room_endpoint01"));
 
       //  response.then().assertThat().statusCode(200);
       //  response.then().assertThat().statusCode(200);
@@ -56,6 +57,10 @@ US16_RoomsPojo_Get putRequest=new US16_RoomsPojo_Get();
 
     @Given("admin validates the data")
     public void admin_validates_the_data() {
+        US16_RoomsPojo_Get roomsPojo_get=response.as(US16_RoomsPojo_Get.class);
+
+        assertEquals(roomsPojo_get.getRoomNumber(),roomsPojoPost.getRoomNumber());
+        assertEquals(roomsPojo_get.getRoomType(),roomsPojoPost.getRoomType());
 
 
     }
@@ -63,9 +68,11 @@ US16_RoomsPojo_Get putRequest=new US16_RoomsPojo_Get();
     @Given("admin sends post request for rooms")
     public void admin_sends_post_request_for_rooms() {
         // post yaparken istenilen datayi set etmek gerekir
+        Faker faker=new Faker();
+       int number=faker.number().numberBetween(1111,999999999);
         roomsPojoPost.setRoomType("TWIN");
         roomsPojoPost.setPrice(501);
-        roomsPojoPost.setRoomNumber(19887700);
+        roomsPojoPost.setRoomNumber(number);
         roomsPojoPost.setStatus(false);
         roomsPojoPost.setDescription("our new born Child room");
 response=given().headers("Authorization",
@@ -108,9 +115,9 @@ assertEquals(roomsPojo_get.getRoomType(),roomsPojoPost.getRoomType());
     @Given("admin sends put request for rooms")
     public void admin_sends_put_request_for_rooms() {
 
-        putRequest.setId(208814);
-        putRequest.setRoomType("DELUXE");
-        putRequest.setRoomNumber(13130);
+        putRequest.setId(1451);
+        putRequest.setRoomType("TWIN");
+        putRequest.setRoomNumber(27241);
         putRequest.setPrice(1399);
         putRequest.setStatus(true);
 
@@ -128,6 +135,37 @@ assertEquals(roomsPojo_get.getRoomType(),roomsPojoPost.getRoomType());
 
     }
 
+
+    @And("Admin validates the put request")
+    public void adminValidatesThePutRequest() {
+        JsonPath jsonPath=response.jsonPath();
+
+        assertEquals(putRequest.getRoomType(),jsonPath.getString("roomType"));
+        assertEquals(putRequest.getRoomNumber(),jsonPath.getInt("roomNumber"));
+        assertEquals(putRequest.getPrice(),jsonPath.getInt("price"));
+    }
+
+
+// delete
+@Given("admin sends delete request for rooms {string}")
+public void adminSendsDeleteRequestForRooms(String id) {
+
+        response = given().headers("Authorization",
+                        "Bearer " + token,
+                        "Content-Type",
+                        ContentType.JSON,
+                        "Accept",
+                        ContentType.JSON)
+                .when().delete("https://medunna.com/api/rooms"+"/"+id);
+
+
+    }
+    @Given("admin validates the delete request")
+    public void admin_validates_the_delete_request() {
+        response.then().assertThat().statusCode(204);
+
+
+    }
 
 
 }

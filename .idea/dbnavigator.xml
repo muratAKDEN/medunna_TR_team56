@@ -24,12 +24,33 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a1070f67-1db0-44f7-a7c5-7118c35a751c">
-      <console name="Medunna" type="STANDARD" schema="public" session="Main"><![CDATA[select * from public.cmessage]]></console>
+      <console name="Medunna" type="STANDARD" schema="public" session="Pool"><![CDATA[select
+    p.adress,
+    p.birth_date,
+    p.blood_group,
+    p.country_id,
+    p.created_by,
+    p.created_date,
+    p.cstate_id,
+    p.description,
+    p.email,
+    p.first_name,
+    p.gender,
+    p."id",
+    p.last_modified_by,
+    p.last_modified_date,
+    p.last_name,
+    p.phone,
+    p.user_id
+from
+    patient p;
+
+select * from room]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
