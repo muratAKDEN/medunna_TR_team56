@@ -25,7 +25,7 @@ public class US17_Page {
     @FindBy(xpath = "//input[@name='name']")
     public WebElement createEditItemName;
 
-    @FindBy (xpath = "//div[@class='Toastify__toast-body']")
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement popUpMessage;
 
     @FindBy(xpath = "//span[.='Created Date']")

@@ -1,6 +1,7 @@
 package pojos;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PhysiciansPojo {

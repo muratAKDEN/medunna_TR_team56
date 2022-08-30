@@ -1,60 +1,83 @@
 package stepDefinitions.apiSteps;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+import io.cucumber.java.en.*;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
+
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;;
+import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 import pojos.US19_StaffPojo;
 import utilities.Authentication;
 import utilities.ConfigReader;
-
+import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
 
 public class US19_ApiStep {
-    Response response;
-    US19_StaffPojo staffPojo;
+    static RequestSpecification spec;
+    static Response response;
+    static US19_StaffPojo expectedData;
 
-    @Given("Kullanici {string} icin get request yapar")
-    public void kullaniciIcinGetRequestYapar(String id) {
-        RequestSpecification spec = new RequestSpecBuilder().
-                setBaseUri(ConfigReader.getProperty("staff")).build();
 
-        spec.pathParams("param1","api","param2","staff","param3","214870");
+    @Given("ft end point belirlerrr")
 
-        response = given().spec(spec)
-                .headers("Authorization","Bearer "+ Authentication.generateToken())
-                .contentType(ContentType.JSON)
+    //url olustur
+    public void ft_end_point_belirlerrr() {
+        spec = new RequestSpecBuilder().
+                setBaseUri(ConfigReader.getProperty("medunnaUrl")).build();
+
+        spec.pathParams("param1", "api", "param2", "staff","param3", 214870);
+
+    }
+
+    @Given("ft request gonderirrr")
+    public void ft_request_gonderirrr() {
+        String token= Authentication.generateToken();
+        response = given()
+                .headers("Authorization", "Bearer " + token,
+                        "Content-Type",
+                        ContentType.JSON,
+                        "Accept",
+                        ContentType.JSON
+                ).spec(spec)
                 .when()
                 .get("/{param1}/{param2}/{param3}");
 
         response.prettyPrint();
 
+    }
 
+    @Given("ft status kodun ikiyuz oldugunu dogrularrr")
+    public void ft_status_kodun_ikiyuz_oldugunu_dogrularr() {
+        response.then().assertThat().statusCode(200);
+        System.out.println("status code :" + response.statusCode());
 
     }
 
-    @And("ft staff bilgilerini kaydeder")
-    public void ftStaffBilgileriniKaydeder() throws JsonProcessingException {
+    @Given("ft deserialization islemi yaparrr")
+    public void ft_deserilization_islemi_yaparrr() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        staffPojo = mapper.readValue(response.asString(), US19_StaffPojo.class);
+        US19_StaffPojo actualData= mapper.readValue(response.asString(), US19_StaffPojo.class);
+        Assert.assertEquals(expectedData.getId(), actualData.getId());
+        Assert.assertEquals(expectedData.getFirstName(), actualData.getFirstName());
+        Assert.assertEquals(expectedData.getLastName(), actualData.getLastName());
+        Assert.assertEquals(expectedData.getPhone(), actualData.getPhone());
+        //Assert.assertEquals(ssn,staffPojo.getUser().getSsn());
+        //Assert.assertEquals(email,staffPojo.getUser().getEmail());
 
-        //WriteToTxt.saveAppointData(staffPojo);
-    }
-
-    @And("ft gelen datayi validate eder {string} {string} {string} {string} {string} {string}")
-    public void ftGelenDatayiValidateEder(String id, String firstName, String lastName, String phone, String ssn, String email) {
-        Assert.assertEquals(id, staffPojo.getId());
-        Assert.assertEquals(firstName, staffPojo.getFirstName());
-        Assert.assertEquals(lastName, staffPojo.getLastName());
-        Assert.assertEquals(phone,staffPojo.getPhone());
-        //Assert.assertEquals(ssn,staffPojo.getUser().);
-        //Assert.assertEquals(phone,staffPojo.getUser().);
 
     }
+    @Given("ft expected datalari girer")
+    public void ftexpecteddatalarigirer() {
+        expectedData=new US19_StaffPojo();
+        int expectedid=214870;
+
+        expectedData.setId(expectedid);
+        expectedData.setFirstName("Katharine");
+        expectedData.setLastName("Ryan");
+        expectedData.setPhone("541-789-5632");
+    }
+
 }

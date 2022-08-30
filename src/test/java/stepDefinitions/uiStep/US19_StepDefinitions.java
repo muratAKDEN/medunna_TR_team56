@@ -17,10 +17,10 @@ import static utilities.ReusableMethods.waitFor;
 public class US19_StepDefinitions {
     US19_Pages us19_pages = new US19_Pages();
     Actions actions = new Actions(Driver.getDriver());
-/*
+
     @Given("ft  {string} sitesine gider")
     public void ft_sitesine_gider(String string) {
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrll"));
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
 
     @Then("ft account-menu yi tiklar")
@@ -35,7 +35,7 @@ public class US19_StepDefinitions {
     }
 
     @When("ft {string} ve {string} bilgilerini girer ve sign in butonuna tiklar")
-    public void ft_ve_bilgilerini_girer_ve_sign_in_butonuna_tiklar(String string, String string2) throws InterruptedException {
+    public void ft_ve_bilgilerini_girer_ve_sign_in_butonuna_tiklar(String staffUsername, String StaffPassword) throws InterruptedException {
         Driver.waitAndSendText(us19_pages.username, ConfigReader.getProperty("staffUsername"));
         Driver.waitAndSendText(us19_pages.password, ConfigReader.getProperty("StaffPassword"));
         Driver.wait(1);
@@ -271,5 +271,9 @@ public class US19_StepDefinitions {
 
     }
 
-*/
+
+    @And("ft sayfayi kapatir")
+    public void ftSayfayiKapatir() {
+        Driver.closeDriver();
+    }
 }
