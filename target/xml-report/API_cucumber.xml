@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.366">
+    <testcase classname="US28 Admin olarak; Country oluşturma / Okuma ve Silme" name="ADMIN API kullanarak yeni bir ülke oluşturabilir" time="7.601">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given Admin id'ye gore get request yapar....................................passed
+And Admin response cod 200 oldugunu dogrular................................undefined
+Then Admin dogrulama yapar..................................................skipped
+]]>
+        </failure>
+    </testcase>
+</testsuite>

@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/API_cucumber.json",
                 "junit:target/xml-report/API_cucumber.xml"},
         features = "src/test/resources/features/apiFeatures",
-        glue = "src/test/java/stepDefinitions/apiStep",
-        tags = "RoomPut",
+        glue = "stepDefinitions",
+        tags = " @api1",
         dryRun = false
 
 )

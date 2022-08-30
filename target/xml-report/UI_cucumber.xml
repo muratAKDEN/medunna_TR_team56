@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="35.465">
+    <testcase classname="Admin olarak; Country oluşturma / Okuma ve Silme" name="TC01" time="13.403">
+        <failure message="invalid session id&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-SIUM34P', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [5aa61a3af9287e003868fc30daac87f4, findElement {using=xpath, value=//span[text()='Country']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\EYMANU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58005}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58005/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5aa61a3af9287e003868fc30daac87f4" type="org.openqa.selenium.NoSuchSessionException">
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And Admin adi ve sifresiyle siteye girer....................................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And Items&Titles butonuna tiklar............................................passed
+And Kullanici sayfayi kapatir...............................................passed
+Given Country secenegine tiklar.............................................failed
+Then Create a new Country butonuna tiklar...................................skipped
+And Name kismina Ülke adini yazar...........................................skipped
+And Save butonuna tiklar....................................................skipped
+Then Admin yeni ulke olusturdugunu cikan yaziyla dogrular...................skipped
+And Olusturdugu ulkenin listede gorundugunu test eder.......................skipped
+And Ulkenin Id sini kaydeder................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-SIUM34P', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5aa61a3af9287e003868fc30daac87f4, findElement {using=xpath, value=//span[text()='Country']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\EYMANU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58005}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58005/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5aa61a3af9287e003868fc30daac87f4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepDefinitions.uiStep.US28_Stepdefinitions.country_secenegine_tiklar(US28_Stepdefinitions.java:42)
+	at ✽.Country secenegine tiklar(file:///C:/Users/Şeyma%20Nur/IdeaProjects/medunna_TR_team56/src/test/resources/features/uiFeatures/US28.feature:15)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Admin olarak; Country oluşturma / Okuma ve Silme" name="TC02" time="10.297">
+        <failure message="invalid session id&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-SIUM34P', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [09101fe6cf5c7d6f41f72ae11e998460, findElement {using=xpath, value=//*[text()='State/City'][1]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\EYMANU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58045}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58045/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 09101fe6cf5c7d6f41f72ae11e998460" type="org.openqa.selenium.NoSuchSessionException">
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And Admin adi ve sifresiyle siteye girer....................................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And Items&Titles butonuna tiklar............................................passed
+And Kullanici sayfayi kapatir...............................................passed
+Given StateCity secenegine tiklar...........................................failed
+Then Create a new StateCity butonuna tiklar.................................skipped
+Then Acilan sayfada Name kismina eyalet veya sehrini yazar..................skipped
+Given StateCity kismina olusturdugu ulkeyi yazar............................skipped
+And Save butonuna tiklar....................................................skipped
+Then kullanici 3 saniye bekler..............................................skipped
+And Admin yeni StateCity olusturdugunu cikan yaziyla dogrular...............skipped
+And Admin sayfayi kapatir...................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-SIUM34P', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [09101fe6cf5c7d6f41f72ae11e998460, findElement {using=xpath, value=//*[text()='State/City'][1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\EYMANU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58045}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58045/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 09101fe6cf5c7d6f41f72ae11e998460
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepDefinitions.uiStep.US28_Stepdefinitions.statecitySecenegineTiklar(US28_Stepdefinitions.java:90)
+	at ✽.StateCity secenegine tiklar(file:///C:/Users/Şeyma%20Nur/IdeaProjects/medunna_TR_team56/src/test/resources/features/uiFeatures/US28.feature:25)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Admin olarak; Country oluşturma / Okuma ve Silme" name="TC03" time="11.26">
+        <failure message="invalid session id&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-SIUM34P', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [53eec5510a56a6d9c0bd2fb064d70991, findElement {using=xpath, value=//span[text()='Country']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\EYMANU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58083/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 53eec5510a56a6d9c0bd2fb064d70991" type="org.openqa.selenium.NoSuchSessionException">
+            <![CDATA[Given Kullanici "medunnaUrl" adresine gider.................................passed
+Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....passed
+And kullanici acilan dropdown menude signIn butonuna tiklar.................passed
+And Admin adi ve sifresiyle siteye girer....................................passed
+And kullanici Sign In butonuna tiklar.......................................passed
+And Items&Titles butonuna tiklar............................................passed
+And Kullanici sayfayi kapatir...............................................passed
+Given Country secenegine tiklar.............................................failed
+Then Cikan listeden daha once olusturdugu ulkeyi bulur......................skipped
+Then kullanici 3 saniye bekler..............................................skipped
+When Delete butonuna basar..................................................skipped
+When Cikan dogrulama ekranindan da Delete butonuna basar....................skipped
+Then kullanici 3 saniye bekler..............................................skipped
+And Ulkenin silindiginden emin olur.........................................skipped
+And Sayfayi kapatir.........................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-SIUM34P', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [53eec5510a56a6d9c0bd2fb064d70991, findElement {using=xpath, value=//span[text()='Country']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\EYMANU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58083/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 53eec5510a56a6d9c0bd2fb064d70991
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepDefinitions.uiStep.US28_Stepdefinitions.country_secenegine_tiklar(US28_Stepdefinitions.java:42)
+	at ✽.Country secenegine tiklar(file:///C:/Users/Şeyma%20Nur/IdeaProjects/medunna_TR_team56/src/test/resources/features/uiFeatures/US28.feature:35)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
