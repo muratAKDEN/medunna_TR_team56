@@ -8,7 +8,7 @@ Feature: US27 Messages by Admin Validate with API and DB
     And kullanici post request gonderir ve response u kaydeder
     Then kullanici gerekli dogrulamayi yapar
 
-    @getMessage
+  @getMessage
   Scenario: TC02 Kullanıcı, API kullanarak ileti okumayı doğrulamalıdır
 
     Given kullanici url'i hazirlar

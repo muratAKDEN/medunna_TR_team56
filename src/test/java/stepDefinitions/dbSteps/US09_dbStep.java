@@ -1,12 +1,9 @@
 package stepDefinitions.dbSteps;
-
 import io.cucumber.java.en.*;
-import org.junit.Assert;
-
 import java.util.List;
+import static utilities.DBUtils.createConnection;
+import static utilities.DBUtils.getColumnData;
 
-import static stepDefinitions.uiStep.US09_StepDefinitions.hastaToplamSayisi_UI;
-import static utilities.DBUtils.*;
 
 public class US09_dbStep {
 
@@ -25,18 +22,17 @@ public class US09_dbStep {
     @Then("Kullanici database'den tum hasta bilgilerini alir")
     public void kullanici_database_den_tum_hasta_bilgilerini_alir() {
 
-        hastalistesi_DB = getColumnData("select * from in_patient", "id");
+         hastalistesi_DB = getColumnData("select * from patient", "id");
 
         hastaToplamSayisi_DB = hastalistesi_DB.size();
 
         System.out.println("Tüm kayıtlı DB Hasta  Sayısı : " + hastaToplamSayisi_DB);
 
-        closeConnection();
+      //  closeConnection();
+
 
 
 
     }
-
-
 
 }

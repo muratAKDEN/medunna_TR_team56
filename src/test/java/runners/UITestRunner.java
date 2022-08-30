@@ -12,8 +12,16 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/UI_cucumber.xml"},
         features="src/test/resources/features/uiFeatures",
         glue= "stepDefinitions",
+<<<<<<< HEAD
         tags = "@smoke",
+=======
+
+        tags = " @sdf",
+>>>>>>> 2573cbc6cf32e1ee14decca4e7a6eebfe693935e
         dryRun = false
+
+
+
 
 )
 

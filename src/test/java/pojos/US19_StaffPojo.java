@@ -1,10 +1,40 @@
 package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.github.javafaker.Country;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class US09_Pojo {
+public class US19_StaffPojo {
+    /*
+  {
+   "createdBy": "team63admin",
+   "createdDate": "2022-08-21T05:17:00.483627Z",
+   "id": 212059,
+   "firstName": "feerf",
+   "lastName": "rgsrfbrdtf",
+   "birthDate": "2022-08-20T21:00:00Z",
+   "phone": "5555555555",
+   "gender": "MALE",
+   "bloodGroup": "Apositive",
+   "adress": "",
+   "description": "",
+   "user": {
+       "createdBy": "anonymousUser",
+       "createdDate": "2022-03-31T16:54:08.825242Z",
+       "id": 45612,
+       "login": "team91adminn",
+       "firstName": "team",
+       "lastName": "91",
+       "email": "skdfgsd@gmail.com",
+       "activated": true,
+       "langKey": "en",
+       "imageUrl": null,
+       "resetDate": null,
+       "ssn": "810-91-9103"
+   },
+   "country": null,
+   "cstate": null
+}
+    */
     private String createdBy;
     private String createdDate;
     private int id;
@@ -13,29 +43,9 @@ public class US09_Pojo {
     private String birthDate;
     private String phone;
     private String gender;
-    private String bloodGroup;
-    private String adress;
-    private String email;
-    private Country country;
     private User user;
 
-    @Override
-    public String toString() {
-        return "US09_Pojo{" +
-                "createdBy='" + createdBy + '\'' +
-                ", createdDate='" + createdDate + '\'' +
-                ", id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", phone='" + phone + '\'' +
-                ", gender='" + gender + '\'' +
-                ", bloodGroup='" + bloodGroup + '\'' +
-                ", adress='" + adress + '\'' +
-                ", email='" + email + '\'' +
-                ", country=" + country +
-                ", user=" + user +
-                '}';
+    public US19_StaffPojo() {
     }
 
     public String getCreatedBy() {
@@ -102,43 +112,26 @@ public class US09_Pojo {
         this.gender = gender;
     }
 
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
-        this.country = country;
-    }
-
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "US19_StaffPojo{" +
+                "createdBy='" + createdBy + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", phone='" + phone + '\'' +
+                ", gender='" + gender + '\'' +
+                ", user=" + user +
+                '}';
     }
 }

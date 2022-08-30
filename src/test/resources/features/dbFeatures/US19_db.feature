@@ -1,10 +1,11 @@
-Feature: DB kullarak personelleri dogrulayin
+@DbStaff
+Feature: Admin DB kullanarak staff dogrular
 
-  Scenario: TC06 ft DB baglanarak doktor bilgilerini dogrular
-    Given ft DB ile Medunna veri tabanina baglanir
-    When ft DB ile "staff" tablosundaki butun verilerini alir
-    And ft DB ile "staff" tablosundaki "id" 217647 olan personelin verilerini alir
-    And ft DB ile personelin verileri okur
-    Then ft DB ile alinan datalari validate eder
-    And ft DB tüm veri kayıtlarını ilgili dosyalara kaydeder
-    And ft veritabanı bağlantısını kapat
+  Scenario Outline:Admin staff id ile sorgulama yapar.
+    Given Admin sataff icin DB ile baglanti kurar
+    Given Admin "<id>"ile staff sorgulama yapar
+    And Admin "<last_name>" staff bilgisini validate eder
+    And ft DB baglantisini kapatir
+    Examples: Data
+      | id     | last_name |
+      | 214338 | world     |
