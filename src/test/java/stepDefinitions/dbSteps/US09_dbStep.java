@@ -1,5 +1,7 @@
 package stepDefinitions.dbSteps;
 import io.cucumber.java.en.*;
+import org.junit.Assert;
+
 import java.util.List;
 import static utilities.DBUtils.createConnection;
 import static utilities.DBUtils.getColumnData;
@@ -28,7 +30,18 @@ public class US09_dbStep {
 
         System.out.println("Tüm kayıtlı DB Hasta  Sayısı : " + hastaToplamSayisi_DB);
 
-      //  closeConnection();
+        Integer hastaId2=8358;
+
+        for (Object each : hastalistesi_DB
+        ) {
+            if (each.equals(hastaId2)){
+                Assert.assertTrue(each.equals(hastaId2));
+                System.out.println("bulundu");
+            }
+        }
+
+
+        //  closeConnection();
 
 
 

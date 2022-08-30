@@ -8,9 +8,11 @@ import org.junit.Assert;
 import utilities.Authentication;
 import utilities.ConfigReader;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertTrue;
 import static stepDefinitions.dbSteps.US09_dbStep.hastaToplamSayisi_DB;
 import static stepDefinitions.uiStep.US09_StepDefinitions.hastaToplamSayisi_UI;
 import static utilities.Authentication.generateToken;
@@ -53,11 +55,28 @@ String token=Authentication.generateToken();
 
         ssnListAPI = jsonPath.getList("ssn");
 
+        List<Object> hastaIdList=new ArrayList<>();
+
+        hastaIdList =jsonPath.getList("id");
+        Integer hastaId=8358;
+
+
+        for (Object each : hastaIdList
+             ) {
+            if (each.equals(hastaId)){
+                Assert.assertTrue(each.equals(hastaId));
+                System.out.println("bulundu");
+            }
+        }
+
+
+      /*
         hastaToplamSayisi_API = ssnListAPI.size();
-        System.out.println("Tüm kayıtlı API Hasta  Sayısı : "+hastaToplamSayisi_API);
+        System.out.println("Tüm kayıtlı API Hasta  Sayısı : "+hastaToplamSayisi_API); */
 
     }
 
+    /*
     @Then("Kullanici API ile kayitli hasta sayisini DB ve UI ile gercekler")
     public void kullanici_apı_ile_kayitli_hasta_sayisini_db_ve_ui_ile_gercekler () {
             Assert.assertEquals(hastaToplamSayisi_API, hastaToplamSayisi_DB);
@@ -66,7 +85,7 @@ String token=Authentication.generateToken();
 
         }
 
-
+*/
     }
 
 

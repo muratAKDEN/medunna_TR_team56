@@ -6,4 +6,4 @@ Feature: US10_DoktorRandevulari
     Given user set the URL
     Then user sends GET request for appointments
     When user receives response with status code two hundred
-  #  Then user verifies that response contains physicianID
+    Then user verifies that response contains physicianID
