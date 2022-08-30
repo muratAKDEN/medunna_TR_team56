@@ -44,6 +44,18 @@ public class US09_dbStep {
         //  closeConnection();
 
 
+        for (Object each : hastalistesi_DB
+        ) {
+            if (each.equals(hastaId2)){
+                Assert.assertTrue(each.equals(hastaId2));
+                System.out.println("bulundu");
+            }
+        }
+
+
+        //  closeConnection();
+
+
 
 
     }
