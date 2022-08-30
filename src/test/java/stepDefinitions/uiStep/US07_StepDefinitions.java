@@ -96,7 +96,11 @@ public class US07_StepDefinitions {
 
     @And("Hasta girilen tarihin gg.aa.yyyy formunda oldugunu dogrular")
     public void hastaGirilenTarihinGgAaYyyyFormundaOldugunuDogrular() {
+
+       // US07_Page.appointmentDateTimeBox.sendKeys(ConfigReader.getProperty("unvaliddate"));
+
         pages.appointmentDateTimeBox.sendKeys(ConfigReader.getProperty("unvalidDate"));
+
     }
 
     @And("Hasta Sayfayi kapatir")
