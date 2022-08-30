@@ -1,29 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.174">
-    <testcase classname="US09 Staff (Personel), hasta bilgilerini gorebilmeli, duzenleyebilmeli ve silebilmelidir." name="TC04 Kullanıcı, API kullanarak tüm hasta bilgilerini doğrulamalıdır." time="4.884">
-        <failure message="" type="java.lang.NullPointerException">
-            <![CDATA[Given Kullanici GET request gonderir........................................passed
-And status kodunun 200 oldugu gorulur.......................................passed
-Then Kullanici tum hasta bilgilerini API response ile alir..................passed
-Then Kullanici medunna database e baglanir..................................passed
-And Kullanici database'den tum hasta bilgilerini alir.......................failed
-Then Kullanici "medunnaUrl" adresine gider..................................skipped
-Then Kullanici sayfanin sag ust kosesinde yer alan insan ikonuna tiklar.....skipped
-And kullanici acilan dropdown menude signIn butonuna tiklar.................skipped
-And kullanici username olarak "staffUser" girer.............................skipped
-And kullanici password olarak "password" girer..............................skipped
-And kullanici Sign In butonuna tiklar.......................................skipped
-Then NBH 'My Pages' dropdown menusunu tiklar................................skipped
-And NBH 'Search Patient' butonunu tiklar....................................skipped
-Then kullanici sayfanin en altindaki kayitli hasta sayisini alir............skipped
-And Kullanici API ile kayitli hasta sayisini DB ve UI ile gercekler.........skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at utilities.DBUtils.executeQuery(DBUtils.java:33)
-	at utilities.DBUtils.getColumnData(DBUtils.java:155)
-	at stepDefinitions.dbSteps.US09_dbStep.kullanici_database_den_tum_hasta_bilgilerini_alir(US09_dbStep.java:25)
-	at ✽.Kullanici database'den tum hasta bilgilerini alir(file:///C:/Users/akden/IdeaProjects/medunna_TR_team56/src/test/resources/features/apiFeatures/US09_api.feature:9)
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.366">
+    <testcase classname="US28 Admin olarak; Country oluşturma / Okuma ve Silme" name="ADMIN API kullanarak yeni bir ülke oluşturabilir" time="7.601">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given Admin id'ye gore get request yapar....................................passed
+And Admin response cod 200 oldugunu dogrular................................undefined
+Then Admin dogrulama yapar..................................................skipped
 ]]>
         </failure>
     </testcase>
